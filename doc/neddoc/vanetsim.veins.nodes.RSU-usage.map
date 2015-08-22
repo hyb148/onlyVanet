@@ -1,0 +1,6 @@
+<area shape="rect" id="node1" href="vanetsim.veins.nodes.RSU.html" title="Compound Module RSU" alt="" coords="197,81,269,106">
+<area shape="rect" id="node2" href="vanetsim.veins.base.modules.BaseMobility.html" title="Simple Module BaseMobility" alt="" coords="5,155,101,181">
+<area shape="rect" id="node3" href="vanetsim.veins.modules.nic.INic80211p.html" title="Module Interface INic80211p" alt="" coords="127,155,215,181">
+<area shape="rect" id="node4" href="vanetsim.veins.base.modules.IBaseApplLayer.html" title="Module Interface IBaseApplLayer" alt="" coords="239,155,353,181">
+<area shape="rect" id="node5" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="377,155,476,181">
+<area shape="rect" id="node6" href="vanetsim.simulations.veins.RSUExampleScenario.html" title="Network RSUExampleScenario" alt="" coords="157,6,309,31">

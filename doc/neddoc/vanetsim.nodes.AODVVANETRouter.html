@@ -1,0 +1,935 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Compound Module <i>AODVVANETRouter</i></h2>
+<b>Package:</b> vanetsim.nodes<br/><b>File: <a href="src-nodes-AODVVANETRouter.ned.html">src/nodes/AODVVANETRouter.ned</a></b><br/>
+<p>It models a ~WirelessHost extended with ~AODVRouting submodule.</p>
+<p>AODV is an on-demand MANET routing protocol. Each node
+works similar to a 'router': they manage their own routing
+tables, send request for routes and consult the IP layer via
+Netfilter hooks for data forwarding.</p>
+<p>Scenerios where AODV routing is desired use this module as a
+host module.</p>
+<p>For more info about AODVRouting, see the corresponding module:
+~AODVRouting and its C++ implementation with the same name.</p>
+<p>The AODV v.2 (known as DYMO) is also implemented: ~xDYMO,
+~DYMORouter.</p>
+<img src="vanetsim.nodes.AODVVANETRouter-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.status.NodeStatus.html" title="NodeStatus" alt="NodeStatus" coords="31,78,73,123">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.base.NotificationBoard.html" title="NotificationBoard" alt="NotificationBoard" coords="-4,183,115,228">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.battery.IBattery.html" title="IBattery" alt="IBattery" coords="30,105,80,150">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.mobility.contract.IMobility.html" title="IMobility" alt="IMobility" coords="27,139,83,184">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html" title="NetworkLayer" alt="NetworkLayer" coords="285,307,378,368">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.RoutingTable.html" title="RoutingTable" alt="RoutingTable" coords="13,253,98,298">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.common.InterfaceTable.html" title="InterfaceTable" alt="InterfaceTable" coords="7,315,104,360">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html" title="PcapRecorder" alt="PcapRecorder" coords="-63,366,173,411">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html" title="LoopbackInterface" alt="LoopbackInterface" coords="60,426,104,487">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IWirelessNic.html" title="IWirelessNic" alt="IWirelessNic" coords="160,426,276,487">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IWiredNic.html" title="IWiredNic" alt="IWiredNic" coords="314,426,427,487">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IWiredNic.html" title="IWiredNic" alt="IWiredNic" coords="499,426,622,487">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IExternalNic.html" title="IExternalNic" alt="IExternalNic" coords="76,426,227,487">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.ITCPApp.html" title="ITCPApp" alt="ITCPApp" coords="76,74,223,135">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.ITCP.html" title="ITCP" alt="ITCP" coords="129,161,173,222">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.IUDPApp.html" title="IUDPApp" alt="IUDPApp" coords="253,74,409,135">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.IUDP.html" title="IUDP" alt="IUDP" coords="311,161,355,222">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.ISCTPApp.html" title="ISCTPApp" alt="ISCTPApp" coords="449,74,610,135">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.ISCTP.html" title="ISCTP" alt="ISCTP" coords="509,161,553,222">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.IPingApp.html" title="IPingApp" alt="IPingApp" coords="557,161,717,222">
+<area shape="rect" href="vanetsim.routing.aodvvanet.AODVVANETRouting.html" title="AODVVANETRouting" alt="AODVVANETRouting" coords="525,327,595,388">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.nodes.AODVVANETRouter-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.nodes.AODVVANETRouter.html" title="Compound Module AODVVANETRouter" alt="" coords="83,81,227,106">
+<area shape="rect" id="node2" href="vanetsim.routing.aodvvanet.AODVVANETRouting.html" title="Simple Module AODVVANETRouting" alt="" coords="5,155,155,181">
+<area shape="rect" id="node3" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="180,155,279,181">
+<area shape="rect" id="node4" href="vanetsim.simulations._nodes.AODVVANETCar.html" title="Compound Module AODVVANETCar" alt="" coords="91,6,217,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.nodes.AODVVANETRouter-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="vanetsim.nodes.AODVVANETRouter.html" title="Compound Module AODVVANETRouter" alt="" coords="5,81,149,106">
+<area shape="rect" id="node2" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.WirelessHost.html" title="Compound Module WirelessHost" alt="" coords="27,6,128,31">
+</map>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.WirelessHost.html">WirelessHost</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Models a host with (default) one wireless (802.11) card in infrastructure mode.
+This module is basically a ~StandardHost with an ~Ieee80211Nic with
+mgmtType = ~Ieee80211MgmtSTA added.
+It should be used in conjunction with ~AccessPoint, or any other AP model
+which contains ~Ieee80211Nic with mgmtType = ~Ieee80211MgmtAP.</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Used in compound modules:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.simulations._nodes.AODVVANETCar.html">AODVVANETCar</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>hasStatus</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>numExtInterfaces</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>numRadios</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>the number of radios in the router. by default no wireless</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>numPcapRecorders</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>no of PcapRecorders.</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>mobilityType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>numRadios > 0 ? "StationaryMobility" : ""</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>routingFile</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>IPForward</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>forwardMulticast</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>batteryType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>numTcpApps</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>no of TCP apps. Specify the app types in INI file with tcpApp[0..1].typename="TCPEchoApp" syntax</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>numUdpApps</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>no of UDP apps. Specify the app types in INI file with udpApp[0..1].typename="UDPVideoStreamCli" syntax</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>numSctpApps</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>no of SCTP apps. Specify the app types in INI file with sctpApp[0..1].typename="SCTPServer" syntax</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>numPingApps</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>no of PING apps. Specify the app types in INI file with pingApp[0..1].typename="PingApp" syntax</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>hasTcp</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>numTcpApps>0</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>hasUdp</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>numUdpApps>0</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>hasSctp</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>numSctpApps>0</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>tcpType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>firstAvailable("TCP", "TCP_lwIP", "TCP_NSC", "TCP_None")</td>
+   <td>
+<p>tcp implementation (e.g. ~TCP, ~TCP_lwIP, ~TCP_NSC) or ~TCPSpoof</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>udpType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>firstAvailable("UDP","UDP_None")</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>sctpType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>firstAvailable("SCTP","SCTP_None")</td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=device/cellphone</i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>node</td>
+   <td><i></i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>labels</td>
+   <td><i>node</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>radioIn [ ]</xsl:if></td>
+   <td><i>input</i></td>
+   <td>numRadios</td>   <td></td>
+</tr>
+<tr class="inherited">
+   <td>pppg [ ]</xsl:if></td>
+   <td><i>inout</i></td>
+   <td></td>   <td></td>
+</tr>
+<tr class="inherited">
+   <td>ethg [ ]</xsl:if></td>
+   <td><i>inout</i></td>
+   <td></td>   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.status.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.autorouting.ipv4.IPv4NodeConfigurator.html">configurator</a>.networkConfiguratorModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>the absolute path to the IPv4NetworkConfigurator; use "" if there is no configurator</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.autorouting.ipv4.IPv4NodeConfigurator.html">configurator</a>.configureRoutingTable</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>add routing entries to routing table (uses the configurator module)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.IPv4.html">ip</a>.routingTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.IPv4.html">ip</a>.procDelay</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0s</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.IPv4.html">ip</a>.timeToLive</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>32</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.IPv4.html">ip</a>.multicastTimeToLive</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>32</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.IPv4.html">ip</a>.fragmentTimeout</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>60s</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.IPv4.html">ip</a>.forceBroadcast</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.arp.ARP.html">arp</a>.routingTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.arp.ARP.html">arp</a>.retryTimeout</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1s</td>
+   <td>
+<p>number seconds ARP waits between retries to resolve an IPv4 address</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.arp.ARP.html">arp</a>.retryCount</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>3</td>
+   <td>
+<p>number of times ARP will attempt to resolve an IPv4 address</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.arp.ARP.html">arp</a>.cacheTimeout</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>120s</td>
+   <td>
+<p>number seconds unused entries in the cache will time out</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.arp.ARP.html">arp</a>.globalARP</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html">networkLayer</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.arp.ARP.html">arp</a>.deletePackets</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>if global ARP and enty is not in memory delete the datagram</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.RoutingTable.html">routingTable</a>.routerId</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"auto"</td>
+   <td>
+<p>for routers, the router id using IPv4 address dotted
+notation; specify "auto" to select the highest
+interface address; should be left empty ("") for hosts</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.common.InterfaceTable.html">interfaceTable</a>.displayAddresses</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>whether to display IP addresses on links</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html">pcapRecorder</a>.verbose</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>whether to log packets on the module output</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html">pcapRecorder</a>.pcapFile</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>the PCAP file to be written</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html">pcapRecorder</a>.snaplen</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>65535</td>
+   <td>
+<p>maximum number of bytes to record per packet</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html">pcapRecorder</a>.dumpBadFrames</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>enable dump of frames with hasBitError</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html">pcapRecorder</a>.moduleNamePatterns</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"wlan[*] eth[*] ppp[*] ext[*]"</td>
+   <td>
+<p>space-separated list of sibling module names to listen on</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html">pcapRecorder</a>.sendingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetSentToLower"</td>
+   <td>
+<p>space-separated list of outbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html">pcapRecorder</a>.receivingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetReceivedFromLower"</td>
+   <td>
+<p>space-separated list of inbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html">lo0</a>.<a href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.loopback.Loopback.html">lo</a>.mtu</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4470B</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.networkProtocolModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"^.networkLayer.ip"</td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.askGratuitousRREP</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>see RFC 3561: 6.6.3</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.useHelloMessages</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>see RFC 3561: 6.9</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.useLocalRepair</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>see RFC 3561: 6.12 *not implemented yet*</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.udpPort</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>654</td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.maxPeriodicJitter</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>helloInterval / 4</td>
+   <td>
+<p>it MUST NOT be negative; it MUST NOT be greater than MESSAGE_INTERVAL/2; it SHOULD NOT be greater than MESSAGE_INTERVAL/4.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.periodicJitter</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(0s, maxPeriodicJitter)</td>
+   <td>
+<p>jitter for externally triggered message generation and message forwarding</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.maxJitter</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>5ms</td>
+   <td>
+<p>RFC 5148:
+need more revise: As well as the decision as to whether
+to use jitter being dependent on the medium access control and
+lower layers, the selection of the MAXJITTER parameter SHOULD
+be appropriate to those mechanisms.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.jitter</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(0ms, maxJitter)</td>
+   <td>
+<p>jitter for broadcasts</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.helloInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1s</td>
+   <td>
+<p>every helloInterval seconds a node broadcasts Hello messages (if it is necessary)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.allowedHelloLoss</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>allowedHelloLoss * helloInterval is the lifetime value for Hello messages</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.activeRouteTimeout</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>3s</td>
+   <td>
+<p>the timeout value for cached routes If Hello messages are used, then the
+ACTIVE_ROUTE_TIMEOUT parameter value MUST be more than the value
+(ALLOWED_HELLO_LOSS * HELLO_INTERVAL).</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.netDiameter</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>35</td>
+   <td>
+<p>the maximum possible number of hops between two nodes in the network</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.nodeTraversalTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.04s</td>
+   <td>
+<p>an estimation of the average one-hop traversal time</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.rerrRatelimit</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>maximum number of RERR messages that the AODV may originate in 1s.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.rreqRetries</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>specifies the number of times AODV will repeat an expanded ring search for a destination</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.rreqRatelimit</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>maximum number of RREQ messages that the AODV may originate in 1s.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.timeoutBuffer</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>plus time to wait for a delayed RREP (due to congestion) (to omit this buffer set it to 0)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.ttlStart</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>specifies the TTL value when initiating a route request</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.ttlIncrement</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>specifies the value by which the TTL will be incremented each time a RREQ is retransmitted</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.ttlThreshold</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>7</td>
+   <td>
+<p>the maximum value of TTL over which NET_DIAMETER value will be used to broadcast any RREQ</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.localAddTTL</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>it is used by the formula which calculates the initial TTL of the RREQ for a local repair</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.losRange</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>line of site range.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.speedWeight</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>speed weight factor</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.accelerationWeight</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>acceleration weight factor</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.directionWeight</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>direction weight factor</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.linkQualityWeight</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>link quality weight factor</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.myRouteTimeout</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>2 * activeRouteTimeout</td>
+   <td>
+<p>the value of the lifetime field that a destination node places in RREPs</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.deletePeriod</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>5 * max(activeRouteTimeout, helloInterval)</td>
+   <td>
+<p>the time after which an expired route is deleted</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.blacklistTimeout</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>rreqRetries * netTraversalTime</td>
+   <td>
+<p>the time after which a blacklisted node is removed from the blacklist</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.netTraversalTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>2 * nodeTraversalTime * netDiameter</td>
+   <td>
+<p>an estimation of the traversal time for the complete network</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.nextHopWait</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>nodeTraversalTime + 0.01s</td>
+   <td>
+<p>timeout for a RREP-ACK</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.routing.aodvvanet.AODVVANETRouting.html">aodvvanet</a>.pathDiscoveryTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>2 * netTraversalTime</td>
+   <td>
+<p>buffer timeout for each broadcasted RREQ message</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// It models a ~WirelessHost extended with ~AODVRouting submodule.
+//
+// AODV is an on-demand MANET routing protocol. Each node
+// works similar to a 'router': they manage their own routing
+// tables, send request for routes and consult the IP layer via
+// Netfilter hooks for data forwarding.
+//
+// Scenerios where AODV routing is desired use this module as a
+// host module.
+//
+// For more info about AODVRouting, see the corresponding module:
+// ~AODVRouting and its C++ implementation with the same name.
+//
+// The AODV v.2 (known as DYMO) is also implemented: ~xDYMO,
+// ~DYMORouter.
+//
+</span><span style="color: #800000; font-weight: bold; ">module</span><span style="color: #000000; "> </span><span style="color: #000000; ">AODVVANETRouter</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">WirelessHost</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=device/cellphone&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">IPForward</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">//wlan[*].mgmtType = default(&quot;Ieee80211MgmtAdhoc&quot;);
+</span><span style="color: #000000; ">    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">aodvvanet</span><span style="color: #000000; ">: </span><span style="color: #000000; ">AODVVANETRouting</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=558,307&quot;</span><span style="color: #000000; ">);
+        }
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">aodvvanet</span><span style="color: #000000; ">.</span><span style="color: #000000; ">to_ip</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">networkLayer</span><span style="color: #000000; ">.</span><span style="color: #000000; ">transportIn</span><span style="color: #000000; ">++;
+        </span><span style="color: #000000; ">aodvvanet</span><span style="color: #000000; ">.</span><span style="color: #000000; ">from_ip</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">networkLayer</span><span style="color: #000000; ">.</span><span style="color: #000000; ">transportOut</span><span style="color: #000000; ">++;
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

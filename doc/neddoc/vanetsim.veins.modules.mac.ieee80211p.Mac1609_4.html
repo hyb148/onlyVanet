@@ -1,0 +1,339 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>Mac1609_4</i></h2>
+<b>Package:</b> vanetsim.veins.modules.mac.ieee80211p<br/><b>File: <a href="src-veins-modules-mac-ieee80211p-Mac1609_4.ned.html">src/veins/modules/mac/ieee80211p/Mac1609_4.ned</a></b><br/><p><a href="../doxy/classMac1609__4.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>Manages timeslots for CCH and SCH listening and sending.</p>
+<p><b>Author:</b> Christopher Saloman</p>
+<p><b>Author:</b> David Eckhoff : rewrote complete model</p>
+<p><b>See also:</b> <a href="vanetsim.veins.modules.application.ieee80211p.BaseWaveApplLayer.html">BaseWaveApplLayer</a></p>
+<p><b>See also:</b> <a href="vanetsim.veins.modules.nic.Nic80211p.html">Nic80211p</a></p>
+<p><b>See also:</b> <a href="vanetsim.veins.modules.phy.PhyLayer80211p.html">PhyLayer80211p</a></p>
+<img src="vanetsim.veins.modules.mac.ieee80211p.Mac1609_4-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="vanetsim.veins.modules.mac.ieee80211p.Mac1609_4.html" title="Mac1609_4" alt="Mac1609_4" coords="0,31,119,71">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.veins.modules.mac.ieee80211p.Mac1609_4-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.veins.modules.mac.ieee80211p.Mac1609_4.html" title="Simple Module Mac1609_4" alt="" coords="5,81,93,106">
+<area shape="rect" id="node2" href="vanetsim.veins.modules.nic.Nic80211p.html" title="Compound Module Nic80211p" alt="" coords="7,6,91,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.veins.modules.mac.ieee80211p.Mac1609_4-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="vanetsim.veins.modules.mac.ieee80211p.Mac1609_4.html" title="Simple Module Mac1609_4" alt="" coords="15,81,104,106">
+<area shape="rect" id="node2" href="vanetsim.veins.base.modules.BaseMacLayer.html" title="Simple Module BaseMacLayer" alt="" coords="5,6,115,31">
+</map>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.veins.base.modules.BaseMacLayer.html">BaseMacLayer</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Base module for every mac layer module</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Used in compound modules:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.veins.modules.nic.Nic80211p.html">Nic80211p</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+
+<p>This NIC implements an 802.11p network interface card.</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>notAffectedByHostState</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>headerLength</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0 bit</td>
+   <td>
+<p>length of the MAC packet header (in bits)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>address</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"auto"</td>
+   <td>
+<p>MAC address as hex string (12 hex digits), or
+"auto". "auto" values will be replaced by
+a generated MAC address in init stage 1.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>useServiceChannel</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>cycle between an SCH and the CCH (or stay on CCH all the time)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>serviceChannel</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>the service channel this maclayer listens on</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>bitrate</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>18 Mbps</td>
+   <td>
+<p>bit rate</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>syncOffset</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.0003s</td>
+   <td>
+<p>little asynchronization between cars</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>txPower</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>tx power [mW]</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>queueSize</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>class</td>
+   <td><i>Mac1609_4</i></td>
+   <td>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>upperLayerIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>from upper layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>upperLayerOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>to uppe layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>upperControlIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>control from upper layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>upperControlOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>control to upper layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>lowerLayerIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>from lower layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>lowerLayerOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>to lower layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>lowerControlIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>control from lower layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>lowerControlOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>control to lower layer</p>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Signals:</h3>
+<table class="signalstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="unit">Unit</th>
+   </tr>
+<tr class="local">
+   <td>sigCollision</td>
+   <td><i>
+bool   </i></td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>sigChannelBusy</td>
+   <td><i>
+bool   </i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Manages timeslots for CCH and SCH listening and sending.
+//
+// </span><span style="color: #000080; ">@author</span><span style="color: #808080; font-style: italic; "> Christopher Saloman
+// </span><span style="color: #000080; ">@author</span><span style="color: #808080; font-style: italic; "> David Eckhoff : rewrote complete model
+//
+// </span><span style="color: #000080; ">@see</span><span style="color: #808080; font-style: italic; "> BaseWaveApplLayer
+// </span><span style="color: #000080; ">@see</span><span style="color: #808080; font-style: italic; "> Nic80211p
+// </span><span style="color: #000080; ">@see</span><span style="color: #808080; font-style: italic; "> PhyLayer80211p
+//
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">Mac1609_4</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BaseMacLayer</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #000000; ">Mac1609_4</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">// cycle between an SCH and the CCH (or stay on CCH all the time)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">useServiceChannel</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">// the service channel this maclayer listens on
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">serviceChannel</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">// debug switch
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">debug</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">// length of MAC header, header is already added at 1609_4
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">headerLength</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bit</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; "> </span><span style="color: #000000; ">bit</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">// bit rate 
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">bitrate</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">18</span><span style="color: #000000; "> </span><span style="color: #000000; ">Mbps</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">// little asynchronization between cars
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">syncOffset</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">0003</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">//tx power [mW]
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">txPower</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mW</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">queueSize</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">// signal informing interested application about channel busy state
+</span><span style="color: #000000; ">        </span><span style="color: #000000; font-weight: bold; ">@signal</span><span style="color: #000000; ">[</span><span style="color: #000000; ">sigChannelBusy</span><span style="color: #000000; ">](</span><span style="color: #000000; ">type</span><span style="color: #000000; ">=</span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; ">);
+        </span><span style="color: #808080; font-style: italic; ">// signal informing interested application about a collision
+</span><span style="color: #000000; ">        </span><span style="color: #000000; font-weight: bold; ">@signal</span><span style="color: #000000; ">[</span><span style="color: #000000; ">sigCollision</span><span style="color: #000000; ">](</span><span style="color: #000000; ">type</span><span style="color: #000000; ">=</span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; ">);
+
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

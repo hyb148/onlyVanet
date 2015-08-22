@@ -1,0 +1,305 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Compound Module <i>Highway</i></h2>
+<b>Package:</b> vanetsim.simulations._nodes<br/><b>File: <a href="simulations-_nodes-Highway.ned.html">simulations/_nodes/Highway.ned</a></b><br/><p>(no description)</p><img src="vanetsim.simulations._nodes.Highway-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html" title="ChannelControl" alt="ChannelControl" coords="207,152,309,206">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html" title="TraCIScenarioManagerLaunchd" alt="TraCIScenarioManagerLaunchd" coords="485,148,544,209">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.simulations._nodes.Highway-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.simulations._nodes.Highway.html" title="Compound Module Highway" alt="" coords="162,6,235,31">
+<area shape="rect" id="node2" href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html" title="Simple Module TraCIScenarioManagerLaunchd" alt="" coords="5,81,211,106">
+<area shape="rect" id="node3" href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html" title="Simple Module ChannelControl" alt="" coords="235,81,345,106">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.simulations._nodes.Highway-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="vanetsim.simulations._nodes.Highway.html" title="Compound Module Highway" alt="" coords="5,6,77,31">
+<area shape="rect" id="node2" href="vanetsim.simulations._nodes.Scenario.html" title="Network Scenario" alt="" coords="5,81,77,106">
+</map>
+<h3 class="subtitle">Known subclasses:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.simulations._nodes.Scenario.html">Scenario</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html">channelControl</a>.coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch for core framework</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html">channelControl</a>.pMax</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>20mW</td>
+   <td>
+<p>maximum sending power used for this network (in mW)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html">channelControl</a>.sat</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-110dBm</td>
+   <td>
+<p>signal attenuation threshold (in dBm)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html">channelControl</a>.alpha</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>path loss coefficient</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html">channelControl</a>.carrierFrequency</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>2.4GHz</td>
+   <td>
+<p>base carrier frequency of all the channels (in Hz)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html">channelControl</a>.numChannels</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>number of radio channels (frequencies)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html">channelControl</a>.propagationModel</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"FreeSpaceModel"</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html">channelControl</a>.maxInterferenceDistance</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1m</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>emit debug messages?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.connectAt</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0s</td>
+   <td>
+<p>when to connect to TraCI server (must be the initial timestep of the server)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.firstStepAt</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1s</td>
+   <td>
+<p>when to start synchronizing with the TraCI server (-1: immediately after connecting)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.updateInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1s</td>
+   <td>
+<p>time interval of hosts' position updates</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.moduleType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"inet.nodes.wireless.WirelessHostSimplified"</td>
+   <td>
+<p>module type to be used in the simulation for each managed vehicle</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.moduleName</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"host"</td>
+   <td>
+<p>module name to be used in the simulation for each managed vehicle</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.moduleDisplayString</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"i=misc/node2;is=vs;r=0,,#707070,1"</td>
+   <td>
+<p>module displayString to be used in the simulation for each managed vehicle</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.host</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"localhost"</td>
+   <td>
+<p>sumo-launchd.py server hostname</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.port</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>9999</td>
+   <td>
+<p>sumo-launchd.py server port</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.launchConfig</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>
+<p>launch configuration to send to sumo-launchd.py</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.seed</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>-1</td>
+   <td>
+<p>seed value to set in launch configuration, if missing (-1: current run number)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.autoShutdown</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>Shutdown module as soon as no more vehicles are in the simulation</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.margin</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>25</td>
+   <td>
+<p>margin to add to all received vehicle positions</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.roiRoads</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>which roads (e.g. "hwy1 hwy2") are considered to consitute the region of interest, if not empty</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.roiRects</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>which rectangles (e.g. "0,0-10,10 20,20-30,30) are considered to consitute the region of interest, if not empty</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inetmanet-2.0/doc/neddoc/inet.world.traci.TraCIScenarioManagerLaunchd.html">manager</a>.penetrationRate</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>the probability of a vehicle being equipped with Car2X technology</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">module</span><span style="color: #000000; "> </span><span style="color: #000000; ">Highway</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">channelControl</span><span style="color: #000000; ">: </span><span style="color: #000000; ">ChannelControl</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=256,128&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">manager</span><span style="color: #000000; ">: </span><span style="color: #000000; ">TraCIScenarioManagerLaunchd</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=512,128&quot;</span><span style="color: #000000; ">);
+        }
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

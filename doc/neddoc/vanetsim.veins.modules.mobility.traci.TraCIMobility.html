@@ -1,0 +1,222 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>TraCIMobility</i></h2>
+<b>Package:</b> vanetsim.veins.modules.mobility.traci<br/><b>File: <a href="src-veins-modules-mobility-traci-TraCIMobility.ned.html">src/veins/modules/mobility/traci/TraCIMobility.ned</a></b><br/><p><a href="../doxy/classVeins_1_1TraCIMobility.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>Used in modules created by the TraCIScenarioManager.</p>
+<p>This module relies on the TraCIScenarioManager for state updates
+and can not be used on its own.</p>
+<p>See the Veins website <a href="http://veins.car2x.org/"> for a tutorial, documentation, and publications </a>.</p>
+<p><b>Author:</b> Christoph Sommer, David Eckhoff, Luca Bedogni, Bastian Halmos, Stefan Joerer</p>
+<p><b>See also:</b> TraCIScenarioManager</p>
+<p><b>See also:</b> <a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">TraCIScenarioManagerLaunchd</a></p>
+<img src="vanetsim.veins.modules.mobility.traci.TraCIMobility-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="vanetsim.veins.modules.mobility.traci.TraCIMobility.html" title="TraCIMobility" alt="TraCIMobility" coords="0,31,134,71">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.veins.modules.mobility.traci.TraCIMobility-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.veins.modules.mobility.traci.TraCIMobility.html" title="Simple Module TraCIMobility" alt="" coords="5,6,104,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.veins.modules.mobility.traci.TraCIMobility-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="vanetsim.veins.modules.mobility.traci.TraCIMobility.html" title="Simple Module TraCIMobility" alt="" coords="5,81,104,106">
+<area shape="rect" id="node2" href="vanetsim.veins.base.modules.BaseMobility.html" title="Simple Module BaseMobility" alt="" coords="6,6,103,31">
+</map>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.veins.base.modules.BaseMobility.html">BaseMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Module which is responsible for mobility
+related information like position and movement
+<a href="vanetsim.veins.base.modules.BaseMobility.html">BaseMobility</a> itself defines a static mobility
+pattern (means only a position, no movement).
+Mobility modules which extend from this module
+will define more complex movement patterns.</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>notAffectedByHostState</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch for the core framework</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>x</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>x coordinate of the nodes' position (-1 = random)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>y</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>y coordinate of the nodes' position (-1 = random)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>z</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>z coordinate of the nodes' position (-1 = random)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>antennaPositionOffset</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.0m</td>
+   <td>
+<p>position offset of the antenna of the front of the car</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>accidentCount</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>number of accidents</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>accidentStart</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(30s,60s)</td>
+   <td>
+<p>time until first accident, relative to departure time</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>accidentDuration</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(30s,60s)</td>
+   <td>
+<p>duration of accident</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>accidentInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(30s,60s)</td>
+   <td>
+<p>time between accidents</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=block/cogwheel</i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>class</td>
+   <td><i>Veins::TraCIMobility</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Used in modules created by the TraCIScenarioManager.
+//
+// This module relies on the TraCIScenarioManager for state updates
+// and can not be used on its own.
+//
+// See the Veins website </span><span style="color: #800000; ">&lt;a href=&quot;http://veins.car2x.org/&quot;&gt;</span><span style="color: #808080; font-style: italic; "> for a tutorial, documentation, and publications </span><span style="color: #800000; ">&lt;/a&gt;</span><span style="color: #808080; font-style: italic; ">.
+//
+// </span><span style="color: #000080; ">@author</span><span style="color: #808080; font-style: italic; "> Christoph Sommer, David Eckhoff, Luca Bedogni, Bastian Halmos, Stefan Joerer
+//
+// </span><span style="color: #000080; ">@see</span><span style="color: #808080; font-style: italic; "> TraCIScenarioManager
+// </span><span style="color: #000080; ">@see</span><span style="color: #808080; font-style: italic; "> TraCIScenarioManagerLaunchd
+//
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">TraCIMobility</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BaseMobility</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #000000; ">Veins</span><span style="color: #000000; ">::</span><span style="color: #000000; ">TraCIMobility</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=block/cogwheel&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">debug</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);  </span><span style="color: #808080; font-style: italic; ">// debug switch
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">antennaPositionOffset</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;m&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">0</span><span style="color: #000000; ">m</span><span style="color: #000000; ">);  </span><span style="color: #808080; font-style: italic; ">// position offset of the antenna of the front of the car
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">accidentCount</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">);  </span><span style="color: #808080; font-style: italic; ">// number of accidents
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">accidentStart</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #800080; font-weight: bold; ">uniform</span><span style="color: #000000; ">(</span><span style="color: #008000; ">30</span><span style="color: #000000; ">s</span><span style="color: #000000; ">,</span><span style="color: #008000; ">60</span><span style="color: #000000; ">s</span><span style="color: #000000; ">));  </span><span style="color: #808080; font-style: italic; ">// time until first accident, relative to departure time
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">volatile</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">accidentDuration</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #800080; font-weight: bold; ">uniform</span><span style="color: #000000; ">(</span><span style="color: #008000; ">30</span><span style="color: #000000; ">s</span><span style="color: #000000; ">,</span><span style="color: #008000; ">60</span><span style="color: #000000; ">s</span><span style="color: #000000; ">));  </span><span style="color: #808080; font-style: italic; ">// duration of accident
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">volatile</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">accidentInterval</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #800080; font-weight: bold; ">uniform</span><span style="color: #000000; ">(</span><span style="color: #008000; ">30</span><span style="color: #000000; ">s</span><span style="color: #000000; ">,</span><span style="color: #008000; ">60</span><span style="color: #000000; ">s</span><span style="color: #000000; ">));  </span><span style="color: #808080; font-style: italic; ">// time between accidents
+</span><span style="color: #000000; ">}
+
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

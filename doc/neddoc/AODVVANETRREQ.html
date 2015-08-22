@@ -1,0 +1,224 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Class <i>AODVVANETRREQ</i></h2>
+<b>File: <a href="src-routing-aodvvanet-AODVVANETControlPackets.msg.html">src/routing/aodvvanet/AODVVANETControlPackets.msg</a></b><br/><p><a href="../doxy/classAODVVANETRREQ.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>Represents an AODVVANET(<a href="vanetsim.simulations.aodvvanet.AODVVANET.html">1</a>,<a href="vanetsim.AODVVANET.html">2</a>) Route Request</p>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-msg-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="AODVVANETRREQ-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="AODVVANETRREQ.html" title="Class AODVVANETRREQ" alt="" coords="5,6,149,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-msg-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="AODVVANETRREQ-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="AODVVANETRREQ.html" title="Class AODVVANETRREQ" alt="" coords="27,81,171,106">
+<area shape="rect" id="node2" href="AODVVANETControlPacket.html" title="Packet AODVVANETControlPacket" alt="" coords="5,6,192,31">
+</map>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="AODVVANETControlPacket.html">AODVVANETControlPacket</a>
+   </td>
+   <td>
+<i>packet</i>
+   </td>
+   <td>
+
+<p>Base packet for AODVVANET(<a href="vanetsim.simulations.aodvvanet.AODVVANET.html">1</a>,<a href="vanetsim.AODVVANET.html">2</a>) Control Packets</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Fields:</h3>
+<table class="fieldstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>packetType</td>
+   <td>
+      <i>
+unsigned int</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>joinFlag</td>
+   <td>
+      <i>
+bool</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>repairFlag</td>
+   <td>
+      <i>
+bool</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>gratuitousRREPFlag</td>
+   <td>
+      <i>
+bool</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>destOnlyFlag</td>
+   <td>
+      <i>
+bool</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>unknownSeqNumFlag</td>
+   <td>
+      <i>
+bool</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>hopCount</td>
+   <td>
+      <i>
+unsigned int</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>rreqId</td>
+   <td>
+      <i>
+unsigned int</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>destAddr</td>
+   <td>
+      <i>
+IPv4Address</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>destSeqNum</td>
+   <td>
+      <i>
+unsigned int</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>originatorAddr</td>
+   <td>
+      <i>
+IPv4Address</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>originatorSeqNum</td>
+   <td>
+      <i>
+unsigned int</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>position</td>
+   <td>
+      <i>
+Coord</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>speed</td>
+   <td>
+      <i>
+Coord</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>acceleration</td>
+   <td>
+      <i>
+Coord</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>direction</td>
+   <td>
+      <i>
+Coord</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>twr</td>
+   <td>
+      <i>
+double</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>expirationTime</td>
+   <td>
+      <i>
+double</i>
+   </td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Represents an AODVVANET Route Request
+//
+</span><span style="color: #800000; font-weight: bold; ">class</span><span style="color: #000000; "> </span><span style="color: #000000; ">AODVVANETRREQ</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">AODVVANETControlPacket</span><span style="color: #000000; ">
+{
+    </span><span style="color: #000080; font-weight: bold; ">unsigned</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">packetType</span><span style="color: #000000; "> = </span><span style="color: #000000; ">RREQ</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">joinFlag</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">repairFlag</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">gratuitousRREPFlag</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">destOnlyFlag</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">unknownSeqNumFlag</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">unsigned</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">hopCount</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">unsigned</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">rreqId</span><span style="color: #000000; ">;
+    </span><span style="color: #000000; ">IPv4Address</span><span style="color: #000000; "> </span><span style="color: #000000; ">destAddr</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">unsigned</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">destSeqNum</span><span style="color: #000000; ">;
+    </span><span style="color: #000000; ">IPv4Address</span><span style="color: #000000; "> </span><span style="color: #000000; ">originatorAddr</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">unsigned</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">originatorSeqNum</span><span style="color: #000000; ">;
+    </span><span style="color: #000000; ">Coord</span><span style="color: #000000; "> </span><span style="color: #000000; ">position</span><span style="color: #000000; ">;
+    </span><span style="color: #000000; ">Coord</span><span style="color: #000000; "> </span><span style="color: #000000; ">speed</span><span style="color: #000000; ">;
+    </span><span style="color: #000000; ">Coord</span><span style="color: #000000; "> </span><span style="color: #000000; ">acceleration</span><span style="color: #000000; ">;
+    </span><span style="color: #000000; ">Coord</span><span style="color: #000000; "> </span><span style="color: #000000; ">direction</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">twr</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">expirationTime</span><span style="color: #000000; ">;
+}
+
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

@@ -1,0 +1,78 @@
+----------------------------------------------------------------------
+
+
+Tcl error: modinsp.cc#621: bad window path name ""
+    while executing
+"winfo toplevel [focus]"
+    invoked from within
+"if [catch {
+       opp_displaystring $dispstr parse tags $submodptr 1
+
+       # scale (x,y)
+       if {$scaling != ""} {
+           set x [expr $scali..."
+    (procedure "graphicalModuleWindow:drawSubmodule" line 20)
+    invoked from within
+"graphicalModuleWindow:drawSubmodule .ptr0x4dda5a0-2.c ptr0x50fb180 84.8327 97.5422 {vehicle[0]} r=2cm {} 0"
+
+
+Tcl error: modinsp.cc#621: bad window path name ""
+    while executing
+"winfo toplevel [focus]"
+    invoked from within
+"if [catch {
+       opp_displaystring $dispstr parse tags $submodptr 1
+
+       # scale (x,y)
+       if {$scaling != ""} {
+           set x [expr $scali..."
+    (procedure "graphicalModuleWindow:drawSubmodule" line 20)
+    invoked from within
+"graphicalModuleWindow:drawSubmodule .ptr0x4dda5a0-2.c ptr0x50fb180 84.8327 97.5422 {vehicle[0]} {t=↘;b=3,3,rect,red,red,0;r=2cm} {} 0"
+
+
+Tcl error: modinsp.cc#621: bad window path name ""
+    while executing
+"winfo toplevel [focus]"
+    invoked from within
+"if [catch {
+       opp_displaystring $dispstr parse tags $submodptr 1
+
+       # scale (x,y)
+       if {$scaling != ""} {
+           set x [expr $scali..."
+    (procedure "graphicalModuleWindow:drawSubmodule" line 20)
+    invoked from within
+"graphicalModuleWindow:drawSubmodule .ptr0x4dda5a0-2.c ptr0x50fb180 1020 38 {vehicle[0]} {p=1020,38;t=↘;b=3,3,rect,red,red,0;r=2cm} {} 0"
+
+
+Tcl error: modinsp.cc#621: bad window path name ""
+    while executing
+"winfo toplevel [focus]"
+    invoked from within
+"if [catch {
+       opp_displaystring $dispstr parse tags $submodptr 1
+
+       # scale (x,y)
+       if {$scaling != ""} {
+           set x [expr $scali..."
+    (procedure "graphicalModuleWindow:drawSubmodule" line 20)
+    invoked from within
+"graphicalModuleWindow:drawSubmodule .ptr0x4dda5a0-2.c ptr0x50fb180 1020 38 {vehicle[0]} {r2=249,,blue;r1=4445,,gray;p=1020,38;t=↘;b=3,3,rect,red,red..."
+
+
+Tcl error: modinsp.cc#621: bad window path name ""
+    while executing
+"winfo toplevel [focus]"
+    invoked from within
+"if [catch {
+       opp_displaystring $dispstr parse tags $submodptr 1
+
+       # scale (x,y)
+       if {$scaling != ""} {
+           set x [expr $scali..."
+    (procedure "graphicalModuleWindow:drawSubmodule" line 20)
+    invoked from within
+"graphicalModuleWindow:drawSubmodule .ptr0x4dda5a0-2.c ptr0x50fb180 1020 38 {vehicle[0]} {r2=249,,blue;r1=4445,,gray;p=1020,38;t=↘;b=3,3,rect,red,red..."
+
+

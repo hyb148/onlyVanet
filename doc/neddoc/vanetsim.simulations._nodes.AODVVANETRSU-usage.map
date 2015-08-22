@@ -1,0 +1,10 @@
+<area shape="rect" id="node1" href="vanetsim.simulations._nodes.AODVVANETRSU.html" title="Compound Module AODVVANETRSU" alt="" coords="457,81,591,106">
+<area shape="rect" id="node2" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.common.InterfaceTable.html" title="Simple Module InterfaceTable" alt="" coords="5,155,109,181">
+<area shape="rect" id="node3" href="vanetsim.vanetrouting.mobility.contract.IVANETMobility.html" title="Module Interface IVANETMobility" alt="" coords="134,155,249,181">
+<area shape="rect" id="node4" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.RoutingTable.html" title="Simple Module RoutingTable" alt="" coords="275,155,373,181">
+<area shape="rect" id="node5" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html" title="Compound Module NetworkLayer" alt="" coords="398,155,500,181">
+<area shape="rect" id="node6" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.autorouting.ipv4.HostAutoConfigurator.html" title="Simple Module HostAutoConfigurator" alt="" coords="525,155,672,181">
+<area shape="rect" id="node7" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.ieee80211.Ieee80211Nic.html" title="Compound Module Ieee80211Nic" alt="" coords="697,155,799,181">
+<area shape="rect" id="node8" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="824,155,923,181">
+<area shape="rect" id="node9" href="../../../inetmanet-2.0/doc/neddoc/inet.base.NotificationBoard.html" title="Simple Module NotificationBoard" alt="" coords="947,155,1069,181">
+<area shape="rect" id="node10" href="vanetsim.simulations.aodvvanet.AODVVANET.html" title="Network AODVVANET" alt="" coords="471,6,576,31">

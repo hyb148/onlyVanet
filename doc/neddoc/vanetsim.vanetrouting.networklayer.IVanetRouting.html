@@ -1,0 +1,49 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Module Interface <i>IVanetRouting</i></h2>
+<b>Package:</b> vanetsim.vanetrouting.networklayer<br/><b>File: <a href="src-vanetrouting-networklayer-IVanetRouting.ned.html">src/vanetrouting/networklayer/IVanetRouting.ned</a></b><br/><p>(no description)</p><img src="vanetsim.vanetrouting.networklayer.IVanetRouting-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="vanetsim.vanetrouting.networklayer.IVanetRouting.html" title="IVanetRouting" alt="IVanetRouting" coords="0,31,214,71">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.vanetrouting.networklayer.IVanetRouting-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.vanetrouting.networklayer.IVanetRouting.html" title="Module Interface IVanetRouting" alt="" coords="5,6,109,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.vanetrouting.networklayer.IVanetRouting-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="vanetsim.vanetrouting.networklayer.IVanetRouting.html" title="Module Interface IVanetRouting" alt="" coords="166,6,271,31">
+<area shape="rect" id="node2" href="vanetsim.AODVVANET.html" title="Simple Module AODVVANET" alt="" coords="5,81,109,106">
+<area shape="rect" id="node3" href="vanetsim.BITCAR.html" title="Simple Module BITCAR" alt="" coords="135,81,207,106">
+<area shape="rect" id="node4" href="vanetsim.RBVTP.html" title="Simple Module RBVTP" alt="" coords="231,81,303,106">
+<area shape="rect" id="node5" href="vanetsim.RBVTR.html" title="Simple Module RBVTR" alt="" coords="327,81,399,106">
+</map>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=block/routing</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">moduleinterface</span><span style="color: #000000; "> </span><span style="color: #000000; ">IVanetRouting</span><span style="color: #000000; ">
+{
+    </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=block/routing&quot;</span><span style="color: #000000; ">);
+    </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">input</span><span style="color: #000000; "> </span><span style="color: #000000; ">from_ip</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">output</span><span style="color: #000000; "> </span><span style="color: #000000; ">to_ip</span><span style="color: #000000; ">;
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

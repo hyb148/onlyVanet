@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['radio',['Radio',['../classVeins_1_1Radio.html',1,'Veins']]],
+  ['radiostateanaloguemodel',['RadioStateAnalogueModel',['../classRadioStateAnalogueModel.html',1,'']]],
+  ['rbvtrtracibuffer',['rbvtrTraCIBuffer',['../classrbvtrTraCIScenarioManager_1_1rbvtrTraCIBuffer.html',1,'rbvtrTraCIScenarioManager']]],
+  ['rbvtrtracicoord',['rbvtrTraCICoord',['../structrbvtrTraCIScenarioManager_1_1rbvtrTraCICoord.html',1,'rbvtrTraCIScenarioManager']]],
+  ['rbvtrtracidemo',['rbvtrTraCIDemo',['../classrbvtrTraCIDemo.html',1,'']]],
+  ['rbvtrtracimobility',['rbvtrTraCIMobility',['../classrbvtrTraCIMobility.html',1,'']]],
+  ['rbvtrtracimobilityaccess',['rbvtrTraCIMobilityAccess',['../classrbvtrTraCIMobilityAccess.html',1,'']]],
+  ['rbvtrtraciscenariomanager',['rbvtrTraCIScenarioManager',['../classrbvtrTraCIScenarioManager.html',1,'']]],
+  ['rbvtrtraciscenariomanageraccess',['rbvtrTraCIScenarioManagerAccess',['../classrbvtrTraCIScenarioManagerAccess.html',1,'']]],
+  ['rbvtrtraciscenariomanagerlaunchd',['rbvtrTraCIScenarioManagerLaunchd',['../classrbvtrTraCIScenarioManagerLaunchd.html',1,'']]],
+  ['rbvtrtraciscenariomanagerlaunchdaccess',['rbvtrTraCIScenarioManagerLaunchdAccess',['../classrbvtrTraCIScenarioManagerLaunchdAccess.html',1,'']]],
+  ['rbvtrtracitestapp',['rbvtrTraCITestApp',['../classrbvtrTraCITestApp.html',1,'']]],
+  ['result_5ft',['result_t',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/structcChannel_1_1result__t.html',1,'cChannel']]],
+  ['road',['Road',['../classVeins_1_1TraCICommandInterface_1_1Road.html',1,'Veins::TraCICommandInterface']]],
+  ['route',['Route',['../classVeins_1_1TraCICommandInterface_1_1Route.html',1,'Veins::TraCICommandInterface']]],
+  ['rreqidentifier',['RREQIdentifier',['../classAODVVANETRouting_1_1RREQIdentifier.html',1,'AODVVANETRouting']]],
+  ['rreqidentifiercompare',['RREQIdentifierCompare',['../classAODVVANETRouting_1_1RREQIdentifierCompare.html',1,'AODVVANETRouting']]],
+  ['rsamconstmappingiterator',['RSAMConstMappingIterator',['../classRSAMConstMappingIterator.html',1,'']]],
+  ['rsammapping',['RSAMMapping',['../classRSAMMapping.html',1,'']]]
+];

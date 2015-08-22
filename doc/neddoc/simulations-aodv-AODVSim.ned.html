@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">NED File <i>simulations/aodv/AODVSim.ned</i></h2>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.simulations.aodv.AODVSim.html">AODVSim</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #000000; ">
+</span><span style="color: #800000; font-weight: bold; ">package</span><span style="color: #000000; "> </span><span style="color: #000000; ">vanetsim</span><span style="color: #000000; ">.</span><span style="color: #000000; ">simulations</span><span style="color: #000000; ">.</span><span style="color: #000000; ">aodv</span><span style="color: #000000; ">;
+
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; ">  </span><span style="color: #000000; ">vanetsim</span><span style="color: #000000; ">.</span><span style="color: #000000; ">simulations</span><span style="color: #000000; ">.</span><span style="color: #000000; ">_nodes</span><span style="color: #000000; ">.</span><span style="color: #000000; ">RSU</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; ">  </span><span style="color: #000000; ">vanetsim</span><span style="color: #000000; ">.</span><span style="color: #000000; ">simulations</span><span style="color: #000000; ">.</span><span style="color: #000000; ">_nodes</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Car</span><span style="color: #000000; ">;
+
+</span><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">AODVSim</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">vanetsim</span><span style="color: #000000; ">.</span><span style="color: #000000; ">simulations</span><span style="color: #000000; ">.</span><span style="color: #000000; ">_nodes</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Scenario</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">rsu</span><span style="color: #000000; ">[</span><span style="color: #008000; ">1</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">RSU</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=150,140;b=10,10,oval&quot;</span><span style="color: #000000; ">);
+        }
+}</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

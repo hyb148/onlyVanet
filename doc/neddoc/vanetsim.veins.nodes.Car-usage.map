@@ -1,0 +1,5 @@
+<area shape="rect" id="node1" href="vanetsim.veins.nodes.Car.html" title="Compound Module Car" alt="" coords="172,6,244,31">
+<area shape="rect" id="node2" href="vanetsim.veins.base.modules.IMobility.html" title="Module Interface IMobility" alt="" coords="5,81,77,106">
+<area shape="rect" id="node3" href="vanetsim.veins.modules.nic.INic80211p.html" title="Module Interface INic80211p" alt="" coords="101,81,189,106">
+<area shape="rect" id="node4" href="vanetsim.veins.base.modules.IBaseApplLayer.html" title="Module Interface IBaseApplLayer" alt="" coords="213,81,328,106">
+<area shape="rect" id="node5" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="352,81,451,106">

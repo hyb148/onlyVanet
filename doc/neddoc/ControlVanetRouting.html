@@ -1,0 +1,66 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Packet <i>ControlVanetRouting</i></h2>
+<b>File: <a href="src-vanetrouting-base-ControlVanetRouting.msg.html">src/vanetrouting/base/ControlVanetRouting.msg</a></b><br/><p><a href="../doxy/classControlVanetRouting.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>ICMP message class</p>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-msg-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="ControlVanetRouting-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="ControlVanetRouting.html" title="Packet ControlVanetRouting" alt="" coords="5,6,147,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-msg-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="ControlVanetRouting-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="ControlVanetRouting.html" title="Packet ControlVanetRouting" alt="" coords="5,6,147,31">
+</map>
+<h3 class="subtitle">Fields:</h3>
+<table class="fieldstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>srcAddress</td>
+   <td>
+      <i>
+VanetAddress</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>destAddress</td>
+   <td>
+      <i>
+VanetAddress</i>
+   </td>
+   <td></td>
+</tr>
+<tr class="local">
+   <td>optionCode</td>
+   <td>
+      <i>
+int</i>
+   </td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// ICMP message class
+//
+</span><span style="color: #800000; font-weight: bold; ">packet</span><span style="color: #000000; "> </span><span style="color: #000000; ">ControlVanetRouting</span><span style="color: #000000; ">
+{
+    </span><span style="color: #000000; ">VanetAddress</span><span style="color: #000000; "> </span><span style="color: #000000; ">srcAddress</span><span style="color: #000000; ">;
+    </span><span style="color: #000000; ">VanetAddress</span><span style="color: #000000; "> </span><span style="color: #000000; ">destAddress</span><span style="color: #000000; ">;
+    </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">optionCode</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@enum</span><span style="color: #000000; ">(</span><span style="color: #000000; ">VanetControlType</span><span style="color: #000000; ">) = </span><span style="color: #000000; ">VANET_ROUTE_NO_OPTION</span><span style="color: #000000; ">;
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

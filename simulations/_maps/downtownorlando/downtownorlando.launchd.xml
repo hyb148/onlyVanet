@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- debug config -->
+<launch>
+	<basedir path="/home/administrator/ITS/omnetpp-4.4.1/samples/onlyVanet/simulations/_maps/downtownorlando" />
+	<copy file="downtownorlando.net.xml" />
+	<copy file="downtownorlando.rou.xml" />
+	<copy file="downtownorlando.sumo.cfg" type="config" />
+</launch>
+

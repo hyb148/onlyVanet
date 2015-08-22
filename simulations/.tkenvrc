@@ -1,0 +1,3 @@
+# Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "AODVSim" "AODVSim" "2" "607x337+777+14:normal"
+

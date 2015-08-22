@@ -1,0 +1,210 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>BaseVanetRouting</i></h2>
+<b>Package:</b> vanetsim.vanetrouting.base<br/><b>File: <a href="src-vanetrouting-base-BaseVanetRouting.ned.html">src/vanetrouting/base/BaseVanetRouting.ned</a></b><br/>
+<p>Base module for vanet routing protocols</p>
+<img src="vanetsim.vanetrouting.base.BaseVanetRouting-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="vanetsim.vanetrouting.base.BaseVanetRouting.html" title="BaseVanetRouting" alt="BaseVanetRouting" coords="0,31,168,71">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.vanetrouting.base.BaseVanetRouting-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.vanetrouting.base.BaseVanetRouting.html" title="Simple Module BaseVanetRouting" alt="" coords="4,6,133,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.vanetrouting.base.BaseVanetRouting-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="vanetsim.vanetrouting.base.BaseVanetRouting.html" title="Simple Module BaseVanetRouting" alt="" coords="153,6,283,31">
+<area shape="rect" id="node2" href="vanetsim.AODVVANET.html" title="Simple Module AODVVANET" alt="" coords="5,81,109,106">
+<area shape="rect" id="node3" href="vanetsim.BITCAR.html" title="Simple Module BITCAR" alt="" coords="135,81,207,106">
+<area shape="rect" id="node4" href="vanetsim.RBVTP.html" title="Simple Module RBVTP" alt="" coords="231,81,303,106">
+<area shape="rect" id="node5" href="vanetsim.RBVTR.html" title="Simple Module RBVTR" alt="" coords="327,81,399,106">
+</map>
+<h3 class="subtitle">Known subclasses:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.AODVVANET.html">AODVVANET</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="vanetsim.BITCAR.html">BITCAR</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="vanetsim.RBVTP.html">RBVTP</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="vanetsim.RBVTR.html">RBVTR</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>excludedInterfaces</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>list of interfaces excluded by the vanet routing protocol</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>interfaces</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"prefix(wlan)"</td>
+   <td>
+<p>list of routing interfaces were the routing protocol is active, the
+prefix(namei) indicate all the interfaces with "namei" in his names</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>useVanetLabelRouting</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>the routing entries are marked IPv4Route::MANET, this label force an exact search with independent of the mask</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>useICMP</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>By default the module use the ICMP but it's necessary to activate with the method setSendToICMP(true)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>setICMPSourceAddress</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>set the datagram source address if the address is undefined to the address of node
+This parameter allow that the ICMP messages could arrive to the source applications</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>vanetPurgeRoutingTables</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>autoassignAddress</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>assign IP adresses automatically to the interfaces</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>autoassignAddressBase</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"10.0.0.0"</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>isStaticNode</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=block/routing</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Base module for vanet routing protocols
+//
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">BaseVanetRouting</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=block/routing&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">excludedInterfaces</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// list of interfaces excluded by the vanet routing protocol
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">interfaces</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;prefix(wlan)&quot;</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// list of routing interfaces were the routing protocol is active, the
+</span><span style="color: #000000; ">                                                </span><span style="color: #808080; font-style: italic; ">// prefix(namei) indicate all the interfaces with &quot;namei&quot; in his names
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">useVanetLabelRouting</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// the routing entries are marked IPv4Route::MANET, this label force an exact search with independent of the mask
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">useICMP</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// By default the module use the ICMP but it's necessary to activate with the method setSendToICMP(true)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">setICMPSourceAddress</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// set the datagram source address if the address is undefined to the address of node
+</span><span style="color: #000000; ">                                                 </span><span style="color: #808080; font-style: italic; ">// This parameter allow that the ICMP messages could arrive to the source applications
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">vanetPurgeRoutingTables</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">autoassignAddress</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// assign IP adresses automatically to the interfaces
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">autoassignAddressBase</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;10.0.0.0&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">isStaticNode</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

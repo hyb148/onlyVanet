@@ -1,0 +1,569 @@
+file 83729 1440178858                                           
+version 2
+run AODVVANET-Simple-100-0-20150821-23:10:33-30931
+attr configname AODVVANET-Simple-100
+attr datetime 20150821-23:10:33
+attr experiment AODVVANET-Simple-100
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network AODVVANET
+attr processid 30931
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 7  AODVVANET.vehicle[0].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 22  AODVVANET.vehicle[0].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 21  AODVVANET.vehicle[0].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 24  AODVVANET.vehicle[0].wlan.mac  "throughput AC0"  ETV
+vector 13  AODVVANET.vehicle[0].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 15  AODVVANET.vehicle[0].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 14  AODVVANET.vehicle[0].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 17  AODVVANET.vehicle[0].mobility  posx  ETV
+vector 18  AODVVANET.vehicle[0].mobility  posy  ETV
+vector 0  AODVVANET.vehicle[0].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 11  AODVVANET.vehicle[0].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 10  AODVVANET.vehicle[0].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 19  AODVVANET.vehicle[0].mobility  speed  ETV
+vector 20  AODVVANET.vehicle[0].mobility  acceleration  ETV
+vector 34  AODVVANET.vehicle[1].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 49  AODVVANET.vehicle[1].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 48  AODVVANET.vehicle[1].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 51  AODVVANET.vehicle[1].wlan.mac  "throughput AC0"  ETV
+vector 40  AODVVANET.vehicle[1].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 42  AODVVANET.vehicle[1].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 41  AODVVANET.vehicle[1].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 44  AODVVANET.vehicle[1].mobility  posx  ETV
+vector 45  AODVVANET.vehicle[1].mobility  posy  ETV
+vector 27  AODVVANET.vehicle[1].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 32  AODVVANET.vehicle[1].networkLayer.arp  sentReq:vector  ETV
+attr title  "ARP request sent, vector"
+vector 38  AODVVANET.vehicle[1].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 37  AODVVANET.vehicle[1].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 61  AODVVANET.vehicle[2].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 76  AODVVANET.vehicle[2].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 75  AODVVANET.vehicle[2].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 78  AODVVANET.vehicle[2].wlan.mac  "throughput AC0"  ETV
+vector 67  AODVVANET.vehicle[2].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 69  AODVVANET.vehicle[2].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 68  AODVVANET.vehicle[2].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 71  AODVVANET.vehicle[2].mobility  posx  ETV
+vector 72  AODVVANET.vehicle[2].mobility  posy  ETV
+vector 46  AODVVANET.vehicle[1].mobility  speed  ETV
+vector 54  AODVVANET.vehicle[2].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 65  AODVVANET.vehicle[2].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 64  AODVVANET.vehicle[2].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 47  AODVVANET.vehicle[1].mobility  acceleration  ETV
+vector 73  AODVVANET.vehicle[2].mobility  speed  ETV
+vector 74  AODVVANET.vehicle[2].mobility  acceleration  ETV
+vector 88  AODVVANET.vehicle[3].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 103  AODVVANET.vehicle[3].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 102  AODVVANET.vehicle[3].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 105  AODVVANET.vehicle[3].wlan.mac  "throughput AC0"  ETV
+vector 94  AODVVANET.vehicle[3].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 96  AODVVANET.vehicle[3].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 95  AODVVANET.vehicle[3].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 98  AODVVANET.vehicle[3].mobility  posx  ETV
+vector 99  AODVVANET.vehicle[3].mobility  posy  ETV
+vector 81  AODVVANET.vehicle[3].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 92  AODVVANET.vehicle[3].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 91  AODVVANET.vehicle[3].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 100  AODVVANET.vehicle[3].mobility  speed  ETV
+vector 101  AODVVANET.vehicle[3].mobility  acceleration  ETV
+vector 115  AODVVANET.vehicle[4].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 130  AODVVANET.vehicle[4].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 129  AODVVANET.vehicle[4].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 132  AODVVANET.vehicle[4].wlan.mac  "throughput AC0"  ETV
+vector 121  AODVVANET.vehicle[4].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 123  AODVVANET.vehicle[4].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 122  AODVVANET.vehicle[4].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 125  AODVVANET.vehicle[4].mobility  posx  ETV
+vector 126  AODVVANET.vehicle[4].mobility  posy  ETV
+vector 108  AODVVANET.vehicle[4].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 119  AODVVANET.vehicle[4].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 118  AODVVANET.vehicle[4].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 127  AODVVANET.vehicle[4].mobility  speed  ETV
+vector 128  AODVVANET.vehicle[4].mobility  acceleration  ETV
+vector 142  AODVVANET.vehicle[5].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 157  AODVVANET.vehicle[5].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 156  AODVVANET.vehicle[5].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 159  AODVVANET.vehicle[5].wlan.mac  "throughput AC0"  ETV
+vector 148  AODVVANET.vehicle[5].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 150  AODVVANET.vehicle[5].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 149  AODVVANET.vehicle[5].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 152  AODVVANET.vehicle[5].mobility  posx  ETV
+vector 153  AODVVANET.vehicle[5].mobility  posy  ETV
+vector 135  AODVVANET.vehicle[5].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 146  AODVVANET.vehicle[5].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 145  AODVVANET.vehicle[5].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 154  AODVVANET.vehicle[5].mobility  speed  ETV
+vector 155  AODVVANET.vehicle[5].mobility  acceleration  ETV
+vector 169  AODVVANET.vehicle[6].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 184  AODVVANET.vehicle[6].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 183  AODVVANET.vehicle[6].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 186  AODVVANET.vehicle[6].wlan.mac  "throughput AC0"  ETV
+vector 175  AODVVANET.vehicle[6].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 177  AODVVANET.vehicle[6].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 176  AODVVANET.vehicle[6].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 179  AODVVANET.vehicle[6].mobility  posx  ETV
+vector 180  AODVVANET.vehicle[6].mobility  posy  ETV
+vector 162  AODVVANET.vehicle[6].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 173  AODVVANET.vehicle[6].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 172  AODVVANET.vehicle[6].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 181  AODVVANET.vehicle[6].mobility  speed  ETV
+vector 182  AODVVANET.vehicle[6].mobility  acceleration  ETV
+vector 196  AODVVANET.vehicle[7].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 211  AODVVANET.vehicle[7].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 210  AODVVANET.vehicle[7].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 213  AODVVANET.vehicle[7].wlan.mac  "throughput AC0"  ETV
+vector 202  AODVVANET.vehicle[7].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 204  AODVVANET.vehicle[7].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 203  AODVVANET.vehicle[7].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 206  AODVVANET.vehicle[7].mobility  posx  ETV
+vector 207  AODVVANET.vehicle[7].mobility  posy  ETV
+vector 189  AODVVANET.vehicle[7].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 200  AODVVANET.vehicle[7].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 199  AODVVANET.vehicle[7].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 26  AODVVANET.vehicle[0].wlan.radio  snirVector  ETV
+vector 12  AODVVANET.vehicle[0].wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 9  AODVVANET.vehicle[0].wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 215  AODVVANET.vehicle[7].wlan.radio  snirVector  ETV
+vector 201  AODVVANET.vehicle[7].wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 198  AODVVANET.vehicle[7].wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 208  AODVVANET.vehicle[7].mobility  speed  ETV
+vector 209  AODVVANET.vehicle[7].mobility  acceleration  ETV
+vector 223  AODVVANET.vehicle[8].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 238  AODVVANET.vehicle[8].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 237  AODVVANET.vehicle[8].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 240  AODVVANET.vehicle[8].wlan.mac  "throughput AC0"  ETV
+vector 229  AODVVANET.vehicle[8].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 231  AODVVANET.vehicle[8].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 230  AODVVANET.vehicle[8].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 233  AODVVANET.vehicle[8].mobility  posx  ETV
+vector 234  AODVVANET.vehicle[8].mobility  posy  ETV
+vector 216  AODVVANET.vehicle[8].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 227  AODVVANET.vehicle[8].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 226  AODVVANET.vehicle[8].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 235  AODVVANET.vehicle[8].mobility  speed  ETV
+vector 236  AODVVANET.vehicle[8].mobility  acceleration  ETV
+vector 250  AODVVANET.vehicle[9].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 265  AODVVANET.vehicle[9].wlan.mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 264  AODVVANET.vehicle[9].wlan.mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 267  AODVVANET.vehicle[9].wlan.mac  "throughput AC0"  ETV
+vector 256  AODVVANET.vehicle[9].wlan.radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 258  AODVVANET.vehicle[9].wlan.radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 257  AODVVANET.vehicle[9].wlan.radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 260  AODVVANET.vehicle[9].mobility  posx  ETV
+vector 261  AODVVANET.vehicle[9].mobility  posy  ETV
+vector 243  AODVVANET.vehicle[9].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 254  AODVVANET.vehicle[9].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 253  AODVVANET.vehicle[9].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 134  AODVVANET.vehicle[4].wlan.radio  snirVector  ETV
+vector 120  AODVVANET.vehicle[4].wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 117  AODVVANET.vehicle[4].wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 269  AODVVANET.vehicle[9].wlan.radio  snirVector  ETV
+vector 255  AODVVANET.vehicle[9].wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 252  AODVVANET.vehicle[9].wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 262  AODVVANET.vehicle[9].mobility  speed  ETV
+vector 263  AODVVANET.vehicle[9].mobility  acceleration  ETV
+0	20226 9 16 16 8 8 1 8 8 8 64
+7	20235 8 9 9 8 8 1 0 0 0 0
+9	20243 148 652 990 35.004147148601 42.36571454494 6 62 62 372 23064
+10	20391 302 22 1001 8.002794067511 42.36903008655 12 62 62 744 46128
+11	20693 302 21 1000 8.002744067511 42.36898008655 12 62 62 744 46128
+12	20995 154 652 990 35.004147148601 42.36571454494 6 62 62 372 23064
+13	21149 15 9 9 8 8 1 2000000 2000000 2000000 4000000000000
+14	21164 9 9 9 8 8 1 0 0 0 0
+15	21173 885 9 1007 8 42.36971808655 37 0 2 30 54
+17	22058 767 9 1311 8 52 45 531.55 531.55 23919.75 12714543.1125
+18	22825 722 9 1311 8 52 45 29.95 29.95 1347.75 40365.1125
+19	23547 533 49 1311 9 52 44 0 0 0 0
+20	24080 523 61 1311 10 52 43 0 0 0 0
+21	24603 4966 9 1016 8 42.36976808655 206 0 5 432 1632
+22	29569 1770 9 1007 8 42.36971808655 74 0 2 60 108
+24	31339 427 9 984 8 42.36502654494 12 0 1555.9512301067 7402.6766135305 8222629.3724745
+26	31766 39 651 651 35.004147148601 35.004147148601 1 49.959080597222 49.959080597222 49.959080597222 2495.9097341198
+27	31805 11 72 72 12 12 1 8 8 8 64
+32	31816 35 74 155 12 14 3 1 1 3 3
+34	31851 11 65 65 12 12 1 0 0 0 0
+37	31862 56 78 159 12.00005 14.00005 3 70 70 210 14700
+38	31918 38 77 158 12 14 3 70 70 210 14700
+40	31956 17 65 65 12 12 1 2000000 2000000 2000000 4000000000000
+41	31973 11 65 65 12 12 1 0 0 0 0
+42	31984 120 65 163 12 14.000802 7 0 2 6 12
+44	32104 747 65 1311 12 52 41 1020.05 1020.05 41822.05 42660582.1025
+45	32851 665 65 1311 12 52 41 38.15 38.15 1564.15 59672.3225
+46	33516 490 100 1311 13 52 40 0 0 0 0
+47	34006 478 154 1311 14 52 39 0 0 0 0
+48	34484 752 65 166 12 14.000972 44 0 5 108 408
+49	35236 240 65 163 12 14.000802 14 0 2 12 24
+51	35476 39 65 158 12 14 3 0 560 1120 627200
+54	35515 12 108 108 13 13 1 8 8 8 64
+61	35527 12 100 100 13 13 1 0 0 0 0
+64	35539 155 125 279 13.001537673026 20.363940783784 6 62 62 372 23064
+65	35694 155 124 278 13.001487673026 20.363890783784 6 62 62 372 23064
+67	35849 18 100 100 13 13 1 2000000 2000000 2000000 4000000000000
+68	35867 12 100 100 13 13 1 0 0 0 0
+69	35879 310 100 282 13 20.364628783784 13 0 2 12 24
+71	36189 730 100 1311 13 52 40 2020.05 2020.05 80802 163224080.1
+72	36919 730 100 1311 13 52 40 1038.15 1038.15 41526 43110216.9
+73	37649 478 154 1311 14 52 39 0 0 0 0
+74	38127 466 180 1311 15 52 38 0 0 0 0
+75	38593 2110 100 284 13 20.364818783784 86 0 5 216 816
+76	40703 620 100 282 13 20.364628783784 26 0 2 24 48
+78	41323 206 100 278 13 20.363890783784 6 0 1527.0074958731 3674.1820166298 4065337.5775239
+81	41529 12 222 222 18 18 1 8 8 8 64
+88	41541 12 215 215 18 18 1 0 0 0 0
+91	41553 156 228 394 18.000405180293 25.363653163257 6 62 62 372 23064
+92	41709 156 227 393 18.000355180293 25.363603163257 6 62 62 372 23064
+94	41865 18 215 215 18 18 1 2000000 2000000 2000000 4000000000000
+95	41883 12 215 215 18 18 1 0 0 0 0
+96	41895 312 215 398 18 25.364341163257 13 0 2 12 24
+98	42207 640 215 1311 18 52 35 2020.05 2020.05 70701.75 142821070.0875
+99	42847 570 215 1311 18 52 35 38.15 38.15 1335.25 50939.7875
+100	43417 452 259 1311 19 52 34 0 0 0 0
+101	43869 439 274 1311 20 52 33 0 0 0 0
+102	44308 2210 215 401 18 25.364391163257 86 0 5 216 816
+103	46518 650 215 398 18 25.364341163257 26 0 2 24 48
+105	47168 212 215 393 18 25.363603163257 6 0 1547.8927062029 3687.225785922 4114480.8057341
+108	47380 13 301 301 22 22 1 8 8 8 64
+115	47393 13 294 294 22 22 1 0 0 0 0
+117	47406 112 1134 1263 49.001532895044 50.444843013266 4 62 62 248 15376
+118	47518 272 307 1274 22.004400436255 50.444960871475 10 62 62 620 38440
+119	47790 272 306 1273 22.004350436255 50.444910871475 10 62 62 620 38440
+120	48062 112 1134 1263 49.001532895044 50.444843013266 4 62 62 248 15376
+121	48174 19 294 294 22 22 1 2000000 2000000 2000000 4000000000000
+122	48193 13 294 294 22 22 1 0 0 0 0
+123	48206 753 294 1280 22 50.445648871475 29 0 2 24 44
+125	48959 599 294 1311 22 52 31 1520.05 1520.05 47121.55 71627112.0775
+126	49558 537 294 1311 22 52 31 38.15 38.15 1182.65 45118.0975
+127	50095 400 362 1311 23 52 30 0 0 0 0
+128	50495 387 383 1311 24 52 29 0 0 0 0
+129	50882 4342 294 1289 22 50.445718871475 166 0 5 360 1360
+130	55224 1506 294 1280 22 50.445648871475 58 0 2 48 88
+132	56730 373 294 1257 22 50.444155013266 10 0 1538.614062648 7053.4429005406 8128473.6426328
+134	57103 41 1133 1133 49.001532895044 49.001532895044 1 49.959080597222 49.959080597222 49.959080597222 2495.9097341198
+135	57144 13 434 434 27 27 1 8 8 8 64
+142	57157 13 427 427 27 27 1 0 0 0 0
+145	57170 159 440 616 27.004773344593 34.36198244489 6 62 62 372 23064
+146	57329 159 439 615 27.004723344593 34.36193244489 6 62 62 372 23064
+148	57488 19 427 427 27 27 1 2000000 2000000 2000000 4000000000000
+149	57507 13 427 427 27 27 1 0 0 0 0
+150	57520 319 427 620 27 34.36267044489 13 0 2 12 24
+152	57839 452 427 1311 27 52 26 31.55 31.55 820.3 25880.465
+153	58291 452 427 1311 27 52 26 29.95 29.95 778.7 23322.065
+154	58743 335 478 1311 28 52 25 0 0 0 0
+155	59078 322 498 1311 29 52 24 0 0 0 0
+156	59400 2168 427 623 27 34.36286044489 86 0 5 216 816
+157	61568 638 427 620 27 34.36267044489 26 0 2 24 48
+159	62206 210 427 615 27 34.36193244489 6 0 1537.4637052508 3682.9626095913 4092143.2320006
+162	62416 13 533 533 31 31 1 8 8 8 64
+169	62429 13 526 526 31 31 1 0 0 0 0
+172	62442 162 539 838 31.001132751783 38.361627141748 6 62 62 372 23064
+173	62604 162 538 837 31.001082751783 38.361577141748 6 62 62 372 23064
+175	62766 19 526 526 31 31 1 2000000 2000000 2000000 4000000000000
+176	62785 13 526 526 31 31 1 0 0 0 0
+177	62798 325 526 841 31 38.362315141748 13 0 2 12 24
+179	63123 384 526 1311 31 52 22 31.55 31.55 694.1 21898.855
+180	63507 428 526 1311 31 52 22 1029.95 1029.95 22658.9 23337534.055
+181	63935 283 584 1311 32 52 21 0 0 0 0
+182	64218 270 603 1311 33 52 20 0 0 0 0
+183	64488 2210 526 843 31 38.362425141748 86 0 5 216 816
+184	66698 650 526 841 31 38.362315141748 26 0 2 24 48
+186	67348 212 526 837 31 38.361577141748 6 0 1546.7320892572 3689.579057913 4115929.1904359
+189	67560 13 638 638 35 35 1 8 8 8 64
+196	67573 13 631 631 35 35 1 0 0 0 0
+198	67586 161 671 1009 35.00713494566 42.369718133662 6 62 62 372 23064
+199	67747 162 644 982 35.003459101489 42.365026497828 6 62 62 372 23064
+200	67909 162 643 981 35.003409101489 42.364976497828 6 62 62 372 23064
+201	68071 161 671 1009 35.00713494566 42.369718133662 6 62 62 372 23064
+202	68232 19 631 631 35 35 1 2000000 2000000 2000000 4000000000000
+203	68251 13 631 631 35 35 1 0 0 0 0
+204	68264 635 631 1008 35 42.369718133662 25 0 2 18 30
+206	68899 334 631 1311 35 52 18 520.05 520.05 9360.9 4868136.045
+207	69233 316 631 1311 35 52 18 38.15 38.15 686.7 26197.605
+208	69549 231 775 1311 36 52 17 0 0 0 0
+209	69780 218 823 1311 37 52 16 0 0 0 0
+210	69998 3140 631 1009 35 42.369718133662 122 0 5 216 816
+211	73138 1270 631 1008 35 42.369718133662 50 0 2 36 60
+213	74408 211 631 981 35 42.364976497828 6 0 1539.4874188645 3683.0401309441 4093721.5395046
+215	74619 39 670 670 35.00713494566 35.00713494566 1 49.959080597222 49.959080597222 49.959080597222 2495.9097341198
+216	74658 13 907 907 40 40 1 8 8 8 64
+223	74671 13 900 900 40 40 1 0 0 0 0
+226	74684 163 913 1085 40.003221370265 47.362423487525 6 62 62 372 23064
+227	74847 163 912 1084 40.003171370265 47.362373487525 6 62 62 372 23064
+229	75010 19 900 900 40 40 1 2000000 2000000 2000000 4000000000000
+230	75029 13 900 900 40 40 1 0 0 0 0
+231	75042 327 900 1089 40 47.363111487525 13 0 2 12 24
+233	75369 257 900 1311 40 52 13 1520.05 1520.05 19760.65 30037176.0325
+234	75626 257 900 1311 40 52 13 1038.15 1038.15 13495.95 14010820.4925
+235	75883 166 954 1311 41 52 12 0 0 0 0
+236	76049 153 977 1311 42 52 11 0 0 0 0
+237	76202 2224 900 1092 40 47.363221487525 86 0 5 216 816
+238	78426 654 900 1089 40 47.363111487525 26 0 2 24 48
+240	79080 213 900 1084 40 47.362373487525 6 0 1527.1182972634 3674.0455590869 4063675.8541941
+243	79293 14 1120 1120 49 49 1 8 8 8 64
+250	79307 14 1113 1113 49 49 1 0 0 0 0
+252	79321 112 1153 1282 49.003960980243 50.445648918587 4 62 62 248 15376
+253	79433 112 1126 1255 49.000844847932 50.444154966154 4 62 62 248 15376
+254	79545 112 1125 1254 49.000794847932 50.444104966154 4 62 62 248 15376
+255	79657 112 1153 1282 49.003960980243 50.445648918587 4 62 62 248 15376
+256	79769 20 1113 1113 49 49 1 2000000 2000000 2000000 4000000000000
+257	79789 14 1113 1113 49 49 1 0 0 0 0
+258	79803 446 1113 1281 49 50.445648918587 17 0 2 12 20
+260	80249 80 1113 1311 49 52 4 1531.55 1531.55 6126.2 9382581.61
+261	80329 72 1113 1311 49 52 4 29.95 29.95 119.8 3588.01
+262	80401 42 1249 1311 50 52 3 0 0 0 0
+263	80443 28 1300 1311 51 52 2 0 0 0 0
+264	80471 2188 1113 1282 49 50.445648918587 82 0 5 144 544
+265	82659 892 1113 1281 49 50.445648918587 34 0 2 24 40
+267	83551 137 1113 1254 49 50.444104966154 4 0 1534.2658735237 3343.8094287728 4026858.3880383
+269	83688 41 1152 1152 49.003960980243 49.003960980243 1 49.959080597222 49.959080597222 49.959080597222 2495.9097341198

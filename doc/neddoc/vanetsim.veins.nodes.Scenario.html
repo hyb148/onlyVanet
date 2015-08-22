@@ -1,0 +1,479 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Network <i>Scenario</i></h2>
+<b>Package:</b> vanetsim.veins.nodes<br/><b>File: <a href="src-veins-nodes-Scenario.ned.html">src/veins/nodes/Scenario.ned</a></b><br/><p>(no description)</p><img src="vanetsim.veins.nodes.Scenario-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="vanetsim.veins.modules.obstacle.ObstacleControl.html" title="ObstacleControl" alt="ObstacleControl" coords="210,73,275,128">
+<area shape="rect" href="vanetsim.veins.modules.world.annotations.AnnotationManager.html" title="AnnotationManager" alt="AnnotationManager" coords="222,71,303,130">
+<area shape="rect" href="vanetsim.veins.base.connectionManager.ConnectionManager.html" title="ConnectionManager" alt="ConnectionManager" coords="86,20,219,81">
+<area shape="rect" href="vanetsim.veins.base.modules.BaseWorldUtility.html" title="BaseWorldUtility" alt="BaseWorldUtility" coords="13,21,55,80">
+<area shape="rect" href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html" title="TraCIScenarioManagerLaunchd" alt="TraCIScenarioManagerLaunchd" coords="485,148,544,209">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.veins.nodes.Scenario-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.veins.nodes.Scenario.html" title="Network Scenario" alt="" coords="374,6,447,31">
+<area shape="rect" id="node2" href="vanetsim.veins.modules.obstacle.ObstacleControl.html" title="Simple Module ObstacleControl" alt="" coords="5,81,120,106">
+<area shape="rect" id="node3" href="vanetsim.veins.base.connectionManager.ConnectionManager.html" title="Simple Module ConnectionManager" alt="" coords="145,81,284,106">
+<area shape="rect" id="node4" href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html" title="Simple Module TraCIScenarioManagerLaunchd" alt="" coords="308,81,513,106">
+<area shape="rect" id="node5" href="vanetsim.veins.base.modules.BaseWorldUtility.html" title="Simple Module BaseWorldUtility" alt="" coords="537,81,657,106">
+<area shape="rect" id="node6" href="vanetsim.veins.modules.world.annotations.AnnotationManager.html" title="Simple Module AnnotationManager" alt="" coords="682,81,816,106">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.veins.nodes.Scenario-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="vanetsim.veins.nodes.Scenario.html" title="Network Scenario" alt="" coords="45,6,117,31">
+<area shape="rect" id="node2" href="vanetsim.simulations.veins.RSUExampleScenario.html" title="Network RSUExampleScenario" alt="" coords="5,81,157,106">
+</map>
+<h3 class="subtitle">Known subclasses:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.simulations.veins.RSUExampleScenario.html">RSUExampleScenario</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>playgroundSizeX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>x size of the area the nodes are in (in meters)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>playgroundSizeY</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>y size of the area the nodes are in (in meters)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>playgroundSizeZ</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>z size of the area the nodes are in (in meters)</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>isNetwork</td>
+   <td><i></i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>display</td>
+   <td><i>bgb=$playgroundSizeX,$playgroundSizeY</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.obstacle.ObstacleControl.html">obstacles</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>emit debug messages?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.obstacle.ObstacleControl.html">obstacles</a>.obstacles</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td>xml("<obstacles/>")</td>
+   <td>
+<p>obstacles to add at startup</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.world.annotations.AnnotationManager.html">annotations</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>emit debug messages?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.world.annotations.AnnotationManager.html">annotations</a>.draw</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>draw annotations?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.world.annotations.AnnotationManager.html">annotations</a>.annotations</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td>xml("<annotations/>")</td>
+   <td>
+<p>annotations to add at startup</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.base.connectionManager.ConnectionManager.html">connectionManager</a>.coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>debug switch for core framework</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.base.connectionManager.ConnectionManager.html">connectionManager</a>.sendDirect</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>send directly to the node or create separate gates for every connection</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.base.connectionManager.ConnectionManager.html">connectionManager</a>.pMax</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>maximum sending power used for this network [mW]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.base.connectionManager.ConnectionManager.html">connectionManager</a>.sat</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>minimum signal attenuation threshold [dBm]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.base.connectionManager.ConnectionManager.html">connectionManager</a>.alpha</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>minimum path loss coefficient</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.base.connectionManager.ConnectionManager.html">connectionManager</a>.carrierFrequency</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>minimum carrier frequency of the channel [Hz]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.base.connectionManager.ConnectionManager.html">connectionManager</a>.drawMaxIntfDist</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>should the maximum interference distance be displayed for each node?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.base.modules.BaseWorldUtility.html">world</a>.useTorus</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>use the playground as torus?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.base.modules.BaseWorldUtility.html">world</a>.use2D</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>use a 2-dimensional world?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>emit debug messages?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.connectAt</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0s</td>
+   <td>
+<p>when to connect to TraCI server (must be the initial timestep of the server)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.firstStepAt</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1s</td>
+   <td>
+<p>when to start synchronizing with the TraCI server (-1: immediately after connecting)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.updateInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1s</td>
+   <td>
+<p>time interval of hosts' position updates</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.moduleType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"inet.nodes.wireless.WirelessHostSimplified"</td>
+   <td>
+<p>module type to be used in the simulation for each managed vehicle</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.moduleName</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"host"</td>
+   <td>
+<p>module name to be used in the simulation for each managed vehicle</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.moduleDisplayString</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"i=misc/node2;is=vs;r=0,,#707070,1"</td>
+   <td>
+<p>module displayString to be used in the simulation for each managed vehicle</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.host</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"localhost"</td>
+   <td>
+<p>sumo-launchd.py server hostname</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.port</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>9999</td>
+   <td>
+<p>sumo-launchd.py server port</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.launchConfig</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>
+<p>launch configuration to send to sumo-launchd.py</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.seed</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>-1</td>
+   <td>
+<p>seed value to set in launch configuration, if missing (-1: current run number)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.autoShutdown</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>Shutdown module as soon as no more vehicles are in the simulation</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.margin</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>25</td>
+   <td>
+<p>margin to add to all received vehicle positions</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.roiRoads</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>which roads (e.g. "hwy1 hwy2") are considered to consitute the region of interest, if not empty</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.roiRects</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>which rectangles (e.g. "0,0-10,10 20,20-30,30) are considered to consitute the region of interest, if not empty</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.penetrationRate</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>the probability of a vehicle being equipped with Car2X technology</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.numVehicles</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.useRouteDistributions</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html">manager</a>.vehicleRngIndex</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>index of the RNG stream to be used, all random numbers concerning the managed vehicles</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">Scenario</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">playgroundSizeX</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">m</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// x size of the area the nodes are in (in meters)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">playgroundSizeY</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">m</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// y size of the area the nodes are in (in meters)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">playgroundSizeZ</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">m</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// z size of the area the nodes are in (in meters)
+</span><span style="color: #000000; ">        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgb=$playgroundSizeX,$playgroundSizeY&quot;</span><span style="color: #000000; ">);
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">obstacles</span><span style="color: #000000; ">: </span><span style="color: #000000; ">ObstacleControl</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=240,50&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">annotations</span><span style="color: #000000; ">: </span><span style="color: #000000; ">AnnotationManager</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=260,50&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">connectionManager</span><span style="color: #000000; ">: </span><span style="color: #000000; ">ConnectionManager</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=150,0;i=abstract/multicast&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">world</span><span style="color: #000000; ">: </span><span style="color: #000000; ">BaseWorldUtility</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; ">playgroundSizeX</span><span style="color: #000000; "> = </span><span style="color: #000000; ">playgroundSizeX</span><span style="color: #000000; ">;
+                </span><span style="color: #000000; ">playgroundSizeY</span><span style="color: #000000; "> = </span><span style="color: #000000; ">playgroundSizeY</span><span style="color: #000000; ">;
+                </span><span style="color: #000000; ">playgroundSizeZ</span><span style="color: #000000; "> = </span><span style="color: #000000; ">playgroundSizeZ</span><span style="color: #000000; ">;
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=30,0;i=misc/globe&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">manager</span><span style="color: #000000; ">: </span><span style="color: #000000; ">TraCIScenarioManagerLaunchd</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=512,128&quot;</span><span style="color: #000000; ">);
+        }
+
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">allowunconnected</span><span style="color: #000000; ">:
+}
+
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

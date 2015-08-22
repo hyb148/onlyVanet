@@ -1,0 +1,949 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>AODVVANET</i></h2>
+<b>Package:</b> vanetsim<br/><b>File: <a href="src-AODVVANET.ned.html">src/AODVVANET.ned</a></b><br/><p><a href="../doxy/classAODVVANETRouting.html" target="mainframe"><b>C++ definition</b></a></p>
+<p>(no description)</p><img src="vanetsim.AODVVANET-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="vanetsim.AODVVANET.html" title="AODVVANET" alt="AODVVANET" coords="0,31,131,71">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.AODVVANET-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.AODVVANET.html" title="Simple Module AODVVANET" alt="" coords="5,6,109,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.AODVVANET-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="vanetsim.AODVVANET.html" title="Simple Module AODVVANET" alt="" coords="89,81,193,106">
+<area shape="rect" id="node2" href="vanetsim.vanetrouting.base.BaseVanetRouting.html" title="Simple Module BaseVanetRouting" alt="" coords="5,6,135,31">
+<area shape="rect" id="node3" href="vanetsim.vanetrouting.networklayer.IVanetRouting.html" title="Module Interface IVanetRouting" alt="" coords="159,6,264,31">
+</map>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.vanetrouting.base.BaseVanetRouting.html">BaseVanetRouting</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Base module for vanet routing protocols</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>excludedInterfaces</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>list of interfaces excluded by the vanet routing protocol</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>interfaces</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"prefix(wlan)"</td>
+   <td>
+<p>list of routing interfaces were the routing protocol is active, the
+prefix(namei) indicate all the interfaces with "namei" in his names</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>useVanetLabelRouting</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>the routing entries are marked IPv4Route::MANET, this label force an exact search with independent of the mask</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>useICMP</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>By default the module use the ICMP but it's necessary to activate with the method setSendToICMP(true)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>setICMPSourceAddress</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>set the datagram source address if the address is undefined to the address of node
+This parameter allow that the ICMP messages could arrive to the source applications</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>vanetPurgeRoutingTables</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>autoassignAddress</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>assign IP adresses automatically to the interfaces</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>autoassignAddressBase</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"10.0.0.0"</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>isStaticNode</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>networkProtocolModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"^.networkLayer.ip"</td>
+   <td>
+   </td>
+</tr>
+<tr class="local">
+   <td>askGratuitousRREP</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>see RFC 3561: 6.6.3</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>useHelloMessages</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>see RFC 3561: 6.9</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>useLocalRepair</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>see RFC 3561: 6.12 *not implemented yet*</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>udpPort</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>654</td>
+   <td>
+   </td>
+</tr>
+<tr class="local">
+   <td>maxPeriodicJitter</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>helloInterval / 4</td>
+   <td>
+<p>it MUST NOT be negative; it MUST NOT be greater than MESSAGE_INTERVAL/2; it SHOULD NOT be greater than MESSAGE_INTERVAL/4.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>periodicJitter</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(0s, maxPeriodicJitter)</td>
+   <td>
+<p>jitter for externally triggered message generation and message forwarding</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>maxJitter</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>5ms</td>
+   <td>
+<p>RFC 5148:
+need more revise: As well as the decision as to whether
+to use jitter being dependent on the medium access control and
+lower layers, the selection of the MAXJITTER parameter SHOULD
+be appropriate to those mechanisms.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>jitter</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(0ms, maxJitter)</td>
+   <td>
+<p>jitter for broadcasts</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>helloInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1s</td>
+   <td>
+<p>every helloInterval seconds a node broadcasts Hello messages (if it is necessary)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>allowedHelloLoss</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>allowedHelloLoss * helloInterval is the lifetime value for Hello messages</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>activeRouteTimeout</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>3s</td>
+   <td>
+<p>the timeout value for cached routes If Hello messages are used, then the
+ACTIVE_ROUTE_TIMEOUT parameter value MUST be more than the value
+(ALLOWED_HELLO_LOSS * HELLO_INTERVAL).</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>netDiameter</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>35</td>
+   <td>
+<p>the maximum possible number of hops between two nodes in the network</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>nodeTraversalTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.04s</td>
+   <td>
+<p>an estimation of the average one-hop traversal time</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>rerrRatelimit</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>maximum number of RERR messages that the AODV may originate in 1s.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>rreqRetries</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>specifies the number of times AODV will repeat an expanded ring search for a destination</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>rreqRatelimit</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>maximum number of RREQ messages that the AODV may originate in 1s.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>timeoutBuffer</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>plus time to wait for a delayed RREP (due to congestion) (to omit this buffer set it to 0)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>ttlStart</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>specifies the TTL value when initiating a route request</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>ttlIncrement</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>specifies the value by which the TTL will be incremented each time a RREQ is retransmitted</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>ttlThreshold</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>7</td>
+   <td>
+<p>the maximum value of TTL over which NET_DIAMETER value will be used to broadcast any RREQ</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>localAddTTL</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p>it is used by the formula which calculates the initial TTL of the RREQ for a local repair</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>losRange</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>line of site range.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>speedWeight</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>speed weight factor</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>accelerationWeight</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>acceleration weight factor</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>directionWeight</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>direction weight factor</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>linkQualityWeight</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>10</td>
+   <td>
+<p>link quality weight factor</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>myRouteTimeout</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>2 * activeRouteTimeout</td>
+   <td>
+<p>the value of the lifetime field that a destination node places in RREPs</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>deletePeriod</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>5 * max(activeRouteTimeout, helloInterval)</td>
+   <td>
+<p>the time after which an expired route is deleted</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>blacklistTimeout</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>rreqRetries * netTraversalTime</td>
+   <td>
+<p>the time after which a blacklisted node is removed from the blacklist</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>netTraversalTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>2 * nodeTraversalTime * netDiameter</td>
+   <td>
+<p>an estimation of the traversal time for the complete network</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>nextHopWait</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>nodeTraversalTime + 0.01s</td>
+   <td>
+<p>timeout for a RREP-ACK</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>pathDiscoveryTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>2 * netTraversalTime</td>
+   <td>
+<p>buffer timeout for each broadcasted RREQ message</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>log_to_file</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>dump AODV log files (non RFC parameter)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>hello_jittering</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>add a +-50ms jitter to the hello interval (non RFC parameter)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>optimized_hellos</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>do not send hello messages if there are no active routes (non RFC parameter)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>expanding_ring_search</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>use expanding ring search (section 6.4)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>local_repair</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>allow the routes to be locally repaired if a node detects link failure (section 6.12)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>rreq_gratuitous</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>force gratuitous flag on all RREQs (section 6.6.3)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>dump debug messages to file (non RFC parameter)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>rt_log_interval</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0ms</td>
+   <td>
+<p>periodically log routing table to routing table logfile, value is the interval in msecs (0 = off)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>unidir_hack</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>detect and avoid unidirectional links (boolean) (section 6.8)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>receive_n_hellos</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>receive N HELLOs before treating as neighbor (non RFC parameter)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>wait_on_reboot</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>wait after reboot and gather routes before sending out routing info (section 6.13)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>ratelimit</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>do not send out more than 10 RERR or RREQ (boolean) (section 6.3 abd 6.11)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>active_timeout</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>3000ms</td>
+   <td>
+<p>active route timeout in (ms) (section 6.2 and 6.7)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>llfeedback</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>allow layer2 link-detection instead of sending hello messages (section 6.10)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>internet_gw_mode</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>NOT SUPPORTED  (boolean) (run this node as an internet gateway (non RFC parameter))</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>internet_gw_address</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"0.0.0.0"</td>
+   <td>
+<p>NOT SUPPORTED</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>targetOnlyRreq</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>EqualDelay</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>add a jitter to broadcast operations (RREQ, HELLO broadcast) (non RFC - omnetpp specific)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>broadcastDelay</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(0s,0.005s)</td>
+   <td>
+<p>the delay added to broadcast operations if EqualDelay is set (used to model processing time)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>unicastDelay</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0s</td>
+   <td>
+<p>a delay added to unicast messaged (i.e. data packet forwarding) (used to model processing time)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>UseIndex</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>use the interface index instead the ip to identify the interface</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>useHover</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>costStatic</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>costMobile</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>isRoot</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>Proactive RREQ</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>proactiveRreqTimeout</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>5000ms</td>
+   <td>
+<p>5 seconds</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>proactiveLifeTime</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0ms</td>
+   <td>
+<p>if zero lifetime is PATH_DISCOVERY_TIME - 2 * rreq_new_hcnt * NODE_TRAVERSAL_TIME;</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>startRreqProactive</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>uniform(1000ms,2000ms)</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>propagateProactive</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>Proactive feedback</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>checkNextHop</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>PublicRoutingTables</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>RreqDelayInReception</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>if true the delay introduced to the RREq is in reception</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>rreqWait</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.01s</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>avoidDupRREP</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>only if promiscous is active, check if rrep has been sent by other node</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>RRERFoceDiscover</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>if true, if the node has num of precursors equal to 0 and the RRER has N flag to '1' and the message has arrive from next hop the node will launch a new discovering process</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=block/routing</i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>class</td>
+   <td><i>AODVVANETRouting</i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>reactive</td>
+   <td><i></i></td>
+   <td>
+<p>IP module will send control messages when no route is present to the destination</p>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>from_ip</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td></td>
+</tr>
+<tr class="local">
+   <td>to_ip</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">AODVVANET</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BaseVanetRouting</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">IVanetRouting</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #000000; ">AODVVANETRouting</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; font-weight: bold; ">@reactive</span><span style="color: #000000; ">;                             </span><span style="color: #808080; font-style: italic; ">// IP module will send control messages when no route is present to the destination
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">networkProtocolModule</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;^.networkLayer.ip&quot;</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">askGratuitousRREP</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// see RFC 3561: 6.6.3
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">useHelloMessages</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// see RFC 3561: 6.9
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">useLocalRepair</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// see RFC 3561: 6.12 *not implemented yet*
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">udpPort</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">654</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">maxPeriodicJitter</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #000000; ">helloInterval</span><span style="color: #000000; "> / </span><span style="color: #008000; ">4</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// it MUST NOT be negative; it MUST NOT be greater than MESSAGE_INTERVAL/2; it SHOULD NOT be greater than MESSAGE_INTERVAL/4.
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">volatile</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">periodicJitter</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #800080; font-weight: bold; ">uniform</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">, </span><span style="color: #000000; ">maxPeriodicJitter</span><span style="color: #000000; ">)); </span><span style="color: #808080; font-style: italic; ">// jitter for externally triggered message generation and message forwarding
+</span><span style="color: #000000; ">
+        </span><span style="color: #808080; font-style: italic; ">// RFC 5148:
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">// need more revise: As well as the decision as to whether
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">// to use jitter being dependent on the medium access control and
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">// lower layers, the selection of the MAXJITTER parameter SHOULD
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">// be appropriate to those mechanisms.
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">maxJitter</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">5</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">volatile</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">jitter</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #800080; font-weight: bold; ">uniform</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">, </span><span style="color: #000000; ">maxJitter</span><span style="color: #000000; ">)); </span><span style="color: #808080; font-style: italic; ">// jitter for broadcasts
+</span><span style="color: #000000; ">
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">helloInterval</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1</span><span style="color: #000000; ">s</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// every helloInterval seconds a node broadcasts Hello messages (if it is necessary)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">allowedHelloLoss</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// allowedHelloLoss * helloInterval is the lifetime value for Hello messages
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">activeRouteTimeout</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">3</span><span style="color: #000000; ">s</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// the timeout value for cached routes If Hello messages are used, then the
+</span><span style="color: #000000; ">                                                            </span><span style="color: #808080; font-style: italic; ">// ACTIVE_ROUTE_TIMEOUT parameter value MUST be more than the value
+</span><span style="color: #000000; ">                                                            </span><span style="color: #808080; font-style: italic; ">// (ALLOWED_HELLO_LOSS * HELLO_INTERVAL).
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">netDiameter</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">35</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// the maximum possible number of hops between two nodes in the network
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">nodeTraversalTime</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">04</span><span style="color: #000000; ">s</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// an estimation of the average one-hop traversal time
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">rerrRatelimit</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">10</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// maximum number of RERR messages that the AODV may originate in 1s.
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">rreqRetries</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// specifies the number of times AODV will repeat an expanded ring search for a destination
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">rreqRatelimit</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">10</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// maximum number of RREQ messages that the AODV may originate in 1s.
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">timeoutBuffer</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// plus time to wait for a delayed RREP (due to congestion) (to omit this buffer set it to 0)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">ttlStart</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// specifies the TTL value when initiating a route request
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">ttlIncrement</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// specifies the value by which the TTL will be incremented each time a RREQ is retransmitted
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">ttlThreshold</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">7</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// the maximum value of TTL over which NET_DIAMETER value will be used to broadcast any RREQ
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">localAddTTL</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// it is used by the formula which calculates the initial TTL of the RREQ for a local repair
+</span><span style="color: #000000; ">
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">losRange</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">10</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// line of site range.
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">speedWeight</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">10</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// speed weight factor
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">accelerationWeight</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">10</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// acceleration weight factor
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">directionWeight</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">10</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// direction weight factor
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">linkQualityWeight</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">10</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// link quality weight factor
+</span><span style="color: #000000; ">
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">myRouteTimeout</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2</span><span style="color: #000000; "> * </span><span style="color: #000000; ">activeRouteTimeout</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// the value of the lifetime field that a destination node places in RREPs
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">deletePeriod</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">5</span><span style="color: #000000; "> * </span><span style="color: #800080; font-weight: bold; ">max</span><span style="color: #000000; ">(</span><span style="color: #000000; ">activeRouteTimeout</span><span style="color: #000000; ">, </span><span style="color: #000000; ">helloInterval</span><span style="color: #000000; ">)); </span><span style="color: #808080; font-style: italic; ">// the time after which an expired route is deleted
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">blacklistTimeout</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #000000; ">rreqRetries</span><span style="color: #000000; "> * </span><span style="color: #000000; ">netTraversalTime</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// the time after which a blacklisted node is removed from the blacklist
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">netTraversalTime</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2</span><span style="color: #000000; "> * </span><span style="color: #000000; ">nodeTraversalTime</span><span style="color: #000000; "> * </span><span style="color: #000000; ">netDiameter</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// an estimation of the traversal time for the complete network
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">nextHopWait</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #000000; ">nodeTraversalTime</span><span style="color: #000000; "> + </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">01</span><span style="color: #000000; ">s</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// timeout for a RREP-ACK
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">pathDiscoveryTime</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2</span><span style="color: #000000; "> * </span><span style="color: #000000; ">netTraversalTime</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// buffer timeout for each broadcasted RREQ message
+</span><span style="color: #000000; ">
+
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">log_to_file</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);     </span><span style="color: #808080; font-style: italic; ">// dump AODV log files (non RFC parameter)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">hello_jittering</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">);  </span><span style="color: #808080; font-style: italic; ">// add a +-50ms jitter to the hello interval (non RFC parameter)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">optimized_hellos</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// do not send hello messages if there are no active routes (non RFC parameter)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">expanding_ring_search</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">);  </span><span style="color: #808080; font-style: italic; ">// use expanding ring search (section 6.4)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">local_repair</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">);    </span><span style="color: #808080; font-style: italic; ">// allow the routes to be locally repaired if a node detects link failure (section 6.12)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">rreq_gratuitous</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// force gratuitous flag on all RREQs (section 6.6.3)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">debug</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);          </span><span style="color: #808080; font-style: italic; ">// dump debug messages to file (non RFC parameter)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">rt_log_interval</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">);     </span><span style="color: #808080; font-style: italic; ">// periodically log routing table to routing table logfile, value is the interval in msecs (0 = off)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">unidir_hack</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">);         </span><span style="color: #808080; font-style: italic; ">// detect and avoid unidirectional links (boolean) (section 6.8)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">receive_n_hellos</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1</span><span style="color: #000000; ">);    </span><span style="color: #808080; font-style: italic; ">// receive N HELLOs before treating as neighbor (non RFC parameter)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">wait_on_reboot</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1</span><span style="color: #000000; ">);      </span><span style="color: #808080; font-style: italic; ">// wait after reboot and gather routes before sending out routing info (section 6.13)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">ratelimit</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1</span><span style="color: #000000; ">);            </span><span style="color: #808080; font-style: italic; ">// do not send out more than 10 RERR or RREQ (boolean) (section 6.3 abd 6.11)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">active_timeout</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">3000</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">);    </span><span style="color: #808080; font-style: italic; ">// active route timeout in (ms) (section 6.2 and 6.7)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">llfeedback</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);      </span><span style="color: #808080; font-style: italic; ">// allow layer2 link-detection instead of sending hello messages (section 6.10)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">internet_gw_mode</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">);    </span><span style="color: #808080; font-style: italic; ">// NOT SUPPORTED  (boolean) (run this node as an internet gateway (non RFC parameter))
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">internet_gw_address</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;0.0.0.0&quot;</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// NOT SUPPORTED
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">targetOnlyRreq</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">EqualDelay</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">);       </span><span style="color: #808080; font-style: italic; ">// add a jitter to broadcast operations (RREQ, HELLO broadcast) (non RFC - omnetpp specific)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">volatile</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">broadcastDelay</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #800080; font-weight: bold; ">uniform</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">,</span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">005</span><span style="color: #000000; ">s</span><span style="color: #000000; ">));  </span><span style="color: #808080; font-style: italic; ">// the delay added to broadcast operations if EqualDelay is set (used to model processing time)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">volatile</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">unicastDelay</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);  </span><span style="color: #808080; font-style: italic; ">// a delay added to unicast messaged (i.e. data packet forwarding) (used to model processing time)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">UseIndex</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);         </span><span style="color: #808080; font-style: italic; ">// use the interface index instead the ip to identify the interface
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">useHover</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">costStatic</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">costMobile</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">4</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">isRoot</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// Proactive RREQ
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">proactiveRreqTimeout</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">5000</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">);</span><span style="color: #808080; font-style: italic; ">// 5 seconds
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">proactiveLifeTime</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// if zero lifetime is PATH_DISCOVERY_TIME - 2 * rreq_new_hcnt * NODE_TRAVERSAL_TIME;
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">startRreqProactive</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #800080; font-weight: bold; ">uniform</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1000</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">,</span><span style="color: #008000; ">2000</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">));
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">propagateProactive</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// Proactive feedback
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">checkNextHop</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">PublicRoutingTables</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">RreqDelayInReception</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// if true the delay introduced to the RREq is in reception
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">volatile</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">rreqWait</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;s&quot;</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">01</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">avoidDupRREP</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);</span><span style="color: #808080; font-style: italic; ">// only if promiscous is active, check if rrep has been sent by other node
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">RRERFoceDiscover</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// if true, if the node has num of precursors equal to 0 and the RRER has N flag to '1' and the message has arrive from next hop the node will launch a new discovering process 
+</span><span style="color: #000000; ">    </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">input</span><span style="color: #000000; "> </span><span style="color: #000000; ">from_ip</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">output</span><span style="color: #000000; "> </span><span style="color: #000000; ">to_ip</span><span style="color: #000000; ">;
+}
+
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

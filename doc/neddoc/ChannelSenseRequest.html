@@ -1,0 +1,128 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Packet <i>ChannelSenseRequest</i></h2>
+<b>File: <a href="src-veins-base-messages-ChannelSenseRequest.msg.html">src/veins/base/messages/ChannelSenseRequest.msg</a></b><br/><p><a href="../doxy/classChannelSenseRequest.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>The <a href="ChannelSenseRequest.html">ChannelSenseRequest</a> is a control packet from the
+MAC layer to the physical layer. In contrast to the
+"getChannelState()" method of the MacToPhyInterface
+which imediatly returns the current ChannelState
+the <a href="ChannelSenseRequest.html">ChannelSenseRequest</a> tells the physical layers decider
+to sense over a period of time before sending back
+the request together with the ChannelState over this period.</p>
+<p>Every <a href="ChannelSenseRequest.html">ChannelSenseRequest</a> sent to the physical layer
+has to define a <a href="SenseMode.html">SenseMode</a> and a timeout.
+The timeout defines after how much seconds the request
+should be sent back to the MAC layer at latest.
+The <a href="SenseMode.html">SenseMode</a> tells the physical layers the purpose of the
+sense. The SenseModes "UNTIL_IDLE" and "UNTIL_BUSY" are
+telling it to inform the MAC layer as soon as the 
+channel turns idle/busy by sending the request back to it.
+If the channel state does not change the request is sent
+back after the timeout.
+While "UNTIL_IDLE" and "UNTIL_BUSY" can be used as pure
+conveniance functions which don't necessarily represent a
+real channel sense, "UNTIL_TIMEOUT" *always* represents a real 
+channel sensing of the MAC over a fixed period of time
+where the request together with the result will be always sent 
+back after the timeout.</p>
+<p>The request returned to the MAC layer holds the result
+in the form of a ChannelState object. How the idle and
+rssi info contained in the ChannelState are calculated
+and interpreted depends on the Decider.</p>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-msg-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="ChannelSenseRequest-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="ChannelSenseRequest.html" title="Packet ChannelSenseRequest" alt="" coords="5,6,160,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-msg-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="ChannelSenseRequest-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="ChannelSenseRequest.html" title="Packet ChannelSenseRequest" alt="" coords="5,6,160,31">
+</map>
+<h3 class="subtitle">Fields:</h3>
+<table class="fieldstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>senseMode</td>
+   <td>
+      <i>
+int</i>
+   </td>
+   <td>
+<p>defines the sensing mode (see <a href="SenseMode.html">SenseMode</a> enum)</p>
+</td>
+</tr>
+<tr class="local">
+   <td>senseTimeout</td>
+   <td>
+      <i>
+simtime_t</i>
+   </td>
+   <td>
+<p>Time to listen on the channel</p>
+</td>
+</tr>
+<tr class="local">
+   <td>result</td>
+   <td>
+      <i>
+ChannelState</i>
+   </td>
+   <td>
+<p>The result of the request containing the current state of the channel.
+See ChannelState for details.</p>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// The ChannelSenseRequest is a control packet from the
+// MAC layer to the physical layer. In contrast to the
+// &quot;getChannelState()&quot; method of the MacToPhyInterface
+// which imediatly returns the current ChannelState
+// the ChannelSenseRequest tells the physical layers decider
+// to sense over a period of time before sending back
+// the request together with the ChannelState over this period.
+//
+// Every ChannelSenseRequest sent to the physical layer
+// has to define a SenseMode and a timeout.
+// The timeout defines after how much seconds the request
+// should be sent back to the MAC layer at latest.
+// The SenseMode tells the physical layers the purpose of the
+// sense. The SenseModes &quot;UNTIL_IDLE&quot; and &quot;UNTIL_BUSY&quot; are
+// telling it to inform the MAC layer as soon as the 
+// channel turns idle/busy by sending the request back to it.
+// If the channel state does not change the request is sent
+// back after the timeout.
+// While &quot;UNTIL_IDLE&quot; and &quot;UNTIL_BUSY&quot; can be used as pure
+// conveniance functions which don't necessarily represent a
+// real channel sense, &quot;UNTIL_TIMEOUT&quot; *always* represents a real 
+// channel sensing of the MAC over a fixed period of time
+// where the request together with the result will be always sent 
+// back after the timeout.
+//
+// The request returned to the MAC layer holds the result
+// in the form of a ChannelState object. How the idle and
+// rssi info contained in the ChannelState are calculated
+// and interpreted depends on the Decider.
+//
+</span><span style="color: #800000; font-weight: bold; ">packet</span><span style="color: #000000; "> </span><span style="color: #000000; ">ChannelSenseRequest</span><span style="color: #000000; ">
+{
+    </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">senseMode</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@enum</span><span style="color: #000000; ">(</span><span style="color: #000000; ">SenseMode</span><span style="color: #000000; ">);	</span><span style="color: #808080; font-style: italic; ">// defines the sensing mode (see SenseMode enum)
+</span><span style="color: #000000; ">    </span><span style="color: #000000; ">simtime_t</span><span style="color: #000000; "> </span><span style="color: #000000; ">senseTimeout</span><span style="color: #000000; ">; 		</span><span style="color: #808080; font-style: italic; ">// Time to listen on the channel
+</span><span style="color: #000000; ">    </span><span style="color: #000000; ">ChannelState</span><span style="color: #000000; "> </span><span style="color: #000000; ">result</span><span style="color: #000000; ">; 			</span><span style="color: #808080; font-style: italic; ">// The result of the request containing the current state of the channel.
+</span><span style="color: #000000; ">									</span><span style="color: #808080; font-style: italic; ">// See ChannelState for details.
+</span><span style="color: #000000; ">}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

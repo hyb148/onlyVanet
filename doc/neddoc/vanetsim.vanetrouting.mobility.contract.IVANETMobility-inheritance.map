@@ -1,0 +1,5 @@
+<area shape="rect" id="node1" href="vanetsim.vanetrouting.mobility.contract.IVANETMobility.html" title="Module Interface IVANETMobility" alt="" coords="242,6,357,31">
+<area shape="rect" id="node2" href="vanetsim.vanetrouting.mobility.single.aodvTraCIMobility.html" title="Simple Module aodvTraCIMobility" alt="" coords="5,81,133,106">
+<area shape="rect" id="node3" href="vanetsim.vanetrouting.mobility.single.bitcarTraCIMobility.html" title="Simple Module bitcarTraCIMobility" alt="" coords="158,81,289,106">
+<area shape="rect" id="node4" href="vanetsim.vanetrouting.mobility.single.rbvtrTraCIMobility.html" title="Simple Module rbvtrTraCIMobility" alt="" coords="314,81,440,106">
+<area shape="rect" id="node5" href="vanetsim.vanetrouting.mobility.common.VANETMobilityBase.html" title="Simple Module VANETMobilityBase" alt="" coords="465,81,607,106">

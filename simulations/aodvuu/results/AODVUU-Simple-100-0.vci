@@ -1,0 +1,968 @@
+file 645773 1439933839                                          
+version 2
+run AODVUU-Simple-100-0-20150813-13:42:46-7558
+attr configname AODVUU-Simple-100
+attr datetime 20150813-13:42:46
+attr experiment AODVUU-Simple-100
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network AODVUUSim
+attr processid 7558
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+vector 2  AODVUUSim.rsu[0].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+2	57686 8 0 0 0 0 1 0 0 0 0
+vector 13  AODVUUSim.rsu[0].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+13	57743 18 0 0 0 0 2 0 0 0 0
+vector 12  AODVUUSim.rsu[0].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+12	57725 18 0 0 0 0 2 0 0 0 0
+vector 8  AODVUUSim.rsu[0].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+8	57694 14 0 0 0 0 1 2000000 2000000 2000000 4000000000000
+vector 10  AODVUUSim.rsu[0].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+10	57716 9 0 0 0 0 1 0 0 0 0
+vector 9  AODVUUSim.rsu[0].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+9	57708 8 0 0 0 0 1 0 0 0 0
+vector 25  AODVUUSim.vehicle[0].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+25	57773 12 64 64 6.1 6.1 1 0 0 0 0
+vector 41  AODVUUSim.vehicle[0].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+41	117880 90 64 80 6.1 6.100802 6 0 2 4 8
+vector 40  AODVUUSim.vehicle[0].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+40	117632 248 64 82 6.1 6.100912 16 0 5 36 136
+vector 43  AODVUUSim.vehicle[0].wlan.mac  "throughput AC0"  ETV
+43	117970 12 64 64 6.1 6.1 1 0 0 0 0
+vector 31  AODVUUSim.vehicle[0].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+31	57815 18 64 64 6.1 6.1 1 2000000 2000000 2000000 4000000000000
+vector 33  AODVUUSim.vehicle[0].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+33	57845 45 64 80 6.1 6.100802 3 0 2 2 4
+vector 32  AODVUUSim.vehicle[0].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+32	57833 12 64 64 6.1 6.1 1 0 0 0 0
+vector 35  AODVUUSim.vehicle[0].mobility  posx  ETV
+35	57890 9169 64 1279 6.1 52.1 461 1020.05 1020.05 470243.05 479671423.1525
+vector 36  AODVUUSim.vehicle[0].mobility  posy  ETV
+36	67059 12800 64 1279 6.1 52.1 461 38.15 629.71191373979 143780.78018629 60012185.770369
+vector 18  AODVUUSim.vehicle[0].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+18	57761 12 72 72 6.1 6.1 1 8 8 8 64
+vector 29  AODVUUSim.vehicle[0].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+29	57802 13 76 76 6.1 6.1 1 70 70 70 4900
+vector 28  AODVUUSim.vehicle[0].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+28	57785 17 77 77 6.10005 6.10005 1 70 70 70 4900
+vector 37  AODVUUSim.vehicle[0].mobility  speed  ETV
+37	79859 12779 83 1279 6.2 52.1 460 0.25286542447004 13.999820163865 5929.5312605976 80255.606636614
+vector 38  AODVUUSim.vehicle[0].mobility  acceleration  ETV
+38	92638 13361 84 1279 6.3 52.1 459 -1.1890771305887 2.5262731315568 136.59257775192 384.85948450875
+vector 39  AODVUUSim.vehicle[0].mobility  co2emission  ETV
+39	105999 11633 84 1279 6.3 52.1 459 0.973 10.058832222791 1267.4786098265 4919.7539335426
+vector 53  AODVUUSim.vehicle[1].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+53	117995 12 93 93 7.1 7.1 1 0 0 0 0
+vector 69  AODVUUSim.vehicle[1].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+69	176772 94 93 109 7.1 7.100802 6 0 2 4 8
+vector 68  AODVUUSim.vehicle[1].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+68	176510 262 93 111 7.1 7.100912 16 0 5 36 136
+vector 71  AODVUUSim.vehicle[1].wlan.mac  "throughput AC0"  ETV
+71	176866 12 93 93 7.1 7.1 1 0 0 0 0
+vector 59  AODVUUSim.vehicle[1].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+59	118039 18 93 93 7.1 7.1 1 2000000 2000000 2000000 4000000000000
+vector 61  AODVUUSim.vehicle[1].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+61	118069 47 93 109 7.1 7.100802 3 0 2 2 4
+vector 60  AODVUUSim.vehicle[1].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+60	118057 12 93 93 7.1 7.1 1 0 0 0 0
+vector 63  AODVUUSim.vehicle[1].mobility  posx  ETV
+63	118116 8991 93 1279 7.1 52.1 451 2020.05 2020.05 911042.55000001 1840351503.1275
+vector 64  AODVUUSim.vehicle[1].mobility  posy  ETV
+64	127107 12538 93 1279 7.1 52.1 451 1038.15 1617.3900695099 589132.50900483 783800590.37178
+vector 46  AODVUUSim.vehicle[1].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+46	117982 13 101 101 7.1 7.1 1 8 8 8 64
+vector 57  AODVUUSim.vehicle[1].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+57	118025 14 105 105 7.1 7.1 1 70 70 70 4900
+vector 56  AODVUUSim.vehicle[1].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+56	118007 18 106 106 7.10005 7.10005 1 70 70 70 4900
+vector 65  AODVUUSim.vehicle[1].mobility  speed  ETV
+65	139645 12525 112 1279 7.2 52.1 450 0.2516033765038 13.999416294557 5806.3729847586 78723.442006283
+vector 66  AODVUUSim.vehicle[1].mobility  acceleration  ETV
+66	152170 13097 113 1279 7.3 52.1 449 -1.2790911892429 2.5938958732877 137.20686283322 393.10546202916
+vector 67  AODVUUSim.vehicle[1].mobility  co2emission  ETV
+67	165267 11243 113 1279 7.3 52.1 449 0.973 10.272105466796 1231.486343643 4892.8209151517
+vector 81  AODVUUSim.vehicle[2].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+81	176892 14 147 147 10.1 10.1 1 0 0 0 0
+vector 97  AODVUUSim.vehicle[2].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+97	232056 102 147 163 10.1 10.100802 6 0 2 4 8
+vector 96  AODVUUSim.vehicle[2].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+96	231776 280 147 165 10.1 10.100932 16 0 5 36 136
+vector 99  AODVUUSim.vehicle[2].wlan.mac  "throughput AC0"  ETV
+99	232158 14 147 147 10.1 10.1 1 0 0 0 0
+vector 87  AODVUUSim.vehicle[2].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+87	176940 20 147 147 10.1 10.1 1 2000000 2000000 2000000 4000000000000
+vector 89  AODVUUSim.vehicle[2].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+89	176974 51 147 163 10.1 10.100802 3 0 2 2 4
+vector 88  AODVUUSim.vehicle[2].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+88	176960 14 147 147 10.1 10.1 1 0 0 0 0
+vector 91  AODVUUSim.vehicle[2].mobility  posx  ETV
+91	177025 8427 147 1279 10.1 52.1 421 2020.05 2020.05 850441.05000001 1717933443.0525
+vector 92  AODVUUSim.vehicle[2].mobility  posy  ETV
+92	185452 11723 147 1279 10.1 52.1 421 38.15 575.04577043463 120039.51193333 45710416.211781
+vector 74  AODVUUSim.vehicle[2].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+74	176878 14 155 155 10.1 10.1 1 8 8 8 64
+vector 85  AODVUUSim.vehicle[2].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+85	176925 15 159 159 10.1 10.1 1 70 70 70 4900
+vector 84  AODVUUSim.vehicle[2].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+84	176906 19 160 160 10.10005 10.10005 1 70 70 70 4900
+vector 93  AODVUUSim.vehicle[2].mobility  speed  ETV
+93	197175 11733 166 1279 10.2 52.1 420 0.25197073848895 13.999473746277 5382.8623604541 72706.198539975
+vector 94  AODVUUSim.vehicle[2].mobility  acceleration  ETV
+94	208908 12253 167 1279 10.3 52.1 419 -1.2224542669719 2.5823568655644 136.52685369305 392.71218187346
+vector 95  AODVUUSim.vehicle[2].mobility  co2emission  ETV
+95	221161 10615 167 1279 10.3 52.1 419 0.973 9.8705540561311 1179.792054326 4762.9437586593
+vector 109  AODVUUSim.vehicle[3].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+109	232187 15 178 178 11.1 11.1 1 0 0 0 0
+vector 125  AODVUUSim.vehicle[3].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+125	287373 108 178 194 11.1 11.100802 6 0 2 4 8
+vector 124  AODVUUSim.vehicle[3].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+124	287077 296 178 196 11.1 11.100852 16 0 5 36 136
+vector 127  AODVUUSim.vehicle[3].wlan.mac  "throughput AC0"  ETV
+127	287481 15 178 178 11.1 11.1 1 0 0 0 0
+vector 115  AODVUUSim.vehicle[3].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+115	232238 21 178 178 11.1 11.1 1 2000000 2000000 2000000 4000000000000
+vector 117  AODVUUSim.vehicle[3].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+117	232274 54 178 194 11.1 11.100802 3 0 2 2 4
+vector 116  AODVUUSim.vehicle[3].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+116	232259 15 178 178 11.1 11.1 1 0 0 0 0
+vector 119  AODVUUSim.vehicle[3].mobility  posx  ETV
+119	232328 11694 178 1279 11.1 52.1 411 531.55 1020.05 316310.86178389 253856213.97767
+vector 120  AODVUUSim.vehicle[3].mobility  posy  ETV
+120	244022 8087 178 1279 11.1 52.1 411 29.95 64.426505679208 12754.290949075 405731.77017914
+vector 102  AODVUUSim.vehicle[3].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+102	232172 15 186 186 11.1 11.1 1 8 8 8 64
+vector 113  AODVUUSim.vehicle[3].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+113	232222 16 190 190 11.1 11.1 1 70 70 70 4900
+vector 112  AODVUUSim.vehicle[3].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+112	232202 20 191 191 11.10005 11.10005 1 70 70 70 4900
+vector 121  AODVUUSim.vehicle[3].mobility  speed  ETV
+121	252109 11851 197 1279 11.2 52.1 410 0.25258744191262 13.999583818009 5231.75894565 70557.026134533
+vector 122  AODVUUSim.vehicle[3].mobility  acceleration  ETV
+122	263960 12357 198 1279 11.3 52.1 409 -1.2789284134749 2.5878362877294 137.41301415953 394.13195144739
+vector 123  AODVUUSim.vehicle[3].mobility  co2emission  ETV
+123	276317 10760 198 1279 11.3 52.1 409 0.973 10.462220091018 1163.9945824669 4786.3156561976
+vector 137  AODVUUSim.vehicle[4].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+137	287511 15 280 280 17.1 17.1 1 0 0 0 0
+vector 153  AODVUUSim.vehicle[4].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+153	335462 108 280 296 17.1 17.100802 6 0 2 4 8
+vector 152  AODVUUSim.vehicle[4].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+152	335166 296 280 298 17.1 17.100892 16 0 5 36 136
+vector 155  AODVUUSim.vehicle[4].wlan.mac  "throughput AC0"  ETV
+155	335570 15 280 280 17.1 17.1 1 0 0 0 0
+vector 143  AODVUUSim.vehicle[4].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+143	287562 21 280 280 17.1 17.1 1 2000000 2000000 2000000 4000000000000
+vector 145  AODVUUSim.vehicle[4].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+145	287598 54 280 296 17.1 17.100802 3 0 2 2 4
+vector 144  AODVUUSim.vehicle[4].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+144	287583 15 280 280 17.1 17.1 1 0 0 0 0
+vector 147  AODVUUSim.vehicle[4].mobility  posx  ETV
+147	287652 7392 280 1279 17.1 52.1 351 1520.05 1520.05 533537.55 811003752.87751
+vector 148  AODVUUSim.vehicle[4].mobility  posy  ETV
+148	295044 10133 280 1279 17.1 52.1 351 38.15 476.00288622519 82680.374625124 25971520.736108
+vector 130  AODVUUSim.vehicle[4].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+130	287496 15 288 288 17.1 17.1 1 8 8 8 64
+vector 141  AODVUUSim.vehicle[4].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+141	287546 16 292 292 17.1 17.1 1 70 70 70 4900
+vector 140  AODVUUSim.vehicle[4].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+140	287526 20 293 293 17.10005 17.10005 1 70 70 70 4900
+vector 149  AODVUUSim.vehicle[4].mobility  speed  ETV
+149	305177 10133 299 1279 17.2 52.1 350 0.2518232359637 13.999992125905 4392.4278488695 58877.324799411
+vector 150  AODVUUSim.vehicle[4].mobility  acceleration  ETV
+150	315310 10555 300 1279 17.3 52.1 349 -1.2670626038453 2.5704720525194 136.4716338168 354.25326099611
+vector 151  AODVUUSim.vehicle[4].mobility  co2emission  ETV
+151	325865 9301 300 1279 17.3 52.1 349 0.973 9.9639350457602 997.08700461295 4087.0827985791
+vector 165  AODVUUSim.vehicle[5].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+165	335600 15 313 313 18.1 18.1 1 0 0 0 0
+vector 181  AODVUUSim.vehicle[5].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+181	381731 108 313 329 18.1 18.100802 6 0 2 4 8
+vector 180  AODVUUSim.vehicle[5].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+180	381435 296 313 331 18.1 18.100992 16 0 5 36 136
+vector 183  AODVUUSim.vehicle[5].wlan.mac  "throughput AC0"  ETV
+183	381839 15 313 313 18.1 18.1 1 0 0 0 0
+vector 171  AODVUUSim.vehicle[5].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+171	335651 21 313 313 18.1 18.1 1 2000000 2000000 2000000 4000000000000
+vector 173  AODVUUSim.vehicle[5].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+173	335687 54 313 329 18.1 18.100802 3 0 2 2 4
+vector 172  AODVUUSim.vehicle[5].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+172	335672 15 313 313 18.1 18.1 1 0 0 0 0
+vector 175  AODVUUSim.vehicle[5].mobility  posx  ETV
+175	335741 6843 313 1279 18.1 52.1 341 520.05 520.05 177337.05 92224132.8525
+vector 176  AODVUUSim.vehicle[5].mobility  posy  ETV
+176	342584 9858 313 1279 18.1 52.1 341 38.15 464.71581346451 78795.214399018 24177823.551785
+vector 158  AODVUUSim.vehicle[5].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+158	335585 15 321 321 18.1 18.1 1 8 8 8 64
+vector 169  AODVUUSim.vehicle[5].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+169	335635 16 325 325 18.1 18.1 1 70 70 70 4900
+vector 168  AODVUUSim.vehicle[5].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+168	335615 20 326 326 18.10005 18.10005 1 70 70 70 4900
+vector 177  AODVUUSim.vehicle[5].mobility  speed  ETV
+177	352442 9850 332 1279 18.2 52.1 340 0.2497930121664 13.999929023788 4279.5327313309 57364.192880778
+vector 178  AODVUUSim.vehicle[5].mobility  acceleration  ETV
+178	362292 10241 333 1279 18.3 52.1 339 -1.1951956400415 2.5959705937421 136.24803673554 360.08527659304
+vector 179  AODVUUSim.vehicle[5].mobility  co2emission  ETV
+179	372533 8902 333 1279 18.3 52.1 339 0.973 9.8498036301161 973.9891113855 4045.1647022839
+vector 193  AODVUUSim.vehicle[6].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+193	25261 15 347 347 19.1 19.1 1 0 0 0 0
+vector 209  AODVUUSim.vehicle[6].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+209	48165 108 347 363 19.1 19.100802 6 0 2 4 8
+vector 211  AODVUUSim.vehicle[6].wlan.mac  "throughput AC0"  ETV
+211	48150 15 347 347 19.1 19.1 1 0 0 0 0
+vector 199  AODVUUSim.vehicle[6].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+199	25327 21 347 347 19.1 19.1 1 2000000 2000000 2000000 4000000000000
+vector 201  AODVUUSim.vehicle[6].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+201	25348 54 347 363 19.1 19.100802 3 0 2 2 4
+vector 200  AODVUUSim.vehicle[6].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+200	25312 15 347 347 19.1 19.1 1 0 0 0 0
+vector 203  AODVUUSim.vehicle[6].mobility  posx  ETV
+203	43232 4918 347 818 19.1 36.2 172 2031.55 2222.4961484554 362888.04574956 766262249.5026
+vector 204  AODVUUSim.vehicle[6].mobility  posy  ETV
+204	39998 3234 347 818 19.1 36.2 172 29.95 29.95 5151.4 154284.43
+vector 186  AODVUUSim.vehicle[6].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+186	25246 15 355 355 19.1 19.1 1 8 8 8 64
+vector 197  AODVUUSim.vehicle[6].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+197	25276 16 359 359 19.1 19.1 1 70 70 70 4900
+vector 196  AODVUUSim.vehicle[6].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+196	25292 20 360 360 19.10005 19.10005 1 70 70 70 4900
+vector 205  AODVUUSim.vehicle[6].mobility  speed  ETV
+205	35086 4912 366 818 19.2 36.2 171 0.25681022623507 13.999906795102 1923.4446324475 24545.025334922
+vector 206  AODVUUSim.vehicle[6].mobility  acceleration  ETV
+206	30039 5047 367 818 19.3 36.2 170 -1.2554847096326 2.5749092141865 137.26337667385 308.60604200059
+vector 207  AODVUUSim.vehicle[6].mobility  co2emission  ETV
+207	25402 4637 367 818 19.3 36.2 170 0.973 10.169923880415 581.81852555013 2719.4463427682
+vector 221  AODVUUSim.vehicle[7].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+221	381869 15 399 399 21.1 21.1 1 0 0 0 0
+vector 237  AODVUUSim.vehicle[7].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+237	424481 108 399 415 21.1 21.100802 6 0 2 4 8
+vector 236  AODVUUSim.vehicle[7].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+236	424185 296 399 417 21.1 21.100872 16 0 5 36 136
+vector 239  AODVUUSim.vehicle[7].wlan.mac  "throughput AC0"  ETV
+239	424589 15 399 399 21.1 21.1 1 0 0 0 0
+vector 227  AODVUUSim.vehicle[7].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+227	381920 21 399 399 21.1 21.1 1 2000000 2000000 2000000 4000000000000
+vector 229  AODVUUSim.vehicle[7].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+229	381956 54 399 415 21.1 21.100802 3 0 2 2 4
+vector 228  AODVUUSim.vehicle[7].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+228	381941 15 399 399 21.1 21.1 1 0 0 0 0
+vector 231  AODVUUSim.vehicle[7].mobility  posx  ETV
+231	382010 6560 399 1279 21.1 52.1 311 1520.05 1520.05 472735.55 718581672.7775
+vector 232  AODVUUSim.vehicle[7].mobility  posy  ETV
+232	388570 8985 399 1279 21.1 52.1 311 38.15 421.68567135373 65109.98005842 18087023.066342
+vector 214  AODVUUSim.vehicle[7].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+214	381854 15 407 407 21.1 21.1 1 8 8 8 64
+vector 225  AODVUUSim.vehicle[7].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+225	381904 16 411 411 21.1 21.1 1 70 70 70 4900
+vector 224  AODVUUSim.vehicle[7].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+224	381884 20 412 412 21.10005 21.10005 1 70 70 70 4900
+vector 233  AODVUUSim.vehicle[7].mobility  speed  ETV
+233	397555 8985 418 1279 21.2 52.1 310 0.25505051981774 13.99991365198 3849.2620010298 51386.202062476
+vector 234  AODVUUSim.vehicle[7].mobility  acceleration  ETV
+234	406540 9343 419 1279 21.3 52.1 309 -1.2895941971336 2.5984301561722 136.50236972667 344.64131646494
+vector 235  AODVUUSim.vehicle[7].mobility  co2emission  ETV
+235	415883 8302 419 1279 21.3 52.1 309 0.973 9.3356017562357 904.68541224763 3762.7146724718
+vector 249  AODVUUSim.vehicle[8].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+249	424619 15 471 471 24.1 24.1 1 0 0 0 0
+vector 265  AODVUUSim.vehicle[8].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+265	463115 108 471 487 24.1 24.100802 6 0 2 4 8
+vector 264  AODVUUSim.vehicle[8].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+264	462819 296 471 489 24.1 24.100872 16 0 5 36 136
+vector 267  AODVUUSim.vehicle[8].wlan.mac  "throughput AC0"  ETV
+267	463223 15 471 471 24.1 24.1 1 0 0 0 0
+vector 255  AODVUUSim.vehicle[8].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+255	424670 21 471 471 24.1 24.1 1 2000000 2000000 2000000 4000000000000
+vector 257  AODVUUSim.vehicle[8].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+257	424706 54 471 487 24.1 24.100802 3 0 2 2 4
+vector 256  AODVUUSim.vehicle[8].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+256	424691 15 471 471 24.1 24.1 1 0 0 0 0
+vector 259  AODVUUSim.vehicle[8].mobility  posx  ETV
+259	424760 5936 471 1279 24.1 52.1 281 1520.05 1520.05 427134.05 649265112.7025
+vector 260  AODVUUSim.vehicle[8].mobility  posy  ETV
+260	430696 8141 471 1279 24.1 52.1 281 38.15 380.61023080538 53274.900208566 13331159.119725
+vector 242  AODVUUSim.vehicle[8].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+242	424604 15 479 479 24.1 24.1 1 8 8 8 64
+vector 253  AODVUUSim.vehicle[8].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+253	424654 16 483 483 24.1 24.1 1 70 70 70 4900
+vector 252  AODVUUSim.vehicle[8].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+252	424634 20 484 484 24.10005 24.10005 1 70 70 70 4900
+vector 261  AODVUUSim.vehicle[8].mobility  speed  ETV
+261	438837 8134 490 1279 24.2 52.1 280 0.25438034072146 13.999910098459 3438.5952929165 45615.6050432
+vector 262  AODVUUSim.vehicle[8].mobility  acceleration  ETV
+262	446971 8418 491 1279 24.3 52.1 279 -1.1930593420984 2.5930969350273 137.38604522042 339.19771856229
+vector 263  AODVUUSim.vehicle[8].mobility  co2emission  ETV
+263	455389 7430 491 1279 24.3 52.1 279 0.973 10.213868233362 840.79207885231 3567.9210025329
+vector 277  AODVUUSim.vehicle[9].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+277	463253 15 527 527 26.1 26.1 1 0 0 0 0
+vector 293  AODVUUSim.vehicle[9].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+293	498599 108 527 543 26.1 26.100802 6 0 2 4 8
+vector 292  AODVUUSim.vehicle[9].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+292	498303 296 527 545 26.1 26.100852 16 0 5 36 136
+vector 295  AODVUUSim.vehicle[9].wlan.mac  "throughput AC0"  ETV
+295	498707 15 527 527 26.1 26.1 1 0 0 0 0
+vector 283  AODVUUSim.vehicle[9].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+283	463304 21 527 527 26.1 26.1 1 2000000 2000000 2000000 4000000000000
+vector 285  AODVUUSim.vehicle[9].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+285	463340 54 527 543 26.1 26.100802 3 0 2 2 4
+vector 284  AODVUUSim.vehicle[9].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+284	463325 15 527 527 26.1 26.1 1 0 0 0 0
+vector 287  AODVUUSim.vehicle[9].mobility  posx  ETV
+287	463394 7563 527 1279 26.1 52.1 261 31.55 344.91675433941 43924.644951961 9928890.5765429
+vector 288  AODVUUSim.vehicle[9].mobility  posy  ETV
+288	470957 4998 527 1279 26.1 52.1 261 29.95 29.95 7816.95 234117.6525
+vector 270  AODVUUSim.vehicle[9].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+270	463238 15 535 535 26.1 26.1 1 8 8 8 64
+vector 281  AODVUUSim.vehicle[9].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+281	463288 16 539 539 26.1 26.1 1 70 70 70 4900
+vector 280  AODVUUSim.vehicle[9].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+280	463268 20 540 540 26.10005 26.10005 1 70 70 70 4900
+vector 289  AODVUUSim.vehicle[9].mobility  speed  ETV
+289	475955 7558 546 1279 26.2 52.1 260 0.25819205497345 13.998657371055 3147.561322113 41562.17585116
+vector 290  AODVUUSim.vehicle[9].mobility  acceleration  ETV
+290	483513 7823 547 1279 26.3 52.1 259 -1.2520545652602 2.594140737531 136.35586663841 340.55544479396
+vector 291  AODVUUSim.vehicle[9].mobility  co2emission  ETV
+291	491336 6967 547 1279 26.3 52.1 259 0.973 10.347733734316 795.77660924062 3510.8266711584
+vector 305  AODVUUSim.vehicle[10].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+305	498737 15 585 585 28.1 28.1 1 0 0 0 0
+vector 321  AODVUUSim.vehicle[10].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+321	531873 108 585 601 28.1 28.100802 6 0 2 4 8
+vector 320  AODVUUSim.vehicle[10].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+320	531577 296 585 603 28.1 28.100972 16 0 5 36 136
+vector 323  AODVUUSim.vehicle[10].wlan.mac  "throughput AC0"  ETV
+323	531981 15 585 585 28.1 28.1 1 0 0 0 0
+vector 311  AODVUUSim.vehicle[10].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+311	498788 21 585 585 28.1 28.1 1 2000000 2000000 2000000 4000000000000
+vector 313  AODVUUSim.vehicle[10].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+313	498824 54 585 601 28.1 28.100802 3 0 2 2 4
+vector 312  AODVUUSim.vehicle[10].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+312	498809 15 585 585 28.1 28.1 1 0 0 0 0
+vector 315  AODVUUSim.vehicle[10].mobility  posx  ETV
+315	498878 6989 585 1279 28.1 52.1 241 31.55 315.71608038721 37034.258871508 7632794.7773544
+vector 316  AODVUUSim.vehicle[10].mobility  posy  ETV
+316	505867 5104 585 1279 28.1 52.1 241 1029.95 1029.95 248217.95 255652077.6025
+vector 298  AODVUUSim.vehicle[10].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+298	498722 15 593 593 28.1 28.1 1 8 8 8 64
+vector 309  AODVUUSim.vehicle[10].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+309	498772 16 597 597 28.1 28.1 1 70 70 70 4900
+vector 308  AODVUUSim.vehicle[10].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+308	498752 20 598 598 28.10005 28.10005 1 70 70 70 4900
+vector 317  AODVUUSim.vehicle[10].mobility  speed  ETV
+317	510971 6976 604 1279 28.2 52.1 240 0.25817500862619 13.999744921199 2855.6241972661 37414.584005042
+vector 318  AODVUUSim.vehicle[10].mobility  acceleration  ETV
+318	517947 7206 605 1279 28.3 52.1 239 -1.2316446023527 2.5884248017566 137.05218385322 321.05733305936
+vector 319  AODVUUSim.vehicle[10].mobility  co2emission  ETV
+319	525153 6424 605 1279 28.3 52.1 239 0.973 9.5834978097795 742.61412344785 3280.8464709548
+vector 333  AODVUUSim.vehicle[11].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+333	532011 15 645 645 30.1 30.1 1 0 0 0 0
+vector 349  AODVUUSim.vehicle[11].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+349	562244 108 645 661 30.1 30.100802 6 0 2 4 8
+vector 348  AODVUUSim.vehicle[11].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+348	561948 296 645 663 30.1 30.100852 16 0 5 36 136
+vector 351  AODVUUSim.vehicle[11].wlan.mac  "throughput AC0"  ETV
+351	562352 15 645 645 30.1 30.1 1 0 0 0 0
+vector 339  AODVUUSim.vehicle[11].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+339	532062 21 645 645 30.1 30.1 1 2000000 2000000 2000000 4000000000000
+vector 341  AODVUUSim.vehicle[11].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+341	532098 54 645 661 30.1 30.100802 3 0 2 2 4
+vector 340  AODVUUSim.vehicle[11].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+340	532083 15 645 645 30.1 30.1 1 0 0 0 0
+vector 343  AODVUUSim.vehicle[11].mobility  posx  ETV
+343	532152 4467 645 1279 30.1 52.1 221 520.05 520.05 114931.05 59769892.5525
+vector 344  AODVUUSim.vehicle[11].mobility  posy  ETV
+344	536619 6402 645 1279 30.1 52.1 221 38.15 295.68622856249 32655.647613711 6294933.7587753
+vector 326  AODVUUSim.vehicle[11].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+326	531996 15 653 653 30.1 30.1 1 8 8 8 64
+vector 337  AODVUUSim.vehicle[11].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+337	532046 16 657 657 30.1 30.1 1 70 70 70 4900
+vector 336  AODVUUSim.vehicle[11].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+336	532026 20 658 658 30.10005 30.10005 1 70 70 70 4900
+vector 345  AODVUUSim.vehicle[11].mobility  speed  ETV
+345	543021 6401 664 1279 30.2 52.1 220 0.25534914747975 13.999990419396 2589.3548877866 33766.212761089
+vector 346  AODVUUSim.vehicle[11].mobility  acceleration  ETV
+346	549422 6599 665 1279 30.3 52.1 219 -1.2333453300875 2.5992222530811 137.37253014192 324.55538235907
+vector 347  AODVUUSim.vehicle[11].mobility  co2emission  ETV
+347	556021 5927 665 1279 30.3 52.1 219 0.973 10.079806650187 701.04852886845 3191.7796450242
+vector 361  AODVUUSim.vehicle[12].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+361	562382 15 707 707 32.1 32.1 1 0 0 0 0
+vector 377  AODVUUSim.vehicle[12].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+377	590135 108 707 723 32.1 32.100802 6 0 2 4 8
+vector 376  AODVUUSim.vehicle[12].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+376	589839 296 707 725 32.1 32.100852 16 0 5 36 136
+vector 379  AODVUUSim.vehicle[12].wlan.mac  "throughput AC0"  ETV
+379	590243 15 707 707 32.1 32.1 1 0 0 0 0
+vector 367  AODVUUSim.vehicle[12].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+367	562433 21 707 707 32.1 32.1 1 2000000 2000000 2000000 4000000000000
+vector 369  AODVUUSim.vehicle[12].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+369	562469 54 707 723 32.1 32.100802 3 0 2 2 4
+vector 368  AODVUUSim.vehicle[12].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+368	562454 15 707 707 32.1 32.1 1 0 0 0 0
+vector 371  AODVUUSim.vehicle[12].mobility  posx  ETV
+371	562523 4272 707 1279 32.1 52.1 201 1520.05 1520.05 305530.05 464420952.5025
+vector 372  AODVUUSim.vehicle[12].mobility  posy  ETV
+372	566795 5846 707 1279 32.1 52.1 201 1038.15 1266.9401647 227884.22164145 259426161.9082
+vector 354  AODVUUSim.vehicle[12].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+354	562367 15 715 715 32.1 32.1 1 8 8 8 64
+vector 365  AODVUUSim.vehicle[12].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+365	562417 16 719 719 32.1 32.1 1 70 70 70 4900
+vector 364  AODVUUSim.vehicle[12].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+364	562397 20 720 720 32.10005 32.10005 1 70 70 70 4900
+vector 373  AODVUUSim.vehicle[12].mobility  speed  ETV
+373	572641 5834 726 1279 32.2 52.1 200 0.25583575830748 13.999882573057 2301.8104846695 29695.581363271
+vector 374  AODVUUSim.vehicle[12].mobility  acceleration  ETV
+374	578475 5995 727 1279 32.3 52.1 199 -1.1812021049671 2.5725327865542 136.53001911445 322.52616785856
+vector 375  AODVUUSim.vehicle[12].mobility  co2emission  ETV
+375	584470 5369 727 1279 32.3 52.1 199 0.973 9.3904319270379 662.69351601237 3096.130458435
+vector 389  AODVUUSim.vehicle[13].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+389	590273 15 861 861 38.1 38.1 1 0 0 0 0
+vector 405  AODVUUSim.vehicle[13].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+405	610001 108 861 877 38.1 38.100802 6 0 2 4 8
+vector 404  AODVUUSim.vehicle[13].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+404	609705 296 861 879 38.1 38.100952 16 0 5 36 136
+vector 407  AODVUUSim.vehicle[13].wlan.mac  "throughput AC0"  ETV
+407	610109 15 861 861 38.1 38.1 1 0 0 0 0
+vector 395  AODVUUSim.vehicle[13].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+395	590324 21 861 861 38.1 38.1 1 2000000 2000000 2000000 4000000000000
+vector 397  AODVUUSim.vehicle[13].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+397	590360 54 861 877 38.1 38.100802 3 0 2 2 4
+vector 396  AODVUUSim.vehicle[13].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+396	590345 15 861 861 38.1 38.1 1 0 0 0 0
+vector 399  AODVUUSim.vehicle[13].mobility  posx  ETV
+399	590414 4123 861 1279 38.1 52.1 141 31.55 179.71983402239 12666.366918056 1452839.889567
+vector 400  AODVUUSim.vehicle[13].mobility  posy  ETV
+400	594537 3024 861 1279 38.1 52.1 141 1029.95 1029.95 145222.95 149572377.3525
+vector 382  AODVUUSim.vehicle[13].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+382	590258 15 869 869 38.1 38.1 1 8 8 8 64
+vector 393  AODVUUSim.vehicle[13].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+393	590308 16 873 873 38.1 38.1 1 70 70 70 4900
+vector 392  AODVUUSim.vehicle[13].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+392	590288 20 874 874 38.10005 38.10005 1 70 70 70 4900
+vector 401  AODVUUSim.vehicle[13].mobility  speed  ETV
+401	597561 4114 880 1279 38.2 52.1 140 0.25669425428915 13.999881321082 1495.6726122362 18648.02278356
+vector 402  AODVUUSim.vehicle[13].mobility  acceleration  ETV
+402	601675 4196 881 1279 38.3 52.1 139 -1.0035247672582 2.5905346808955 137.17577758033 311.50252048201
+vector 403  AODVUUSim.vehicle[13].mobility  co2emission  ETV
+403	605871 3834 881 1279 38.3 52.1 139 0.973 9.9988987009322 508.92435486421 2633.6197967441
+vector 417  AODVUUSim.vehicle[14].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+417	610139 15 971 971 42.1 42.1 1 0 0 0 0
+vector 433  AODVUUSim.vehicle[14].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+433	624511 108 971 987 42.1 42.100802 6 0 2 4 8
+vector 432  AODVUUSim.vehicle[14].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+432	624215 296 971 989 42.1 42.100972 16 0 5 36 136
+vector 435  AODVUUSim.vehicle[14].wlan.mac  "throughput AC0"  ETV
+435	624619 15 971 971 42.1 42.1 1 0 0 0 0
+vector 423  AODVUUSim.vehicle[14].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+423	610190 21 971 971 42.1 42.1 1 2000000 2000000 2000000 4000000000000
+vector 425  AODVUUSim.vehicle[14].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+425	610226 54 971 987 42.1 42.100802 3 0 2 2 4
+vector 424  AODVUUSim.vehicle[14].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+424	610211 15 971 971 42.1 42.1 1 0 0 0 0
+vector 427  AODVUUSim.vehicle[14].mobility  posx  ETV
+427	610280 2192 971 1279 42.1 52.1 101 1020.05 1020.05 103025.05 105090702.2525
+vector 428  AODVUUSim.vehicle[14].mobility  posy  ETV
+428	612472 2971 971 1279 42.1 52.1 101 38.15 130.54058811686 7230.958988634 602795.70806372
+vector 410  AODVUUSim.vehicle[14].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+410	610124 15 979 979 42.1 42.1 1 8 8 8 64
+vector 421  AODVUUSim.vehicle[14].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+421	610174 16 983 983 42.1 42.1 1 70 70 70 4900
+vector 420  AODVUUSim.vehicle[14].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+420	610154 20 984 984 42.10005 42.10005 1 70 70 70 4900
+vector 429  AODVUUSim.vehicle[14].mobility  speed  ETV
+429	615443 2960 990 1279 42.2 52.1 100 0.25116214402742 13.994394628941 937.84748071137 10869.241935053
+vector 430  AODVUUSim.vehicle[14].mobility  acceleration  ETV
+430	618403 2986 991 1279 42.3 52.1 99 -0.68835571845993 2.5588605054189 136.90437398751 298.64155140851
+vector 431  AODVUUSim.vehicle[14].mobility  co2emission  ETV
+431	621389 2826 991 1279 42.3 52.1 99 0.973 9.5620815273963 414.06826600856 2323.6155579215
+vector 445  AODVUUSim.vehicle[15].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+445	624650 16 1037 1037 44.1 44.1 1 0 0 0 0
+vector 461  AODVUUSim.vehicle[15].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+461	636161 114 1037 1053 44.1 44.100802 6 0 2 4 8
+vector 460  AODVUUSim.vehicle[15].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+460	635849 312 1037 1055 44.1 44.100872 16 0 5 36 136
+vector 463  AODVUUSim.vehicle[15].wlan.mac  "throughput AC0"  ETV
+463	636275 16 1037 1037 44.1 44.1 1 0 0 0 0
+vector 451  AODVUUSim.vehicle[15].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+451	624704 22 1037 1037 44.1 44.1 1 2000000 2000000 2000000 4000000000000
+vector 453  AODVUUSim.vehicle[15].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+453	624742 57 1037 1053 44.1 44.100802 3 0 2 2 4
+vector 452  AODVUUSim.vehicle[15].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+452	624726 16 1037 1037 44.1 44.1 1 0 0 0 0
+vector 455  AODVUUSim.vehicle[15].mobility  posx  ETV
+455	624799 2388 1037 1279 44.1 52.1 81 1531.55 1594.922617912 125823.26833476 195480869.69968
+vector 456  AODVUUSim.vehicle[15].mobility  posy  ETV
+456	627187 1604 1037 1279 44.1 52.1 81 29.95 29.95 2425.95 72657.2025
+vector 438  AODVUUSim.vehicle[15].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+438	624634 16 1045 1045 44.1 44.1 1 8 8 8 64
+vector 449  AODVUUSim.vehicle[15].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+449	624687 17 1049 1049 44.1 44.1 1 70 70 70 4900
+vector 448  AODVUUSim.vehicle[15].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+448	624666 21 1050 1050 44.10005 44.10005 1 70 70 70 4900
+vector 457  AODVUUSim.vehicle[15].mobility  speed  ETV
+457	628791 2379 1056 1279 44.2 52.1 80 0.25786917130905 13.98612021334 647.71229933348 6720.4682342881
+vector 458  AODVUUSim.vehicle[15].mobility  acceleration  ETV
+458	631170 2365 1057 1279 44.3 52.1 79 -0.8516124032205 2.5976833763067 137.28251042031 282.45998591707
+vector 459  AODVUUSim.vehicle[15].mobility  co2emission  ETV
+459	633535 2314 1057 1279 44.3 52.1 79 0.973 9.9530818265444 367.55316367055 2095.1937568767
+vector 473  AODVUUSim.vehicle[16].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+473	636307 16 1105 1105 46.1 46.1 1 0 0 0 0
+vector 489  AODVUUSim.vehicle[16].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+489	645184 114 1105 1121 46.1 46.100802 6 0 2 4 8
+vector 488  AODVUUSim.vehicle[16].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+488	644872 312 1105 1123 46.1 46.100992 16 0 5 36 136
+vector 491  AODVUUSim.vehicle[16].wlan.mac  "throughput AC0"  ETV
+491	645298 16 1105 1105 46.1 46.1 1 0 0 0 0
+vector 479  AODVUUSim.vehicle[16].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+479	636361 22 1105 1105 46.1 46.1 1 2000000 2000000 2000000 4000000000000
+vector 481  AODVUUSim.vehicle[16].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+481	636399 57 1105 1121 46.1 46.100802 3 0 2 2 4
+vector 480  AODVUUSim.vehicle[16].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+480	636383 16 1105 1105 46.1 46.1 1 0 0 0 0
+vector 483  AODVUUSim.vehicle[16].mobility  posx  ETV
+483	636456 1330 1105 1279 46.1 52.1 61 1520.05 1520.05 92723.05 140943672.1525
+vector 484  AODVUUSim.vehicle[16].mobility  posy  ETV
+484	637786 1798 1105 1279 46.1 52.1 61 1038.15 1073.9356803632 64062.745329016 67286429.637458
+vector 466  AODVUUSim.vehicle[16].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+466	636291 16 1113 1113 46.1 46.1 1 8 8 8 64
+vector 477  AODVUUSim.vehicle[16].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+477	636344 17 1117 1117 46.1 46.1 1 70 70 70 4900
+vector 476  AODVUUSim.vehicle[16].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+476	636323 21 1118 1118 46.10005 46.10005 1 70 70 70 4900
+vector 485  AODVUUSim.vehicle[16].mobility  speed  ETV
+485	639584 1784 1124 1279 46.2 52.1 60 0.24746733479854 12.045537609938 369.90234124174 2983.4460615803
+vector 486  AODVUUSim.vehicle[16].mobility  acceleration  ETV
+486	641368 1748 1125 1279 46.3 52.1 59 1.3585155313136 2.5938011084683 117.98070275139 244.67475290713
+vector 487  AODVUUSim.vehicle[16].mobility  co2emission  ETV
+487	643116 1756 1125 1279 46.3 52.1 59 1.4119387523523 8.8254489613039 263.5403947326 1408.2750845401
+vector 501  AODVUUSim.vehicle[17].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+501	645330 16 1279 1279 52.1 52.1 1 0 0 0 0
+vector 517  AODVUUSim.vehicle[17].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+517	645685 72 1279 1293 52.1 52.10005 4 0 2 2 4
+vector 516  AODVUUSim.vehicle[17].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+516	645499 186 1279 1294 52.1 52.100802 10 0 5 25 109
+vector 519  AODVUUSim.vehicle[17].wlan.mac  "throughput AC0"  ETV
+519	645757 16 1279 1279 52.1 52.1 1 0 0 0 0
+vector 507  AODVUUSim.vehicle[17].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+507	645384 22 1279 1279 52.1 52.1 1 2000000 2000000 2000000 4000000000000
+vector 509  AODVUUSim.vehicle[17].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+509	645422 36 1279 1293 52.1 52.10005 2 0 2 2 4
+vector 508  AODVUUSim.vehicle[17].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+508	645406 16 1279 1279 52.1 52.1 1 0 0 0 0
+vector 511  AODVUUSim.vehicle[17].mobility  posx  ETV
+511	645458 21 1279 1279 52.1 52.1 1 531.55 531.55 531.55 282545.4025
+vector 512  AODVUUSim.vehicle[17].mobility  posy  ETV
+512	645479 20 1279 1279 52.1 52.1 1 29.95 29.95 29.95 897.0025
+vector 494  AODVUUSim.vehicle[17].udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+494	645314 16 1287 1287 52.1 52.1 1 8 8 8 64
+vector 505  AODVUUSim.vehicle[17].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+505	645367 17 1291 1291 52.1 52.1 1 70 70 70 4900
+vector 504  AODVUUSim.vehicle[17].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+504	645346 21 1292 1292 52.10005 52.10005 1 70 70 70 4900

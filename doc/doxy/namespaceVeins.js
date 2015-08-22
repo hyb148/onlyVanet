@@ -1,0 +1,27 @@
+var namespaceVeins =
+[
+    [ "ChannelAccess", "classVeins_1_1ChannelAccess.html", "classVeins_1_1ChannelAccess" ],
+    [ "AirFrame", "classVeins_1_1AirFrame.html", "classVeins_1_1AirFrame" ],
+    [ "BatteryAccess", "classVeins_1_1BatteryAccess.html", "classVeins_1_1BatteryAccess" ],
+    [ "Radio", "classVeins_1_1Radio.html", "classVeins_1_1Radio" ],
+    [ "TraCITestApp", "classVeins_1_1TraCITestApp.html", "classVeins_1_1TraCITestApp" ],
+    [ "TraCIBuffer", "classVeins_1_1TraCIBuffer.html", "classVeins_1_1TraCIBuffer" ],
+    [ "TraCIColor", "classVeins_1_1TraCIColor.html", "classVeins_1_1TraCIColor" ],
+    [ "TraCICommandInterface", "classVeins_1_1TraCICommandInterface.html", "classVeins_1_1TraCICommandInterface" ],
+    [ "traci2omnet_functor", "structVeins_1_1traci2omnet__functor.html", "structVeins_1_1traci2omnet__functor" ],
+    [ "TraCIConnection", "classVeins_1_1TraCIConnection.html", "classVeins_1_1TraCIConnection" ],
+    [ "TraCICoord", "structVeins_1_1TraCICoord.html", "structVeins_1_1TraCICoord" ],
+    [ "TraCIMobility", "classVeins_1_1TraCIMobility.html", "classVeins_1_1TraCIMobility" ],
+    [ "TraCIMobilityAccess", "classVeins_1_1TraCIMobilityAccess.html", "classVeins_1_1TraCIMobilityAccess" ],
+    [ "TraCIScenarioManager", "classVeins_1_1TraCIScenarioManager.html", "classVeins_1_1TraCIScenarioManager" ],
+    [ "TraCIScenarioManagerAccess", "classVeins_1_1TraCIScenarioManagerAccess.html", "classVeins_1_1TraCIScenarioManagerAccess" ],
+    [ "TraCIScenarioManagerLaunchd", "classVeins_1_1TraCIScenarioManagerLaunchd.html", "classVeins_1_1TraCIScenarioManagerLaunchd" ],
+    [ "TraCIScenarioManagerLaunchdAccess", "classVeins_1_1TraCIScenarioManagerLaunchdAccess.html", "classVeins_1_1TraCIScenarioManagerLaunchdAccess" ],
+    [ "TraCIScreenRecorder", "classVeins_1_1TraCIScreenRecorder.html", "classVeins_1_1TraCIScreenRecorder" ],
+    [ "Obstacle", "classVeins_1_1Obstacle.html", "classVeins_1_1Obstacle" ],
+    [ "ObstacleControl", "classVeins_1_1ObstacleControl.html", "classVeins_1_1ObstacleControl" ],
+    [ "ObstacleControlAccess", "classVeins_1_1ObstacleControlAccess.html", "classVeins_1_1ObstacleControlAccess" ],
+    [ "AnnotationDummy", "classVeins_1_1AnnotationDummy.html", "classVeins_1_1AnnotationDummy" ],
+    [ "AnnotationManager", "classVeins_1_1AnnotationManager.html", "classVeins_1_1AnnotationManager" ],
+    [ "AnnotationManagerAccess", "classVeins_1_1AnnotationManagerAccess.html", "classVeins_1_1AnnotationManagerAccess" ]
+];

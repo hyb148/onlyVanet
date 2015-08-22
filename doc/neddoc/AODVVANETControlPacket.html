@@ -1,0 +1,113 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Packet <i>AODVVANETControlPacket</i></h2>
+<b>File: <a href="src-routing-aodvvanet-AODVVANETControlPackets.msg.html">src/routing/aodvvanet/AODVVANETControlPackets.msg</a></b><br/><p><a href="../doxy/classAODVVANETControlPacket.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>Base packet for AODVVANET(<a href="vanetsim.simulations.aodvvanet.AODVVANET.html">1</a>,<a href="vanetsim.AODVVANET.html">2</a>) Control Packets</p>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-msg-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="AODVVANETControlPacket-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="AODVVANETControlPacket.html" title="Packet AODVVANETControlPacket" alt="" coords="5,6,192,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-msg-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="AODVVANETControlPacket-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="AODVVANETControlPacket.html" title="Packet AODVVANETControlPacket" alt="" coords="242,6,429,31">
+<area shape="rect" id="node2" href="AODVVANETRERR.html" title="Class AODVVANETRERR" alt="" coords="5,81,149,106">
+<area shape="rect" id="node3" href="AODVVANETRREP.html" title="Class AODVVANETRREP" alt="" coords="174,81,316,106">
+<area shape="rect" id="node4" href="AODVVANETRREPACK.html" title="Class AODVVANETRREPACK" alt="" coords="341,81,512,106">
+<area shape="rect" id="node5" href="AODVVANETRREQ.html" title="Class AODVVANETRREQ" alt="" coords="536,81,680,106">
+</map>
+<h3 class="subtitle">Known subclasses:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="AODVVANETRERR.html">AODVVANETRERR</a>
+   </td>
+   <td>
+<i>class</i>
+   </td>
+   <td>
+
+<p>Represents an AODVVANET(<a href="vanetsim.simulations.aodvvanet.AODVVANET.html">1</a>,<a href="vanetsim.AODVVANET.html">2</a>) Route Error</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="AODVVANETRREP.html">AODVVANETRREP</a>
+   </td>
+   <td>
+<i>class</i>
+   </td>
+   <td>
+
+<p>Represents an AODVVANET(<a href="vanetsim.simulations.aodvvanet.AODVVANET.html">1</a>,<a href="vanetsim.AODVVANET.html">2</a>) Route Reply</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="AODVVANETRREPACK.html">AODVVANETRREPACK</a>
+   </td>
+   <td>
+<i>class</i>
+   </td>
+   <td>
+
+<p>Represents an AODVVANET(<a href="vanetsim.simulations.aodvvanet.AODVVANET.html">1</a>,<a href="vanetsim.AODVVANET.html">2</a>) Route Reply ACK</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="AODVVANETRREQ.html">AODVVANETRREQ</a>
+   </td>
+   <td>
+<i>class</i>
+   </td>
+   <td>
+
+<p>Represents an AODVVANET(<a href="vanetsim.simulations.aodvvanet.AODVVANET.html">1</a>,<a href="vanetsim.AODVVANET.html">2</a>) Route Request</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Fields:</h3>
+<table class="fieldstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>packetType</td>
+   <td>
+      <i>
+unsigned int</i>
+   </td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Base packet for AODVVANET Control Packets
+//
+</span><span style="color: #800000; font-weight: bold; ">packet</span><span style="color: #000000; "> </span><span style="color: #000000; ">AODVVANETControlPacket</span><span style="color: #000000; ">
+{
+    </span><span style="color: #000080; font-weight: bold; ">unsigned</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">packetType</span><span style="color: #000000; ">;
+}
+
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

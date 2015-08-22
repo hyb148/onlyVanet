@@ -1,0 +1,420 @@
+file 147322 1439933839                                          
+version 2
+run General-0-20150808-19:00:56-6892
+attr configname General
+attr datetime 20150808-19:00:56
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network ""
+attr processid 6892
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+vector 5  AODVVANET.rsu[0].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+5	17912 8 0 0 0 0 1 0 0 0 0
+vector 16  AODVVANET.rsu[0].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+16	48762 8780 0 2065 0 13.843636863028 356 0 2 269 453
+vector 15  AODVVANET.rsu[0].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+15	26732 22030 0 2065 0 13.843636863028 900 0 5 1656 6256
+vector 11  AODVVANET.rsu[0].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+11	22317 16 0 0 0 0 1 54000000 54000000 54000000 2.916e+15
+vector 13  AODVVANET.rsu[0].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+13	22342 4390 0 2065 0 13.843636863028 178 0 2 135 227
+vector 12  AODVVANET.rsu[0].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+12	22333 9 0 0 0 0 1 0 0 0 0
+vector 2  AODVVANET.rsu[0].wlan.agent  sentRequest:vector  ETV
+attr title "sent requests, vector"
+2	15757 1088 4 1981 0.180829011113 13.780829011113 47 1 1 47 47
+vector 9  AODVVANET.rsu[0].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+9	20098 1111 9 1826 0.280829011113 13.480829011113 46 40 40 1840 73600
+vector 18  AODVVANET.rsu[0].wlan.mac  "throughput AC0"  ETV
+18	57542 1470 9 2000 0.280829011113 13.831160945959 52 0 2292.3459169789 59698.516775062 84361074.378855
+vector 8  AODVVANET.rsu[0].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+8	18986 1112 10 1827 0.280879011113 13.480879011113 46 40 40 1840 73600
+vector 4  AODVVANET.rsu[0].wlan.agent  dropConfirm:vector  ETV
+attr title "dropped confirms, vector"
+4	16845 1067 17 1981 0.430829011113 13.780829011113 46 1 1 46 46
+vector 31  AODVVANET.host[0].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+31	59778 11 418 418 8 8 1 0 0 0 0
+vector 49  AODVVANET.host[0].manetrouting.wlan[0].mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+49	66540 11 418 418 8 8 1 0 0 0 0
+vector 64  AODVVANET.host[0].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+64	84740 5888 418 2067 8 13.844147502868 234 0 2 146 206
+vector 63  AODVVANET.host[0].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+63	73006 11734 418 2067 8 13.844147502868 466 0 5 532 2018
+vector 66  AODVVANET.host[0].wlan.mac  "throughput AC0"  ETV
+66	90628 611 418 1995 8 13.831159585799 21 0 2292.3459169789 17679.431636211 28473625.113192
+vector 70  AODVVANET.host[0].manetrouting.wlan[0].mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+70	103057 5888 418 2068 8 13.844147502868 234 0 2 146 206
+vector 69  AODVVANET.host[0].manetrouting.wlan[0].mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+69	91277 11780 418 2068 8 13.844147502868 468 0 5 540 2040
+vector 72  AODVVANET.host[0].manetrouting.wlan[0].mac  "throughput AC0"  ETV
+72	108945 615 418 1996 8 13.831159585799 21 0 2292.3459169789 18503.31389631 31274148.921639
+vector 37  AODVVANET.host[0].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+37	62839 18 418 418 8 8 1 54000000 54000000 54000000 2.916e+15
+vector 39  AODVVANET.host[0].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+39	62868 2944 418 2067 8 13.844147502868 117 0 2 73 103
+vector 38  AODVVANET.host[0].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+38	62857 11 418 418 8 8 1 0 0 0 0
+vector 55  AODVVANET.host[0].manetrouting.wlan[0].radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+55	69545 18 418 418 8 8 1 54000000 54000000 54000000 2.916e+15
+vector 57  AODVVANET.host[0].manetrouting.wlan[0].radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+57	69574 2944 418 2068 8 13.844147502868 117 0 2 73 103
+vector 56  AODVVANET.host[0].manetrouting.wlan[0].radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+56	69563 11 418 418 8 8 1 0 0 0 0
+vector 59  AODVVANET.host[0].mobility  posx  ETV
+59	72518 155 418 1444 8 13 6 532.58130028169 556.20547616283 3245.1084408005 1755565.5387428
+vector 60  AODVVANET.host[0].mobility  posy  ETV
+60	72673 96 418 1444 8 13 6 29.95 29.95 179.7 5382.015
+vector 68  AODVVANET.host[0].wlan.radio  snirVector  ETV
+68	91239 38 436 436 8.031392371273 8.031392371273 1 30.750074573874 30.750074573874 30.750074573874 945.56708629881
+vector 74  AODVVANET.host[0].manetrouting.wlan[0].radio  snirVector  ETV
+74	109560 38 437 437 8.031392371273 8.031392371273 1 30.750074573874 30.750074573874 30.750074573874 945.56708629881
+vector 36  AODVVANET.host[0].wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+36	61706 1133 438 2041 8.031392371273 13.842644412005 43 40 40 1720 68800
+vector 33  AODVVANET.host[0].wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+33	59789 1133 438 2041 8.031392371273 13.842644412005 43 40 40 1720 68800
+vector 54  AODVVANET.host[0].manetrouting.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+54	68439 1106 439 2009 8.031392371273 13.831671585799 42 40 40 1680 67200
+vector 51  AODVVANET.host[0].manetrouting.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+51	66551 1106 439 2009 8.031392371273 13.831671585799 42 40 40 1680 67200
+vector 46  AODVVANET.host[0].manetrouting.wlan[0].agent  sentRequest:vector  ETV
+attr title "sent requests, vector"
+46	65812 376 444 1970 8.142082412005 13.742082412005 15 1 1 15 15
+vector 53  AODVVANET.host[0].manetrouting.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+53	68048 391 454 2025 8.242082412005 13.842082412005 15 40 40 600 24000
+vector 52  AODVVANET.host[0].manetrouting.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+52	67657 391 455 2026 8.242132412005 13.842132412005 15 40 40 600 24000
+vector 20  AODVVANET.rsu[0].wlan.radio  snirVector  ETV
+20	59012 38 464 464 8.242645772165 8.242645772165 1 30.750074573874 30.750074573874 30.750074573874 945.56708629881
+vector 10  AODVVANET.rsu[0].wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+10	21209 1108 465 2052 8.242645772165 13.842645772165 42 40 40 1680 67200
+vector 7  AODVVANET.rsu[0].wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+7	17920 1066 465 2052 8.242645772165 13.842645772165 42 40 40 1680 67200
+vector 28  AODVVANET.host[0].wlan.agent  sentRequest:vector  ETV
+attr title "sent requests, vector"
+28	59050 376 485 1975 8.293585502868 13.743585502868 15 1 1 15 15
+vector 35  AODVVANET.host[0].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+35	61314 392 491 2057 8.393585502868 13.843585502868 15 40 40 600 24000
+vector 34  AODVVANET.host[0].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+34	60922 392 492 2058 8.393635502868 13.843635502868 15 40 40 600 24000
+vector 48  AODVVANET.host[0].manetrouting.wlan[0].agent  dropConfirm:vector  ETV
+attr title "dropped confirms, vector"
+48	66188 352 508 1970 8.542082412005 13.742082412005 14 1 1 14 14
+vector 30  AODVVANET.host[0].wlan.agent  dropConfirm:vector  ETV
+attr title "dropped confirms, vector"
+30	59426 352 513 1975 8.543585502868 13.743585502868 14 1 1 14 14
+vector 61  AODVVANET.host[0].mobility  speed  ETV
+61	72769 131 590 1444 9 13 5 3.9572089270348 11.569177027038 38.606699679321 334.13859233679
+vector 62  AODVVANET.host[0].mobility  acceleration  ETV
+62	72900 106 775 1444 10 13 4 1.8136934457649 2.0183197392081 7.6119681000034 14.513154720904
+vector 85  AODVVANET.host[1].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+85	109832 13 1111 1111 12 12 1 0 0 0 0
+vector 103  AODVVANET.host[1].manetrouting.wlan[0].mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+103	112888 14 1111 1111 12 12 1 0 0 0 0
+vector 118  AODVVANET.host[1].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+118	121390 2944 1111 2069 12 13.844147502868 110 0 2 64 84
+vector 117  AODVVANET.host[1].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+117	115962 5428 1111 2069 12 13.844147502868 202 0 5 180 680
+vector 120  AODVVANET.host[1].wlan.mac  "throughput AC0"  ETV
+120	124334 313 1111 1992 12 13.831109585799 10 0 2291.5251406821 9166.1005627284 21004349.881512
+vector 124  AODVVANET.host[1].manetrouting.wlan[0].mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+124	129846 2890 1111 2062 12 13.843635502868 108 0 2 61 77
+vector 123  AODVVANET.host[1].manetrouting.wlan[0].mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+123	124688 5158 1111 2062 12 13.843635502868 192 0 5 144 544
+vector 126  AODVVANET.host[1].manetrouting.wlan[0].mac  "throughput AC0"  ETV
+126	132736 313 1111 1997 12 13.831159585799 10 0 1228.6190890654 4914.4763562616 6038019.4640636
+vector 91  AODVVANET.host[1].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+91	111249 20 1111 1111 12 12 1 54000000 54000000 54000000 2.916e+15
+vector 93  AODVVANET.host[1].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+93	111282 1417 1111 2069 12 13.844147502868 55 0 2 32 42
+vector 92  AODVVANET.host[1].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+92	111269 13 1111 1111 12 12 1 0 0 0 0
+vector 109  AODVVANET.host[1].manetrouting.wlan[0].radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+109	114358 21 1111 1111 12 12 1 54000000 54000000 54000000 2.916e+15
+vector 111  AODVVANET.host[1].manetrouting.wlan[0].radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+111	114393 1445 1111 2062 12 13.843635502868 54 0 2 31 39
+vector 110  AODVVANET.host[1].manetrouting.wlan[0].radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+110	114379 14 1111 1111 12 12 1 0 0 0 0
+vector 113  AODVVANET.host[1].mobility  posx  ETV
+113	115838 40 1111 1444 12 13 2 1020.05 1020.05 2040.1 2081004.005
+vector 114  AODVVANET.host[1].mobility  posy  ETV
+114	115878 56 1111 1444 12 13 2 39.207518016116 39.207518016116 78.415036032232 3074.4589379681
+vector 82  AODVVANET.host[1].wlan.agent  sentRequest:vector  ETV
+attr title "sent requests, vector"
+82	109598 130 1122 1965 12.131109585799 13.731109585799 5 1 1 5 5
+vector 89  AODVVANET.host[1].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+89	110547 135 1142 1992 12.231109585799 13.831109585799 5 40 40 200 8000
+vector 88  AODVVANET.host[1].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+88	110412 135 1143 1993 12.231159585799 13.831159585799 5 40 40 200 8000
+vector 128  AODVVANET.host[1].manetrouting.wlan[0].radio  snirVector  ETV
+128	133049 41 1153 1153 12.231671585799 12.231671585799 1 123.01029995664 123.01029995664 123.01029995664 15131.533895423
+vector 108  AODVVANET.host[1].manetrouting.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+108	113742 616 1156 2043 12.231671585799 13.842644412005 22 40 40 880 35200
+vector 105  AODVVANET.host[1].manetrouting.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+105	112902 616 1156 2043 12.231671585799 13.842644412005 22 40 40 880 35200
+vector 122  AODVVANET.host[1].wlan.radio  snirVector  ETV
+122	124647 41 1176 1176 12.242644412005 12.242644412005 1 123.01029995664 123.01029995664 123.01029995664 15131.533895423
+vector 90  AODVVANET.host[1].wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+90	110682 567 1179 2042 12.242644412005 13.842644412005 21 40 40 840 33600
+vector 87  AODVVANET.host[1].wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+87	109845 567 1179 2042 12.242644412005 13.842644412005 21 40 40 840 33600
+vector 100  AODVVANET.host[1].manetrouting.wlan[0].agent  sentRequest:vector  ETV
+attr title "sent requests, vector"
+100	112699 108 1213 1821 12.270704573462 13.470704573462 4 1 1 4 4
+vector 107  AODVVANET.host[1].manetrouting.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+107	113630 112 1243 1895 12.370704573462 13.570704573462 4 40 40 160 6400
+vector 106  AODVVANET.host[1].manetrouting.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+106	113518 112 1244 1896 12.370754573462 13.570754573462 4 40 40 160 6400
+vector 84  AODVVANET.host[1].wlan.agent  dropConfirm:vector  ETV
+attr title "dropped confirms, vector"
+84	109728 104 1272 1965 12.531109585799 13.731109585799 4 1 1 4 4
+vector 102  AODVVANET.host[1].manetrouting.wlan[0].agent  dropConfirm:vector  ETV
+attr title "dropped confirms, vector"
+102	112807 81 1364 1821 12.670704573462 13.470704573462 3 1 1 3 3
+vector 139  AODVVANET.host[2].wlan.mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+139	133225 14 1444 1444 13 13 1 0 0 0 0
+vector 157  AODVVANET.host[2].manetrouting.wlan[0].mgmt  dataQueueLen:vector  ETV
+attr interpolationmode sample-hold
+attr title "data queue length, vector"
+157	135156 14 1444 1444 13 13 1 0 0 0 0
+vector 172  AODVVANET.host[2].wlan.mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+172	140160 1810 1444 2063 13 13.843635502868 68 0 2 37 45
+vector 171  AODVVANET.host[2].wlan.mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+171	137054 3106 1444 2063 13 13.843635502868 116 0 5 72 272
+vector 174  AODVVANET.host[2].wlan.mac  "throughput AC0"  ETV
+174	141970 177 1444 1998 13 13.831159585799 6 0 2664.3835928236 4956.7295098025 12353789.732797
+vector 178  AODVVANET.host[2].manetrouting.wlan[0].mac  RadioState  ETV
+attr enum "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname RadioState
+178	145294 1810 1444 2064 13 13.843635502868 68 0 2 37 45
+vector 177  AODVVANET.host[2].manetrouting.wlan[0].mac  State  ETV
+attr enum "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname Ieee80211Mac
+177	142188 3106 1444 2064 13 13.843635502868 116 0 5 72 272
+vector 180  AODVVANET.host[2].manetrouting.wlan[0].mac  "throughput AC0"  ETV
+180	147104 177 1444 1999 13 13.831159585799 6 0 1603.3740458874 2832.2290403753 4080892.9285032
+vector 145  AODVVANET.host[2].wlan.radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+145	134135 21 1444 1444 13 13 1 54000000 54000000 54000000 2.916e+15
+vector 147  AODVVANET.host[2].wlan.radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+147	134170 905 1444 2063 13 13.843635502868 34 0 2 19 23
+vector 146  AODVVANET.host[2].wlan.radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+146	134156 14 1444 1444 13 13 1 0 0 0 0
+vector 163  AODVVANET.host[2].manetrouting.wlan[0].radio  bitrate:vector  ETV
+attr interpolationmode sample-hold
+attr title "tx bitrate, vector"
+attr unit bps
+163	136066 21 1444 1444 13 13 1 54000000 54000000 54000000 2.916e+15
+vector 165  AODVVANET.host[2].manetrouting.wlan[0].radio  radioState:vector  ETV
+attr interpolationmode sample-hold
+attr title "radio state (enum), vector"
+165	136101 905 1444 2064 13 13.843635502868 34 0 2 19 23
+vector 164  AODVVANET.host[2].manetrouting.wlan[0].radio  channelNo:vector  ETV
+attr interpolationmode sample-hold
+attr title "channel no, vector"
+164	136087 14 1444 1444 13 13 1 0 0 0 0
+vector 167  AODVVANET.host[2].mobility  posx  ETV
+167	137006 20 1444 1444 13 13 1 2020.05 2020.05 2020.05 4080602.0025
+vector 168  AODVVANET.host[2].mobility  posy  ETV
+168	137026 28 1444 1444 13 13 1 1039.2103864904 1039.2103864904 1039.2103864904 1079958.2273895
+vector 115  AODVVANET.host[1].mobility  speed  ETV
+115	115934 28 1444 1444 13 13 1 4.1314942782517 4.1314942782517 4.1314942782517 17.069244971227
+vector 136  AODVVANET.host[2].wlan.agent  sentRequest:vector  ETV
+attr title "sent requests, vector"
+136	133090 81 1454 1987 13.011527627659 13.811527627659 3 1 1 3 3
+vector 176  AODVVANET.host[2].wlan.radio  snirVector  ETV
+176	142147 41 1473 1473 13.031671585799 13.031671585799 1 123.01029995664 123.01029995664 123.01029995664 15131.533895423
+vector 182  AODVVANET.host[2].manetrouting.wlan[0].radio  snirVector  ETV
+182	147281 41 1474 1474 13.031671585799 13.031671585799 1 123.01029995664 123.01029995664 123.01029995664 15131.533895423
+vector 144  AODVVANET.host[2].wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+144	133743 392 1478 2044 13.031671585799 13.842644412005 14 40 40 560 22400
+vector 141  AODVVANET.host[2].wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+141	133239 392 1478 2044 13.031671585799 13.842644412005 14 40 40 560 22400
+vector 162  AODVVANET.host[2].manetrouting.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+162	135674 392 1479 2045 13.031671585799 13.842644412005 14 40 40 560 22400
+vector 159  AODVVANET.host[2].manetrouting.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+159	135170 392 1479 2045 13.031671585799 13.842644412005 14 40 40 560 22400
+vector 143  AODVVANET.host[2].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+143	133687 56 1592 1858 13.111527627659 13.511527627659 2 40 40 80 3200
+vector 142  AODVVANET.host[2].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+142	133631 56 1593 1859 13.111577627659 13.511577627659 2 40 40 80 3200
+vector 154  AODVVANET.host[2].manetrouting.wlan[0].agent  sentRequest:vector  ETV
+attr title "sent requests, vector"
+154	135075 54 1623 1890 13.131580454017 13.531580454017 2 1 1 2 2
+vector 161  AODVVANET.host[2].manetrouting.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+161	135618 56 1665 1931 13.231580454017 13.631580454017 2 40 40 80 3200
+vector 160  AODVVANET.host[2].manetrouting.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+160	135562 56 1666 1932 13.231630454017 13.631630454017 2 40 40 80 3200
+vector 138  AODVVANET.host[2].wlan.agent  dropConfirm:vector  ETV
+attr title "dropped confirms, vector"
+138	133171 54 1720 1987 13.411527627659 13.811527627659 2 1 1 2 2
+vector 156  AODVVANET.host[2].manetrouting.wlan[0].agent  dropConfirm:vector  ETV
+attr title "dropped confirms, vector"
+156	135129 27 1890 1890 13.531580454017 13.531580454017 1 1 1 1 1

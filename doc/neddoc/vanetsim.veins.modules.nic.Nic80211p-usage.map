@@ -1,0 +1,4 @@
+<area shape="rect" id="node1" href="vanetsim.veins.modules.nic.Nic80211p.html" title="Compound Module Nic80211p" alt="" coords="155,6,239,31">
+<area shape="rect" id="node2" href="vanetsim.veins.modules.phy.PhyLayer80211p.html" title="Simple Module PhyLayer80211p" alt="" coords="5,81,123,106">
+<area shape="rect" id="node3" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="148,81,247,106">
+<area shape="rect" id="node4" href="vanetsim.veins.modules.mac.ieee80211p.Mac1609_4.html" title="Simple Module Mac1609_4" alt="" coords="271,81,360,106">

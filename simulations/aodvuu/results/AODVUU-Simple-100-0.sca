@@ -1,0 +1,192 @@
+version 2
+run AODVUU-Simple-100-0-20150813-13:42:46-7558
+attr configname AODVUU-Simple-100
+attr datetime 20150813-13:42:46
+attr experiment AODVUU-Simple-100
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network AODVUUSim
+attr processid 7558
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar AODVUUSim.vehicle[6].mobility 	startTime 	19.1
+scalar AODVUUSim.vehicle[6].mobility 	totalTime 	36.2
+scalar AODVUUSim.vehicle[6].mobility 	stopTime 	36.3
+scalar AODVUUSim.vehicle[6].mobility 	minSpeed 	0.25681022623507
+scalar AODVUUSim.vehicle[6].mobility 	maxSpeed 	13.999906795102
+scalar AODVUUSim.vehicle[6].mobility 	totalDistance 	192.34446324475
+scalar AODVUUSim.vehicle[6].mobility 	totalCO2Emission 	58.181852555013
+scalar AODVUUSim.vehicle[6].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar AODVUUSim.vehicle[6].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar AODVUUSim.vehicle[6].udp 	passedUpPk:count 	0
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar AODVUUSim.vehicle[6].udp 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar AODVUUSim.vehicle[6].udp 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar AODVUUSim.vehicle[6].udp 	sentPk:count 	1
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar AODVUUSim.vehicle[6].udp 	sentPk:sum(packetBytes) 	8
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar AODVUUSim.vehicle[6].networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar AODVUUSim.vehicle[6].networkLayer.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar AODVUUSim.vehicle[6].networkLayer.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar AODVUUSim.vehicle[6].networkLayer.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar AODVUUSim.vehicle[6].networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar AODVUUSim.vehicle[6].wlan.mgmt 	dataQueueLen:max 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar AODVUUSim.vehicle[6].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar AODVUUSim.vehicle[6].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar AODVUUSim.vehicle[6].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar AODVUUSim.vehicle[6].wlan.mac 	"number of received packets" 	0
+scalar AODVUUSim.vehicle[6].wlan.mac 	"number of collisions" 	0
+scalar AODVUUSim.vehicle[6].wlan.mac 	"number of internal collisions" 	0
+scalar AODVUUSim.vehicle[6].wlan.mac 	"number of retry for AC 0" 	0
+scalar AODVUUSim.vehicle[6].wlan.mac 	"sent and received bits" 	560
+scalar AODVUUSim.vehicle[6].wlan.mac 	"sent packet within AC 0" 	0
+scalar AODVUUSim.vehicle[6].wlan.mac 	"sent in TXOP " 	0
+scalar AODVUUSim.vehicle[6].wlan.mac 	"sentWithoutRetry AC 0" 	0
+scalar AODVUUSim.vehicle[6].wlan.mac 	"numGivenUp AC 0" 	0
+scalar AODVUUSim.vehicle[6].wlan.mac 	"numDropped AC 0" 	0
+scalar AODVUUSim.vehicle[6].wlan.mac 	rcvdPkFromHL:count 	1
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar AODVUUSim.vehicle[6].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	70
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar AODVUUSim.vehicle[6].wlan.mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar AODVUUSim.vehicle[6].wlan.mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar AODVUUSim.vehicle[6].wlan.mac 	rcvdPkFromLL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar AODVUUSim.vehicle[6].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar AODVUUSim.vehicle[6].wlan.mac 	sentDownPk:count 	1
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar AODVUUSim.vehicle[6].wlan.mac 	sentDownPk:sum(packetBytes) 	70
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar AODVUUSim.vehicle[6].wlan.radio 	lossRate:min 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, min"
+scalar AODVUUSim.vehicle[6].wlan.radio 	lossRate:max 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, max"
+scalar AODVUUSim.vehicle[6].wlan.radio 	lossRate:timeavg 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, timeavg"
+statistic AODVUUSim.vehicle[6].wlan.radio 	channelNo:histogram
+field count 1
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  sample-hold
+attr title  "channel no, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar AODVUUSim.vehicle[6].wlan.radio 	bitrate:min 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, min"
+attr unit  bps
+scalar AODVUUSim.vehicle[6].wlan.radio 	bitrate:max 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, max"
+attr unit  bps
+scalar AODVUUSim.vehicle[6].wlan.radio 	bitrate:timeavg 	2000000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, timeavg"
+attr unit  bps
+scalar AODVUUSim.vehicle[6].wlan.radio 	radioState:count 	3
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), count"
+scalar AODVUUSim.vehicle[6].manetrouting 	"simulated time" 	36.3
+scalar AODVUUSim.vehicle[6].manetrouting 	"Aodv totalSend " 	0
+scalar AODVUUSim.vehicle[6].manetrouting 	"rreq send" 	0
+scalar AODVUUSim.vehicle[6].manetrouting 	"rreq rec" 	0
+scalar AODVUUSim.vehicle[6].manetrouting 	"rrep send" 	0
+scalar AODVUUSim.vehicle[6].manetrouting 	"rrep rec" 	0
+scalar AODVUUSim.vehicle[6].manetrouting 	"rrep ack send" 	0
+scalar AODVUUSim.vehicle[6].manetrouting 	"rrep ack rec" 	0
+scalar AODVUUSim.vehicle[6].manetrouting 	"rerr send" 	0
+scalar AODVUUSim.vehicle[6].manetrouting 	"rerr rec" 	0
+scalar AODVUUSim.vehicle[6].manetrouting 	"total repair" 	0

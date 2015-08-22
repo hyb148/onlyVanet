@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- debug config -->
+<launch>
+	<basedir path="/home/administrator/ITS/VANETProject/VANETSim/simulations/_maps/sanfrancisco/" />
+	<copy file="sanfrancisco.net.xml" />
+	<copy file="sanfrancisco.rou.xml" />
+	<copy file="sanfrancisco.poly.xml" />
+	<copy file="sanfrancisco.sumo.cfg" type="config" />
+</launch>

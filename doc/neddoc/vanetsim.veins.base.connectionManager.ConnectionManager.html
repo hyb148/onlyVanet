@@ -1,0 +1,188 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>ConnectionManager</i></h2>
+<b>Package:</b> vanetsim.veins.base.connectionManager<br/><b>File: <a href="src-veins-base-connectionManager-ConnectionManager.ned.html">src/veins/base/connectionManager/ConnectionManager.ned</a></b><br/><p><a href="../doxy/classConnectionManager.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>Module to control all connection related stuff</p>
+<p>The central module that coordinates the connections between all
+nodes, and handles dynamic gate creation.  <a href="vanetsim.veins.base.connectionManager.ConnectionManager.html">ConnectionManager</a> therefore
+periodically communicates with the mobility module and
+ChannelAccess.</p>
+<p>The four parameters pMax, sat, alpha, and carrierFrequency are used
+to calculate the interference distance between nodes. The values used
+here in <a href="vanetsim.veins.base.connectionManager.ConnectionManager.html">ConnectionManager</a> are used to calculate the upper bound,
+i.e. they can be redifined in the analogue models, but never such
+that the maximal interference distance is exeeded.</p>
+<p><b>Author:</b> Steffen Sroka, Daniel Willkomm, Karl Wessel</p>
+<p><b>See also:</b> MobilityBase</p>
+<img src="vanetsim.veins.base.connectionManager.ConnectionManager-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="vanetsim.veins.base.connectionManager.ConnectionManager.html" title="ConnectionManager" alt="ConnectionManager" coords="0,31,179,71">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.veins.base.connectionManager.ConnectionManager-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.veins.base.connectionManager.ConnectionManager.html" title="Simple Module ConnectionManager" alt="" coords="5,81,144,106">
+<area shape="rect" id="node2" href="vanetsim.veins.nodes.Scenario.html" title="Network Scenario" alt="" coords="38,6,111,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="vanetsim.veins.base.connectionManager.ConnectionManager-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="vanetsim.veins.base.connectionManager.ConnectionManager.html" title="Simple Module ConnectionManager" alt="" coords="5,6,144,31">
+</map>
+<h3 class="subtitle">Networks:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="vanetsim.veins.nodes.Scenario.html">Scenario</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>debug switch for core framework</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>sendDirect</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>send directly to the node or create separate gates for every connection</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>pMax</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>maximum sending power used for this network [mW]</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>sat</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>minimum signal attenuation threshold [dBm]</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>alpha</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>minimum path loss coefficient</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>carrierFrequency</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>minimum carrier frequency of the channel [Hz]</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>drawMaxIntfDist</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>should the maximum interference distance be displayed for each node?</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=abstract/multicast</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">// Module to control all connection related stuff
+//
+// The central module that coordinates the connections between all
+// nodes, and handles dynamic gate creation.  ConnectionManager therefore
+// periodically communicates with the mobility module and
+// ChannelAccess.
+//
+// The four parameters pMax, sat, alpha, and carrierFrequency are used
+// to calculate the interference distance between nodes. The values used
+// here in ConnectionManager are used to calculate the upper bound,
+// i.e. they can be redifined in the analogue models, but never such
+// that the maximal interference distance is exeeded.
+//       
+// </span><span style="color: #000080; ">@author</span><span style="color: #808080; font-style: italic; "> Steffen Sroka, Daniel Willkomm, Karl Wessel
+// </span><span style="color: #000080; ">@see</span><span style="color: #808080; font-style: italic; "> MobilityBase
+//
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">ConnectionManager</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #808080; font-style: italic; ">// debug switch for core framework
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">coreDebug</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">// send directly to the node or create separate gates for every connection
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">sendDirect</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">// maximum sending power used for this network [mW]
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">pMax</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mW</span><span style="color: #000000; ">);
+        </span><span style="color: #808080; font-style: italic; ">// minimum signal attenuation threshold [dBm]
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">sat</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">dBm</span><span style="color: #000000; ">);
+        </span><span style="color: #808080; font-style: italic; ">// minimum path loss coefficient
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">alpha</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">// minimum carrier frequency of the channel [Hz]
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">carrierFrequency</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">Hz</span><span style="color: #000000; ">);
+        </span><span style="color: #808080; font-style: italic; ">// should the maximum interference distance be displayed for each node?
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">drawMaxIntfDist</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=abstract/multicast&quot;</span><span style="color: #000000; ">);
+}
+
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

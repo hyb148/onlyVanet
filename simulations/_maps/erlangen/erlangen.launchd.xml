@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- debug config -->
+<launch>
+	<basedir path="/home/administrator/ITS/omnetpp-4.4.1/samples/onlyVanet/simulations/_maps/erlangen" />
+	<copy file="erlangen.net.xml" />
+	<copy file="erlangen.rou.xml" />
+	<copy file="erlangen.poly.xml" />
+	<copy file="erlangen.sumo.cfg" type="config" />
+</launch>
+

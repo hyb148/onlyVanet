@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['jam_5flength_5fmeters',['JAM_LENGTH_METERS',['../aodvTraCIConstants_8h.html#a8f84a9cfe1563281fc6c91b72f14a562',1,'JAM_LENGTH_METERS():&#160;aodvTraCIConstants.h'],['../bitcarTraCIConstants_8h.html#a8f84a9cfe1563281fc6c91b72f14a562',1,'JAM_LENGTH_METERS():&#160;bitcarTraCIConstants.h'],['../rbvtrTraCIConstants_8h.html#a8f84a9cfe1563281fc6c91b72f14a562',1,'JAM_LENGTH_METERS():&#160;rbvtrTraCIConstants.h'],['../TraCIConstants_8h.html#a8f84a9cfe1563281fc6c91b72f14a562',1,'JAM_LENGTH_METERS():&#160;TraCIConstants.h']]],
+  ['jam_5flength_5fvehicle',['JAM_LENGTH_VEHICLE',['../aodvTraCIConstants_8h.html#a74683d948c8a7dfc72157023021232f0',1,'JAM_LENGTH_VEHICLE():&#160;aodvTraCIConstants.h'],['../bitcarTraCIConstants_8h.html#a74683d948c8a7dfc72157023021232f0',1,'JAM_LENGTH_VEHICLE():&#160;bitcarTraCIConstants.h'],['../rbvtrTraCIConstants_8h.html#a74683d948c8a7dfc72157023021232f0',1,'JAM_LENGTH_VEHICLE():&#160;rbvtrTraCIConstants.h'],['../TraCIConstants_8h.html#a74683d948c8a7dfc72157023021232f0',1,'JAM_LENGTH_VEHICLE():&#160;TraCIConstants.h']]]
+];
