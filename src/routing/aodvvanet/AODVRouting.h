@@ -137,6 +137,16 @@ class INET_API AODVRouting : public cSimpleModule, public ILifecycle, public INe
     void initialize(int stage);
     virtual int numInitStages() const { return 5; }
 
+    /* compute link reliability */
+    Coord findDisplacement(Coord a, Coord b);
+    Coord findRelativeVelocity(Coord a, Coord b);
+    double predictInterval(double h, Coord l, Coord v);
+    double findMu(Coord vel);
+    double findRealtiveMu(Coord vel_a, Coord vel_b);
+    double findSigma(Coord vel);
+    double findRelativeSigma(Coord vel_a, Coord vel_b);
+    double computeRouteReliability(AODVRREQ *rreq);
+
     /* Route Discovery */
     void startRouteDiscovery(const IPv4Address& target, unsigned int timeToLive = 0);
     void completeRouteDiscovery(const IPv4Address& target);

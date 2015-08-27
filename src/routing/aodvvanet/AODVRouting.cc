@@ -29,9 +29,94 @@
 #include "aodvTraCIMobility.h"
 
 Define_Module(AODVRouting);
-double computeRouteReliability(){
-    return 0.5;
 
+
+Coord AODVRouting::findDisplacement(Coord a, Coord b){
+    Coord L = a;
+    L.x -= b.x;
+    L.y -= b.y;
+    return L;
+}
+
+Coord AODVRouting::findRelativeVelocity(Coord a, Coord b){
+    Coord V = a;
+    V.x -= b.x;
+    V.y -= b.y;
+    return V;
+}
+
+double AODVRouting::predictInterval(double h, Coord l, Coord v){
+    double p = v.x*v.x + v.y*v.y;
+    double q = 2*(v.x*l.x + v.y*l.y);
+    double r = l.x*l.x + l.y*l.y + h*h;
+    double d = sqrt(q*q - 4*p*r);
+    double t = (d - q)/2*p;
+    return t;
+}
+
+double AODVRouting::findMu(Coord vel){
+    double speed = sqrt(vel.x*vel.x + vel.y*vel.y);
+    if(speed <= 40){
+        return 30.00;
+    }else if(speed <= 65){
+        return 50.00;
+    }else if(speed <= 90){
+        return 70.00;
+    }else if(speed <= 120){
+        return 90.00;
+    }else if(speed <= 145){
+        return 110.00;
+    }else if(speed <= 170){
+        return 130.00;
+    }else{// speed <= 195
+        return 150.00;
+    }
+}
+
+double AODVRouting::findRealtiveMu(Coord vel_a, Coord vel_b){
+    double mu1 = findMu(vel_a);
+    double mu2 = findMu(vel_b);
+    return abs(mu1 - mu2);
+}
+
+double AODVRouting::findSigma(Coord vel){
+    double speed = sqrt(vel.x*vel.x + vel.y*vel.y);
+    if(speed <= 40){
+        return 9.00;
+    }else if(speed <= 65){
+        return 15.00;
+    }else if(speed <= 90){
+        return 21.00;
+    }else if(speed <= 120){
+        return 27.00;
+    }else if(speed <= 145){
+        return 33.00;
+    }else if(speed <= 170){
+        return 39.00;
+    }else{// speed <= 195
+        return 45.00;
+    }
+}
+
+double AODVRouting::findRelativeSigma(Coord vel_a, Coord vel_b){
+    double sigma1 = findSigma(vel_a);
+    double sigma2 = findSigma(vel_b);
+    return sqrt(sigma1*sigma1 + sigma2*sigma2);
+}
+
+double AODVRouting::computeRouteReliability(AODVRREQ *rreq){
+    aodvTraCIMobility* mobility_this = check_and_cast<aodvTraCIMobility *>(host->getModuleByPath(".mobility"));
+
+    Coord L = findDisplacement(rreq->getPosition(), mobility_this->getCurrentPosition());// displacement
+    Coord V = findRelativeVelocity(rreq->getSpeed(), mobility_this->getCurrentSpeed());// relative velocity
+    double H = 450.00;// Radio range
+    double T = predictInterval(H, L, V);// |V*t + L| = H
+    double t = SIMTIME_DBL(simTime());// current simulation time
+    double mu = findRealtiveMu(rreq->getSpeed(), mobility_this->getCurrentSpeed());// mean of relative velocity
+    double sigma = findRelativeSigma(rreq->getSpeed(), mobility_this->getCurrentSpeed());// standard deviation of relative velocity
+    double denom = sigma*sqrt(2);
+    double R = erf((((2*H)/(t))-mu)/denom) - erf((((2*H)/(t+T))-mu)/denom);
+    return R;
 }
 
 
@@ -103,10 +188,11 @@ void AODVRouting::initialize(int stage)
 
         if (isOperational){
             scheduleAt(simTime() + 1, counterTimer);
-            createRoute(getSelfIPAddress(), getSelfIPAddress(), 0, false, 1, true, simTime() + activeRouteTimeout, 1.00);
+            createRoute(getSelfIPAddress(), getSelfIPAddress(), 0, false, 1, true, simTime() + activeRouteTimeout*600, 1.00);
         }
     }
 }
+
 
 void AODVRouting::handleMessage(cMessage *msg)
 {
@@ -772,7 +858,7 @@ void AODVRouting::handleRREQ(AODVRREQ *rreq, const IPv4Address& sourceAddr, unsi
     EV_INFO << "AODV Route Request arrived with source addr: " << sourceAddr << " originator addr: " << rreq->getOriginatorAddr()
             << " destination addr: " << rreq->getDestAddr() << endl;
 
-    rreq->setLinkReliability(computeRouteReliability()* rreq->getLinkReliability());//computes routeReliablity uptill current node
+    rreq->setLinkReliability(computeRouteReliability(rreq)* rreq->getLinkReliability());//computes routeReliablity uptill current node
     // A node ignores all RREQs received from any node in its blacklist set.
 
     std::map<IPv4Address, simtime_t>::iterator blackListIt = blacklist.find(sourceAddr);
@@ -789,10 +875,10 @@ void AODVRouting::handleRREQ(AODVRREQ *rreq, const IPv4Address& sourceAddr, unsi
 
     if (!previousHopRoute || previousHopRoute->getSource() != this) {
         // create without valid sequence number
-        previousHopRoute = createRoute(sourceAddr, sourceAddr, 1, false, rreq->getOriginatorSeqNum(), true, simTime() + activeRouteTimeout, computeRouteReliability());
+        previousHopRoute = createRoute(sourceAddr, sourceAddr, 1, false, rreq->getOriginatorSeqNum(), true, simTime() + activeRouteTimeout, computeRouteReliability(rreq));
     }
     else
-        updateRoutingTable(previousHopRoute, sourceAddr, 1, false, rreq->getOriginatorSeqNum(), true, simTime() + activeRouteTimeout,computeRouteReliability());
+        updateRoutingTable(previousHopRoute, sourceAddr, 1, false, rreq->getOriginatorSeqNum(), true, simTime() + activeRouteTimeout,computeRouteReliability(rreq));
 
     // then checks to determine whether it has received a RREQ with the same
     // Originator IP address and RREQ ID within at least the last PATH_DISCOVERY_TIME.
@@ -1422,11 +1508,11 @@ void AODVRouting::handleHelloMessage(AODVRREP *helloMessage)
     simtime_t newLifeTime = simTime() + allowedHelloLoss * helloInterval;
 
     if (!routeHelloOriginator || routeHelloOriginator->getSource() != this)
-        createRoute(helloOriginatorAddr, helloOriginatorAddr, 1, true, latestDestSeqNum, true, newLifeTime,computeRouteReliability());
+        createRoute(helloOriginatorAddr, helloOriginatorAddr, 1, true, latestDestSeqNum, true, newLifeTime, 1.00);
     else {
         AODVRouteData *routeData = check_and_cast<AODVRouteData *>(routeHelloOriginator->getProtocolData());
         simtime_t lifeTime = routeData->getLifeTime();
-        updateRoutingTable(routeHelloOriginator, helloOriginatorAddr, 1, true, latestDestSeqNum, true, std::max(lifeTime, newLifeTime),computeRouteReliability());
+        updateRoutingTable(routeHelloOriginator, helloOriginatorAddr, 1, true, latestDestSeqNum, true, std::max(lifeTime, newLifeTime), 1.00);
     }
 
     // TODO: This feature has not implemented yet.

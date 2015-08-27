@@ -49,7 +49,7 @@ void aodvTraCI::initialize(int stage)
         traci->subscribe(mobilityStateChangedSignal, this);
 
         setupLowerLayer();
-        sendMessage();
+        //sendMessage();
     }
 }
 
@@ -72,7 +72,7 @@ void aodvTraCI::handleSelfMsg(cMessage* msg) {
 }
 
 void aodvTraCI::handleLowerMsg(cMessage* msg) {
-    if (!sentMessage) sendMessage();
+    //if (!sentMessage) sendMessage();
     delete msg;
 }
 
@@ -83,16 +83,17 @@ void aodvTraCI::receiveSignal(cComponent *source, simsignal_t signalID, cObject 
     }
 }
 
-void aodvTraCI::sendMessage() {
+// *(new IPv4Address("10.0.0.27"))
+void aodvTraCI::sendMessage(IPv4Address ip) {
     sentMessage = true;
 
     cPacket* newMessage = new cPacket();
 
-    socket.sendTo(newMessage, *(new IPv4Address("10.0.0.27")), 12345);
+    socket.sendTo(newMessage, ip, 12345);
 }
 
 void aodvTraCI::handlePositionUpdate() {
     if (traci->getPosition().x < 7350) {
-        if (!sentMessage) sendMessage();
+        //if (!sentMessage) sendMessage();
     }
 }
