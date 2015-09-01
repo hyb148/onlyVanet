@@ -32,7 +32,7 @@
 #include "UDPPacket.h"
 #include "AODVControlPackets_m.h"
 #include <map>
-
+#include<omnetpp.h>
 /*
  * This class implements AODV routing protocol and Netfilter hooks
  * in the IP-layer required by this protocol.
@@ -45,6 +45,8 @@ class INET_API AODVRouting : public cSimpleModule, public ILifecycle, public INe
      * It implements a unique identifier for an arbitrary RREQ message
      * in the network. See: rreqsArrivalTime.
      */
+    static simsignal_t statAODVRREQSENTSignal;
+    static simsignal_t statAODVRREPSENTSignal;
     class RREQIdentifier
     {
       public:

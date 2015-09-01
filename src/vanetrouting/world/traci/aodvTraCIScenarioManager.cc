@@ -23,6 +23,7 @@
 #include <algorithm>
 #include <stdexcept>
 
+
 #define WANT_WINSOCK2
 #include <platdep/sockets.h>
 #if defined(_WIN32) || defined(__WIN32__) || defined(WIN32) || defined(__CYGWIN__) || defined(_WIN64)
@@ -39,6 +40,8 @@
 #include "world/traci/aodvTraCIScenarioManager.h"
 #include "world/traci/aodvTraCIConstants.h"
 #include "mobility/single/aodvTraCIMobility.h"
+#include "aodvTraCI.h"
+#include "RoutingTable.h"
 
 Define_Module(aodvTraCIScenarioManager);
 
@@ -79,9 +82,9 @@ void aodvTraCIScenarioManager::initialize(int stage)
     std::string road;
     while (std::getline(roiRoads_i, road, ' '))
     {
+        ev<<"##@## Roi roads"<<roiRoads_i;
         roiRoads.push_back(road);
     }
-
     // parse roiRects
     roiRects.clear();
     std::istringstream roiRects_i(roiRects_s);
@@ -89,6 +92,7 @@ void aodvTraCIScenarioManager::initialize(int stage)
     while (std::getline(roiRects_i, rect, ' '))
     {
         std::istringstream rect_i(rect);
+        ev<<"##@## Roi rect"<<roiRects_s;
         double x1;
         rect_i >> x1;
         ASSERT(rect_i);
@@ -120,6 +124,9 @@ void aodvTraCIScenarioManager::initialize(int stage)
     autoShutdownTriggered = false;
 
     socketPtr = 0;
+
+    // application layer random messages <---------------
+    applicationLayerCount = 0;
 
     ASSERT(firstStepAt > connectAt);
     connectAndStartTrigger = new cMessage("connect");
@@ -976,11 +983,101 @@ void aodvTraCIScenarioManager::executeOneTimestep()
         {
             processSubcriptionResult(buf);
         }
+
+        sendApplicationLayerMessage();
     }
 
     if (!autoShutdownTriggered)
         scheduleAt(simTime() + updateInterval, executeOneTimestepTrigger);
 
+}
+
+void aodvTraCIScenarioManager::sendApplicationLayerMessage(){
+
+    if(hosts.size() > 1){
+        int numHostSender;
+        int numHostReciever;
+
+        std::ostringstream convertSender;
+        std::ostringstream convertReciever;
+        std::string stringHostSender;
+        std::string stringHostReciever;
+
+        cModule* hostSender = NULL;
+        cModule* hostReciever = NULL;
+
+//        while(!hostSender || !hostReciever){
+//            numHostSender = intrand(hosts.size());
+//            numHostReciever = intrand(hosts.size());
+//            while(numHostSender == numHostReciever){
+//                numHostReciever = intrand(hosts.size());
+//            }
+//
+//            convert << numHostSender;
+//            stringHostSender = convert.str();
+//            convert << numHostReciever;
+//            stringHostReciever = convert.str();
+//
+//            hostSender = getManagedModule(stringHostSender);
+//            hostReciever = getManagedModule(stringHostReciever);
+//        }
+
+        numHostSender = intrand(hosts.size());
+        numHostReciever = intrand(hosts.size());
+        while(numHostSender == numHostReciever){
+            numHostReciever = intrand(hosts.size());
+        }
+
+        convertSender << numHostSender;
+        stringHostSender = convertSender.str();
+        stringHostSender="type1."+stringHostSender;
+        convertReciever << numHostReciever;
+        stringHostReciever = convertReciever.str();
+        stringHostReciever = "type1."+stringHostReciever;
+
+        EV << "### $$$ Size "<< hosts.size() << endl;
+        EV << "### $$$ numHostSender " << numHostSender << endl;
+        EV << "### $$$ numHostReciever " << numHostReciever << endl;
+
+        EV << "### $$$ stringHostSender " << stringHostSender << endl;
+        EV << "### $$$ stringHostReciever " << stringHostReciever << endl;
+
+        hostSender = getManagedModule(stringHostSender);
+        hostReciever = getManagedModule(stringHostReciever);
+
+        if(hostSender && hostReciever){
+            EV << "### $$$ stringHostReciever "<< stringHostReciever << endl;
+            aodvTraCI* appHostSender = check_and_cast<aodvTraCI *>(hostSender->getModuleByPath(".app"));
+            RoutingTable* appHostReciever = check_and_cast<RoutingTable *>(hostReciever->getModuleByPath(".routingTable"));
+            appHostSender->sendApplicationMessage(appHostReciever->getRouterId());
+            incrementApplicationLayerCount();
+        }
+    }
+}
+
+// utility for application layer random messages
+void aodvTraCIScenarioManager::setApplicationLayerCount(int cnt){
+    this->applicationLayerCount = cnt;
+}
+
+int aodvTraCIScenarioManager::getApplicationLayerCount(){
+    return this->applicationLayerCount;
+}
+
+void aodvTraCIScenarioManager::incrementApplicationLayerCount(){
+    this->applicationLayerCount += 1;
+}
+
+void aodvTraCIScenarioManager::decrementApplicationLayerCount(){
+    this->applicationLayerCount += 1;
+}
+
+bool aodvTraCIScenarioManager::checkApplicationLayerCount(){
+    if(this->applicationLayerCount < 10){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 std::string aodvTraCIScenarioManager::genericGetString(uint8_t commandId, std::string objectId, uint8_t variableId,

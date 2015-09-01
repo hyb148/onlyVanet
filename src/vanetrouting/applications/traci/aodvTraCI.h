@@ -37,6 +37,7 @@ class aodvTraCI : public cSimpleModule, protected cListener, public ILifecycle
         { Enter_Method_Silent(); throw cRuntimeError("Unsupported lifecycle operation '%s'", operation->getClassName()); return true; }
 
         virtual void receiveSignal(cComponent *source, simsignal_t signalID, cObject *obj);
+        virtual void sendApplicationMessage(IPv4Address destRouterId);
 
     protected:
         virtual int numInitStages() const { return 4; }
@@ -45,16 +46,19 @@ class aodvTraCI : public cSimpleModule, protected cListener, public ILifecycle
 
     protected:
         aodvTraCIMobility* traci;
+
         bool sentMessage;
         UDPSocket socket;
         static simsignal_t mobilityStateChangedSignal;
-
+        static simsignal_t statPacketSentSignal;
+        static simsignal_t statPacketReceivedSignal;
+        static simsignal_t statEndToEndDelaySignal;
     protected:
         void setupLowerLayer();
         virtual void handleSelfMsg(cMessage* apMsg);
         virtual void handleLowerMsg(cMessage* apMsg);
 
-        virtual void sendMessage();
+        //virtual void sendMessage();
         virtual void handlePositionUpdate();
 };
 

@@ -969,9 +969,22 @@ $O/src/vanetrouting/util/GlobalWirelessLinkInspector_Vanet.o: src/vanetrouting/u
 $O/src/vanetrouting/world/traci/aodvTraCIScenarioManager.o: src/vanetrouting/world/traci/aodvTraCIScenarioManager.cc \
 	$(INETMANET_2_0_PROJ)/src/base/Compat.h \
 	$(INETMANET_2_0_PROJ)/src/base/Coord.h \
+	$(INETMANET_2_0_PROJ)/src/base/ILifecycle.h \
 	$(INETMANET_2_0_PROJ)/src/base/INETDefs.h \
+	$(INETMANET_2_0_PROJ)/src/base/INotifiable.h \
+	$(INETMANET_2_0_PROJ)/src/base/LifecycleOperation.h \
 	$(INETMANET_2_0_PROJ)/src/mobility/contract/IVANETMobility.h \
+	$(INETMANET_2_0_PROJ)/src/networklayer/contract/IPProtocolId_m.h \
+	$(INETMANET_2_0_PROJ)/src/networklayer/contract/IPv4Address.h \
+	$(INETMANET_2_0_PROJ)/src/networklayer/contract/IPv6Address.h \
+	$(INETMANET_2_0_PROJ)/src/networklayer/contract/IPvXAddress.h \
+	$(INETMANET_2_0_PROJ)/src/networklayer/ipv4/IPv4Route.h \
+	$(INETMANET_2_0_PROJ)/src/networklayer/ipv4/IPv4RouteRule.h \
+	$(INETMANET_2_0_PROJ)/src/networklayer/ipv4/IRoutingTable.h \
+	$(INETMANET_2_0_PROJ)/src/networklayer/ipv4/RoutingTable.h \
+	$(INETMANET_2_0_PROJ)/src/transport/contract/UDPSocket.h \
 	$(INETMANET_2_0_PROJ)/src/util/FWMath.h \
+	src/vanetrouting/applications/traci/aodvTraCI.h \
 	src/vanetrouting/base/VanetModuleAccess.h \
 	src/vanetrouting/mobility/common/VANETMobilityBase.h \
 	src/vanetrouting/mobility/contract/IVANETMobility.h \

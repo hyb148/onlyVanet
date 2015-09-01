@@ -28,6 +28,9 @@
 Define_Module(aodvTraCI);
 
 simsignal_t aodvTraCI::mobilityStateChangedSignal = registerSignal("mobilityStateChanged");
+simsignal_t aodvTraCI::statPacketSentSignal = registerSignal("statPacketSent");
+simsignal_t aodvTraCI::statPacketReceivedSignal = registerSignal("statPacketReceived");
+simsignal_t aodvTraCI::statEndToEndDelaySignal = registerSignal("statEndToEndDelay");
 
 void aodvTraCI::initialize(int stage)
 {
@@ -73,6 +76,10 @@ void aodvTraCI::handleSelfMsg(cMessage* msg) {
 
 void aodvTraCI::handleLowerMsg(cMessage* msg) {
     //if (!sentMessage) sendMessage();
+    emit(statPacketReceivedSignal,NULL);
+    double difference = simTime().dbl();
+    difference = difference - msg->par("sendingTime").doubleValue();
+    emit(statEndToEndDelaySignal,difference);
     delete msg;
 }
 
@@ -83,14 +90,26 @@ void aodvTraCI::receiveSignal(cComponent *source, simsignal_t signalID, cObject 
     }
 }
 
-// *(new IPv4Address("10.0.0.27"))
-void aodvTraCI::sendMessage(IPv4Address ip) {
+
+
+void aodvTraCI::sendApplicationMessage(IPv4Address destRouterId){
+    Enter_Method_Silent();
     sentMessage = true;
-
     cPacket* newMessage = new cPacket();
-
-    socket.sendTo(newMessage, ip, 12345);
+    newMessage->addPar("sendingTime");
+    (newMessage->par("sendingTime")).setDoubleValue(simTime().dbl());
+    emit(statPacketSentSignal,NULL);
+    socket.sendTo(newMessage, destRouterId, 12345);
 }
+
+// *(new IPv4Address("10.0.0.27"))
+//void aodvTraCI::sendMessage() {
+//    sentMessage = true;
+//
+//    cPacket* newMessage = new cPacket();
+//
+//    socket.sendTo(newMessage, *(new IPv4Address("10.0.0.27")), 12345);
+//}
 
 void aodvTraCI::handlePositionUpdate() {
     if (traci->getPosition().x < 7350) {

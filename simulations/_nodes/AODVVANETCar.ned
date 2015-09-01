@@ -21,6 +21,11 @@ module AODVVANETCar
 {
     parameters:
         @node();
+        @statistic[statPacketReceived](record= count);
+        @statistic[statPacketSent](record= count);
+        @statistic[statAODVRREQSENT](record=count);
+        @statistic[statAODVRREPSENT](record=count);
+        @statistic[statEndToEndDelay](record=sum);
         string mobilityType = default("aodvTraCIMobility");
         networkLayer.configurator.networkConfiguratorModule = "";
         string routingProtocol @enum("AODVVANET","RBVTR","BITCAR") = default("AODVVANET");

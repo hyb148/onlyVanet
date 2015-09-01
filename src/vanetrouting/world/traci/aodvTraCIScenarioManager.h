@@ -26,6 +26,7 @@
 #include <list>
 #include <sstream>
 #include <iomanip>
+#include <locale>
 
 #include <omnetpp.h>
 
@@ -53,6 +54,9 @@
  */
 class aodvTraCIScenarioManager : public cSimpleModule
 {
+    private:
+        int applicationLayerCount; // application layer random messages
+
     public:
 
         enum VehicleSignal {
@@ -90,6 +94,14 @@ class aodvTraCIScenarioManager : public cSimpleModule
         {
             return (socketPtr);
         }
+
+        // utility for application layer random messages
+        void sendApplicationLayerMessage();
+        void setApplicationLayerCount(int cnt);
+        int getApplicationLayerCount();
+        void incrementApplicationLayerCount();
+        void decrementApplicationLayerCount();
+        bool checkApplicationLayerCount();// to keep number of messages limited to 5
 
         std::pair<uint32_t, std::string> commandGetVersion();
         void commandSetSpeedMode(std::string nodeId, int32_t bitset);

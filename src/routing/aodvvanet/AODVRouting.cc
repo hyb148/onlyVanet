@@ -29,7 +29,8 @@
 #include "aodvTraCIMobility.h"
 
 Define_Module(AODVRouting);
-
+simsignal_t AODVRouting::statAODVRREQSENTSignal = registerSignal("statAODVRREQSENT");
+simsignal_t AODVRouting::statAODVRREPSENTSignal = registerSignal("statAODVRREPSENT");
 
 Coord AODVRouting::findDisplacement(Coord a, Coord b){
     Coord L = a;
@@ -353,6 +354,7 @@ void AODVRouting::delayDatagram(IPv4Datagram *datagram)
 
 void AODVRouting::sendRREQ(AODVRREQ *rreq, const IPv4Address& destAddr, unsigned int timeToLive)
 {
+    emit(statAODVRREQSENTSignal,NULL);
     // In an expanding ring search, the originating node initially uses a TTL =
     // TTL_START in the RREQ packet IP header and sets the timeout for
     // receiving a RREP to RING_TRAVERSAL_TIME milliseconds.
@@ -426,7 +428,7 @@ void AODVRouting::sendRREQ(AODVRREQ *rreq, const IPv4Address& destAddr, unsigned
 void AODVRouting::sendRREP(AODVRREP *rrep, const IPv4Address& destAddr, unsigned int timeToLive)
 {
     EV_INFO << "Sending Route Reply to " << destAddr << endl;
-
+    emit(statAODVRREPSENTSignal,NULL);
     // When any node transmits a RREP, the precursor list for the
     // corresponding destination node is updated by adding to it
     // the next hop node to which the RREP is forwarded.

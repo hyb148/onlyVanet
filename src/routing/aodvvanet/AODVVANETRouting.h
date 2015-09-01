@@ -31,6 +31,7 @@
 #include "AODVVANETRouteData.h"
 #include "UDPPacket.h"
 #include "AODVVANETControlPackets_m.h"
+#include <omnetpp.h>
 #include <map>
 
 /*
