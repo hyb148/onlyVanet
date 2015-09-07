@@ -81,6 +81,7 @@ INCLUDE_PATH = \
     -Isimulations/aodvuu \
     -Isimulations/aodvuu/results \
     -Isimulations/aodvvanet \
+    -Isimulations/aodvvanet/DATA=500 \
     -Isimulations/aodvvanet/results \
     -Isimulations/results \
     -Isimulations/traci_launchd \
@@ -351,6 +352,7 @@ clean:
 	$(Q)-rm -f simulations/aodvuu/*_m.cc simulations/aodvuu/*_m.h
 	$(Q)-rm -f simulations/aodvuu/results/*_m.cc simulations/aodvuu/results/*_m.h
 	$(Q)-rm -f simulations/aodvvanet/*_m.cc simulations/aodvvanet/*_m.h
+	$(Q)-rm -f simulations/aodvvanet/DATA=500/*_m.cc simulations/aodvvanet/DATA=500/*_m.h
 	$(Q)-rm -f simulations/aodvvanet/results/*_m.cc simulations/aodvvanet/results/*_m.h
 	$(Q)-rm -f simulations/results/*_m.cc simulations/results/*_m.h
 	$(Q)-rm -f simulations/traci_launchd/*_m.cc simulations/traci_launchd/*_m.h
@@ -401,7 +403,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc simulations/*.cc simulations/_maps/*.cc simulations/_maps/downtownorlando/*.cc simulations/_maps/erlangen/*.cc simulations/_maps/i95highway/*.cc simulations/_maps/sanfrancisco/*.cc simulations/_maps/simple/*.cc simulations/_nodes/*.cc simulations/aodv/*.cc simulations/aodv/results/*.cc simulations/aodvuu/*.cc simulations/aodvuu/results/*.cc simulations/aodvvanet/*.cc simulations/aodvvanet/results/*.cc simulations/results/*.cc simulations/traci_launchd/*.cc simulations/veins/*.cc src/*.cc src/nodes/*.cc src/routing/*.cc src/routing/aodvvanet/*.cc src/vanetrouting/*.cc src/vanetrouting/applications/*.cc src/vanetrouting/applications/traci/*.cc src/vanetrouting/base/*.cc src/vanetrouting/mobility/*.cc src/vanetrouting/mobility/common/*.cc src/vanetrouting/mobility/contract/*.cc src/vanetrouting/mobility/single/*.cc src/vanetrouting/networklayer/*.cc src/vanetrouting/util/*.cc src/vanetrouting/world/*.cc src/vanetrouting/world/traci/*.cc src/veins/*.cc src/veins/base/*.cc src/veins/base/connectionManager/*.cc src/veins/base/messages/*.cc src/veins/base/modules/*.cc src/veins/base/phyLayer/*.cc src/veins/base/utils/*.cc src/veins/modules/*.cc src/veins/modules/analogueModel/*.cc src/veins/modules/application/*.cc src/veins/modules/application/ieee80211p/*.cc src/veins/modules/application/traci/*.cc src/veins/modules/mac/*.cc src/veins/modules/mac/ieee80211p/*.cc src/veins/modules/messages/*.cc src/veins/modules/mobility/*.cc src/veins/modules/mobility/traci/*.cc src/veins/modules/nic/*.cc src/veins/modules/obstacle/*.cc src/veins/modules/phy/*.cc src/veins/modules/utility/*.cc src/veins/modules/world/*.cc src/veins/modules/world/annotations/*.cc src/veins/nodes/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc simulations/*.cc simulations/_maps/*.cc simulations/_maps/downtownorlando/*.cc simulations/_maps/erlangen/*.cc simulations/_maps/i95highway/*.cc simulations/_maps/sanfrancisco/*.cc simulations/_maps/simple/*.cc simulations/_nodes/*.cc simulations/aodv/*.cc simulations/aodv/results/*.cc simulations/aodvuu/*.cc simulations/aodvuu/results/*.cc simulations/aodvvanet/*.cc simulations/aodvvanet/DATA=500/*.cc simulations/aodvvanet/results/*.cc simulations/results/*.cc simulations/traci_launchd/*.cc simulations/veins/*.cc src/*.cc src/nodes/*.cc src/routing/*.cc src/routing/aodvvanet/*.cc src/vanetrouting/*.cc src/vanetrouting/applications/*.cc src/vanetrouting/applications/traci/*.cc src/vanetrouting/base/*.cc src/vanetrouting/mobility/*.cc src/vanetrouting/mobility/common/*.cc src/vanetrouting/mobility/contract/*.cc src/vanetrouting/mobility/single/*.cc src/vanetrouting/networklayer/*.cc src/vanetrouting/util/*.cc src/vanetrouting/world/*.cc src/vanetrouting/world/traci/*.cc src/veins/*.cc src/veins/base/*.cc src/veins/base/connectionManager/*.cc src/veins/base/messages/*.cc src/veins/base/modules/*.cc src/veins/base/phyLayer/*.cc src/veins/base/utils/*.cc src/veins/modules/*.cc src/veins/modules/analogueModel/*.cc src/veins/modules/application/*.cc src/veins/modules/application/ieee80211p/*.cc src/veins/modules/application/traci/*.cc src/veins/modules/mac/*.cc src/veins/modules/mac/ieee80211p/*.cc src/veins/modules/messages/*.cc src/veins/modules/mobility/*.cc src/veins/modules/mobility/traci/*.cc src/veins/modules/nic/*.cc src/veins/modules/obstacle/*.cc src/veins/modules/phy/*.cc src/veins/modules/utility/*.cc src/veins/modules/world/*.cc src/veins/modules/world/annotations/*.cc src/veins/nodes/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/src/routing/aodvvanet/AODVControlPackets_m.o: src/routing/aodvvanet/AODVControlPackets_m.cc \

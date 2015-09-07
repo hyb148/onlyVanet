@@ -27,6 +27,7 @@ simple aodvTraCI
 {
     parameters:
         @display("i=block/app2");
+        int PacketSize = default(100);
     gates:
         inout udp;
 }

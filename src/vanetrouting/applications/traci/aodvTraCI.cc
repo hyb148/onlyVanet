@@ -96,6 +96,11 @@ void aodvTraCI::sendApplicationMessage(IPv4Address destRouterId){
     Enter_Method_Silent();
     sentMessage = true;
     cPacket* newMessage = new cPacket();
+    int size = par("PacketSize");
+//    char *buffer = new char[size];
+//    cMessage *msg = new cMessage(buffer);
+//    newMessage->addObject(msg);
+    newMessage->setByteLength(size);
     newMessage->addPar("sendingTime");
     (newMessage->par("sendingTime")).setDoubleValue(simTime().dbl());
     emit(statPacketSentSignal,NULL);

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- debug config -->
 <launch>
-	<basedir path="/home/administrator/ITS/VANETProject/VANETSim/simulations/_maps/sanfrancisco/" />
+	<basedir path="/home/sdetu/ITS/omnetpp-4.4.1/samples/onlyVanet/simulations/_maps/sanfrancisco" />
 	<copy file="sanfrancisco.net.xml" />
 	<copy file="sanfrancisco.rou.xml" />
 	<copy file="sanfrancisco.poly.xml" />

@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2014 OpenSim Ltd.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        // Copyright (C) 2014 OpenSim Ltd.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -49,7 +49,7 @@ Coord AODVRouting::findRelativeVelocity(Coord a, Coord b){
 double AODVRouting::predictInterval(double h, Coord l, Coord v){
     double p = v.x*v.x + v.y*v.y;
     double q = 2*(v.x*l.x + v.y*l.y);
-    double r = l.x*l.x + l.y*l.y + h*h;
+    double r = l.x*l.x + l.y*l.y - h*h;
     double d = sqrt(q*q - 4*p*r);
     double t = (d - q)/2*p;
     return t;
@@ -297,7 +297,7 @@ INetfilter::IHook::Result AODVRouting::ensureRouteForDatagram(IPv4Datagram *data
                 // (e.g., upon route loss), the TTL in the RREQ IP header is initially
                 // set to the Hop Count plus TTL_INCREMENT.
                 if (isInactive)
-                    startRouteDiscovery(destAddr, route->getMetric() + ttlIncrement);
+                    startRouteDiscovery(destAddr, route->getHopCount() + ttlIncrement);
                 else
                     startRouteDiscovery(destAddr);
             }
@@ -440,7 +440,7 @@ void AODVRouting::sendRREP(AODVRREP *rrep, const IPv4Address& destAddr, unsigned
 
     // The node we received the Route Request for is our neighbor,
     // it is probably an unidirectional link
-    if (destRoute->getMetric() == 1) {
+    if (destRoute->getHopCount() == 1) {
         // It is possible that a RREP transmission may fail, especially if the
         // RREQ transmission triggering the RREP occurs over a unidirectional
         // link.
@@ -593,7 +593,7 @@ AODVRREP *AODVRouting::createRREP(AODVRREQ *rreq, IPv4Route *destRoute, IPv4Rout
         // destination (indicated by the hop count in the routing table)
         // Hop Count field in the RREP.
 
-        rrep->setHopCount(destRoute->getMetric());
+        rrep->setHopCount(destRoute->getHopCount());
 
         // The Lifetime field of the RREP is calculated by subtracting the
         // current time from the expiration time in its route table entry.
@@ -627,7 +627,8 @@ AODVRREP *AODVRouting::createGratuitousRREP(AODVRREQ *rreq, IPv4Route *originato
     //                                  as known by the intermediate node.
 
     grrep->setPacketType(RREP);
-    grrep->setHopCount(originatorRoute->getMetric());
+    grrep->setHopCount(originatorRoute->getHopCount());
+    grrep->setRouteReliability(rreq->getLinkReliability());
     grrep->setDestAddr(rreq->getOriginatorAddr());
     grrep->setDestSeqNum(rreq->getOriginatorSeqNum());
     grrep->setOriginatorAddr(rreq->getDestAddr());
@@ -722,7 +723,7 @@ void AODVRouting::handleRREP(AODVRREP *rrep, const IPv4Address& sourceAddr)
             }
             // (iv) the sequence numbers are the same, and the New Hop Count is
             //      smaller than the hop count in route table entry.
-            else if (destSeqNum == destRouteData->getDestSeqNum() && newHopCount < (unsigned int)destRoute->getMetric()) {
+            else if (destSeqNum == destRouteData->getDestSeqNum() && newHopCount < (unsigned int)destRoute->getHopCount()) {
                 updateRoutingTable(destRoute, sourceAddr, newHopCount, true, destSeqNum, true, simTime() + lifeTime,rrep->getRouteReliability()/originRouteData->getRouteReliability());
             }
         }
@@ -808,6 +809,7 @@ void AODVRouting::updateRoutingTable(IPv4Route *route, const IPv4Address& nextHo
 
     route->setGateway(nextHop);
     route->setMetric(1.00/route_reliability);
+    route->setHopCount(hopCount);
 
     AODVRouteData *routingData = check_and_cast<AODVRouteData *>(route->getProtocolData());
     ASSERT(routingData != NULL);
@@ -947,7 +949,7 @@ void AODVRouting::handleRREQ(AODVRREQ *rreq, const IPv4Address& sourceAddr, unsi
         int routeSeqNum = routeData->getDestSeqNum();
         int newSeqNum = std::max(routeSeqNum, rreqSeqNum);
         int newHopCount = rreq->getHopCount();    // Note: already incremented by 1.
-        int routeHopCount = reverseRoute->getMetric();
+        int routeHopCount = reverseRoute->getHopCount();
         // The route is only updated if the new sequence number is either
         //
         //   (i)       higher than the destination sequence number in the route
@@ -1102,6 +1104,7 @@ IPv4Route *AODVRouting::createRoute(const IPv4Address& destAddr, const IPv4Addre
     newRoute->setSource(this);
     newRoute->setProtocolData(newProtocolData);
     newRoute->setMetric(1.00/route_reliability);
+    newRoute->setHopCount(hopCount);
     newRoute->setGateway(nextHop);
     newRoute->setNetmask(IPv4Address::ALLONES_ADDRESS);    // TODO:
 
@@ -1136,8 +1139,8 @@ void AODVRouting::receiveChangeNotification(int signalID, const cObject *obj)
                     handleLinkBreakSendRERR(route->getGateway());
             }
         }
-        else
-            throw cRuntimeError("Unknown packet type in NF_LINK_BREAK notification");
+//        else
+//            throw cRuntimeError("Unknown packet type in NF_LINK_BREAK notification");
     }
 }
 

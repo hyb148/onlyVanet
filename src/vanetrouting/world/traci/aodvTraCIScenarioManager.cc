@@ -22,7 +22,9 @@
 #include <vector>
 #include <algorithm>
 #include <stdexcept>
-
+#include <iterator>
+//#include <chrono>
+//#include <random>
 
 #define WANT_WINSOCK2
 #include <platdep/sockets.h>
@@ -42,6 +44,8 @@
 #include "mobility/single/aodvTraCIMobility.h"
 #include "aodvTraCI.h"
 #include "RoutingTable.h"
+
+
 
 Define_Module(aodvTraCIScenarioManager);
 
@@ -995,62 +999,38 @@ void aodvTraCIScenarioManager::executeOneTimestep()
 void aodvTraCIScenarioManager::sendApplicationLayerMessage(){
 
     if(hosts.size() > 1){
-        int numHostSender;
-        int numHostReciever;
+        int n = 10;
+        while(n--){
+            int numHostSender;
+            int numHostReciever;
 
-        std::ostringstream convertSender;
-        std::ostringstream convertReciever;
-        std::string stringHostSender;
-        std::string stringHostReciever;
+            cModule* hostSender = NULL;
+            cModule* hostReciever = NULL;
 
-        cModule* hostSender = NULL;
-        cModule* hostReciever = NULL;
-
-//        while(!hostSender || !hostReciever){
-//            numHostSender = intrand(hosts.size());
-//            numHostReciever = intrand(hosts.size());
-//            while(numHostSender == numHostReciever){
-//                numHostReciever = intrand(hosts.size());
-//            }
-//
-//            convert << numHostSender;
-//            stringHostSender = convert.str();
-//            convert << numHostReciever;
-//            stringHostReciever = convert.str();
-//
-//            hostSender = getManagedModule(stringHostSender);
-//            hostReciever = getManagedModule(stringHostReciever);
-//        }
-
-        numHostSender = intrand(hosts.size());
-        numHostReciever = intrand(hosts.size());
-        while(numHostSender == numHostReciever){
+            numHostSender = intrand(hosts.size());
             numHostReciever = intrand(hosts.size());
-        }
 
-        convertSender << numHostSender;
-        stringHostSender = convertSender.str();
-        stringHostSender="type1."+stringHostSender;
-        convertReciever << numHostReciever;
-        stringHostReciever = convertReciever.str();
-        stringHostReciever = "type1."+stringHostReciever;
+            while(numHostSender == numHostReciever){
+                numHostReciever = intrand(hosts.size());
+            }
 
-        EV << "### $$$ Size "<< hosts.size() << endl;
-        EV << "### $$$ numHostSender " << numHostSender << endl;
-        EV << "### $$$ numHostReciever " << numHostReciever << endl;
+            std::map<std::string, cModule*>::iterator itr = hosts.begin();
+            std::advance(itr, numHostSender);
+            hostSender = (*itr).second;
 
-        EV << "### $$$ stringHostSender " << stringHostSender << endl;
-        EV << "### $$$ stringHostReciever " << stringHostReciever << endl;
+            itr = hosts.begin();
+            std::advance(itr, numHostReciever);
+            hostReciever = (*itr).second;
 
-        hostSender = getManagedModule(stringHostSender);
-        hostReciever = getManagedModule(stringHostReciever);
+            EV << "### %%% sender: " << numHostSender << endl;
+            EV << "### %%% receiver: " << numHostReciever << endl;
 
-        if(hostSender && hostReciever){
-            EV << "### $$$ stringHostReciever "<< stringHostReciever << endl;
-            aodvTraCI* appHostSender = check_and_cast<aodvTraCI *>(hostSender->getModuleByPath(".app"));
-            RoutingTable* appHostReciever = check_and_cast<RoutingTable *>(hostReciever->getModuleByPath(".routingTable"));
-            appHostSender->sendApplicationMessage(appHostReciever->getRouterId());
-            incrementApplicationLayerCount();
+            if(hostSender && hostReciever){
+                aodvTraCI* appHostSender = check_and_cast<aodvTraCI *>(hostSender->getModuleByPath(".app"));
+                RoutingTable* appHostReciever = check_and_cast<RoutingTable *>(hostReciever->getModuleByPath(".routingTable"));
+                appHostSender->sendApplicationMessage(appHostReciever->getRouterId());
+                incrementApplicationLayerCount();
+            }
         }
     }
 }

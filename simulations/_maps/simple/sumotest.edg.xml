@@ -1,0 +1,23 @@
+<edges>
+	<edge from="1" id="1to2" to="2" numLanes="3" width="5">
+		<lane index="0" speed = "40"/>
+		<lane index="0" speed = "60"/>
+		<lane index="0" speed = "100"/>
+	</edge>
+	<edge from="2" id="2to3" to="3" numLanes="3" width="5">
+		<lane index="0" speed = "40"/>
+		<lane index="0" speed = "60"/>
+		<lane index="0" speed = "100"/>
+	</edge>
+	<edge from="3" id="3to4" to="4" numLanes="3" width="5">
+		<lane index="0" speed = "40"/>
+		<lane index="0" speed = "60"/>
+		<lane index="0" speed = "100"/>
+	</edge>
+	<edge from="4" id="4to1" to="1" numLanes="3" width="5">
+		<lane index="0" speed = "40"/>
+		<lane index="0" speed = "60"/>
+		<lane index="0" speed = "100"/>
+	</edge>
+
+</edges>
