@@ -8,7 +8,7 @@ var classaodvTraCI =
     [ "initialize", "classaodvTraCI.html#ae303294c271dcc6517071fd129805774", null ],
     [ "numInitStages", "classaodvTraCI.html#a3f148afb94348dd5e48f9a1c2d379643", null ],
     [ "receiveSignal", "classaodvTraCI.html#ad18de877ddcfcd2b66c0d367b4f2be67", null ],
-    [ "sendMessage", "classaodvTraCI.html#ac456f13a9bf4ab9aefeca6d875ddaca7", null ],
+    [ "sendApplicationMessage", "classaodvTraCI.html#a7a99dd2b0c20ba0b474432b4e6804272", null ],
     [ "setupLowerLayer", "classaodvTraCI.html#ac4722b21d120e5034c85d0df012cf714", null ],
     [ "sentMessage", "classaodvTraCI.html#a4bad82da04450fb6208663244ee7b522", null ],
     [ "socket", "classaodvTraCI.html#a91a9da2858acc89abc259fde1e33d4a6", null ],

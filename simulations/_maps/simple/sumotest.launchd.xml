@@ -4,6 +4,7 @@
 	<basedir path="/home/sdetu/ITS/omnetpp-4.4.1/samples/onlyVanet/simulations/_maps/simple" />
 	<copy file="sumotest.net.xml" />
 	<copy file="sumotest.rou.xml" />
+	<copy file="sumotest.add.xml" />
 	<copy file="sumotest.sumo.cfg" type="config" />
 </launch>
 

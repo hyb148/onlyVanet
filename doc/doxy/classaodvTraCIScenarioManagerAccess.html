@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('classaodvTraCIScenarioManagerAccess.ht
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -129,7 +129,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="aodvTraCIScenarioManager_8h_source.html#l00358">358</a> of file <a class="el" href="aodvTraCIScenarioManager_8h_source.html">aodvTraCIScenarioManager.h</a>.</p>
+<p>Definition at line <a class="el" href="aodvTraCIScenarioManager_8h_source.html#l00370">370</a> of file <a class="el" href="aodvTraCIScenarioManager_8h_source.html">aodvTraCIScenarioManager.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a53dfcde21468b2214b47924a928a80ea"></a>
 <div class="memitem">
@@ -152,15 +152,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aodvTraCIScenarioManager_8h_source.html#l00361">361</a> of file <a class="el" href="aodvTraCIScenarioManager_8h_source.html">aodvTraCIScenarioManager.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                                         {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <a class="code" href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">o</a> = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classaodvTraCIScenarioManager.html">aodvTraCIScenarioManager</a>*<span class="keyword">&gt;</span>(<a class="codeRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__SimCore.html#ga148138ad1231c2fb67ee5cd1e56ce3ad">simulation</a>.getModuleByPath(<span class="stringliteral">&quot;manager&quot;</span>));</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">o</a>) <span class="keywordflow">throw</span> <a class="codeRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcRuntimeError.html">cRuntimeError</a>(<span class="stringliteral">&quot;Could not find a aodvTraCIScenarioManager module named manager&quot;</span>);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        };</div>
-<div class="ttc" id="classaodvTraCIScenarioManager_html"><div class="ttname"><a href="classaodvTraCIScenarioManager.html">aodvTraCIScenarioManager</a></div><div class="ttdoc">Creates and moves nodes controlled by a aodvTraCI server. </div><div class="ttdef"><b>Definition:</b> <a href="aodvTraCIScenarioManager_8h_source.html#l00054">aodvTraCIScenarioManager.h:54</a></div></div>
-<div class="ttc" id="classcRuntimeError_html"><div class="ttname"><a href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcRuntimeError.html">cRuntimeError</a></div></div>
-<div class="ttc" id="group__SimCore_html_ga148138ad1231c2fb67ee5cd1e56ce3ad"><div class="ttname"><a href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__SimCore.html#ga148138ad1231c2fb67ee5cd1e56ce3ad">simulation</a></div><div class="ttdeci">#define simulation</div></div>
-<div class="ttc" id="classaodvTraCIScenarioManagerAccess_html_acf3f4df8f728b487d591d161ff079930"><div class="ttname"><a href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">aodvTraCIScenarioManagerAccess::o</a></div><div class="ttdeci">aodvTraCIScenarioManager * o</div><div class="ttdef"><b>Definition:</b> <a href="aodvTraCIScenarioManager_8h_source.html#l00371">aodvTraCIScenarioManager.h:371</a></div></div>
+<p>Definition at line <a class="el" href="aodvTraCIScenarioManager_8h_source.html#l00373">373</a> of file <a class="el" href="aodvTraCIScenarioManager_8h_source.html">aodvTraCIScenarioManager.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                                         {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <a class="code" href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">o</a> = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classaodvTraCIScenarioManager.html">aodvTraCIScenarioManager</a>*<span class="keyword">&gt;</span>(simulation.getModuleByPath(<span class="stringliteral">&quot;manager&quot;</span>));</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">o</a>) <span class="keywordflow">throw</span> cRuntimeError(<span class="stringliteral">&quot;Could not find a aodvTraCIScenarioManager module named manager&quot;</span>);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        };</div>
+<div class="ttc" id="classaodvTraCIScenarioManager_html"><div class="ttname"><a href="classaodvTraCIScenarioManager.html">aodvTraCIScenarioManager</a></div><div class="ttdoc">Creates and moves nodes controlled by a aodvTraCI server. </div><div class="ttdef"><b>Definition:</b> <a href="aodvTraCIScenarioManager_8h_source.html#l00055">aodvTraCIScenarioManager.h:55</a></div></div>
+<div class="ttc" id="classaodvTraCIScenarioManagerAccess_html_acf3f4df8f728b487d591d161ff079930"><div class="ttname"><a href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">aodvTraCIScenarioManagerAccess::o</a></div><div class="ttdeci">aodvTraCIScenarioManager * o</div><div class="ttdef"><b>Definition:</b> <a href="aodvTraCIScenarioManager_8h_source.html#l00383">aodvTraCIScenarioManager.h:383</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -186,11 +184,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aodvTraCIScenarioManager_8h_source.html#l00366">366</a> of file <a class="el" href="aodvTraCIScenarioManager_8h_source.html">aodvTraCIScenarioManager.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                                        {</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">o</a>;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        }</div>
-<div class="ttc" id="classaodvTraCIScenarioManagerAccess_html_acf3f4df8f728b487d591d161ff079930"><div class="ttname"><a href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">aodvTraCIScenarioManagerAccess::o</a></div><div class="ttdeci">aodvTraCIScenarioManager * o</div><div class="ttdef"><b>Definition:</b> <a href="aodvTraCIScenarioManager_8h_source.html#l00371">aodvTraCIScenarioManager.h:371</a></div></div>
+<p>Definition at line <a class="el" href="aodvTraCIScenarioManager_8h_source.html#l00378">378</a> of file <a class="el" href="aodvTraCIScenarioManager_8h_source.html">aodvTraCIScenarioManager.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                                        {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">o</a>;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        }</div>
+<div class="ttc" id="classaodvTraCIScenarioManagerAccess_html_acf3f4df8f728b487d591d161ff079930"><div class="ttname"><a href="classaodvTraCIScenarioManagerAccess.html#acf3f4df8f728b487d591d161ff079930">aodvTraCIScenarioManagerAccess::o</a></div><div class="ttdeci">aodvTraCIScenarioManager * o</div><div class="ttdef"><b>Definition:</b> <a href="aodvTraCIScenarioManager_8h_source.html#l00383">aodvTraCIScenarioManager.h:383</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -213,7 +211,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aodvTraCIScenarioManager_8h_source.html#l00371">371</a> of file <a class="el" href="aodvTraCIScenarioManager_8h_source.html">aodvTraCIScenarioManager.h</a>.</p>
+<p>Definition at line <a class="el" href="aodvTraCIScenarioManager_8h_source.html#l00383">383</a> of file <a class="el" href="aodvTraCIScenarioManager_8h_source.html">aodvTraCIScenarioManager.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +224,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classaodvTraCIScenarioManagerAccess.html">aodvTraCIScenarioManagerAccess</a></li>
-    <li class="footer">Generated on Tue Aug 11 2015 00:38:24 for onlyVanet by
+    <li class="footer">Generated on Thu Sep 10 2015 18:53:15 for onlyVanet by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

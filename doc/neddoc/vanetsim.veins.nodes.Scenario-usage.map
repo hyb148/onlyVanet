@@ -1,6 +1,6 @@
-<area shape="rect" id="node1" href="vanetsim.veins.nodes.Scenario.html" title="Network Scenario" alt="" coords="374,6,447,31">
-<area shape="rect" id="node2" href="vanetsim.veins.modules.obstacle.ObstacleControl.html" title="Simple Module ObstacleControl" alt="" coords="5,81,120,106">
-<area shape="rect" id="node3" href="vanetsim.veins.base.connectionManager.ConnectionManager.html" title="Simple Module ConnectionManager" alt="" coords="145,81,284,106">
-<area shape="rect" id="node4" href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html" title="Simple Module TraCIScenarioManagerLaunchd" alt="" coords="308,81,513,106">
-<area shape="rect" id="node5" href="vanetsim.veins.base.modules.BaseWorldUtility.html" title="Simple Module BaseWorldUtility" alt="" coords="537,81,657,106">
-<area shape="rect" id="node6" href="vanetsim.veins.modules.world.annotations.AnnotationManager.html" title="Simple Module AnnotationManager" alt="" coords="682,81,816,106">
+<area shape="rect" id="node1" href="vanetsim.veins.nodes.Scenario.html" title="Network Scenario" alt="" coords="343,6,416,31">
+<area shape="rect" id="node2" href="vanetsim.veins.base.modules.BaseWorldUtility.html" title="Simple Module BaseWorldUtility" alt="" coords="5,81,125,106">
+<area shape="rect" id="node3" href="vanetsim.veins.base.connectionManager.ConnectionManager.html" title="Simple Module ConnectionManager" alt="" coords="149,81,288,106">
+<area shape="rect" id="node4" href="vanetsim.veins.modules.world.annotations.AnnotationManager.html" title="Simple Module AnnotationManager" alt="" coords="313,81,447,106">
+<area shape="rect" id="node5" href="vanetsim.veins.modules.obstacle.ObstacleControl.html" title="Simple Module ObstacleControl" alt="" coords="471,81,587,106">
+<area shape="rect" id="node6" href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html" title="Simple Module TraCIScenarioManagerLaunchd" alt="" coords="612,81,817,106">

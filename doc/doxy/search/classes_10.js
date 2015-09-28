@@ -12,10 +12,11 @@ var searchData=
   ['rbvtrtraciscenariomanagerlaunchd',['rbvtrTraCIScenarioManagerLaunchd',['../classrbvtrTraCIScenarioManagerLaunchd.html',1,'']]],
   ['rbvtrtraciscenariomanagerlaunchdaccess',['rbvtrTraCIScenarioManagerLaunchdAccess',['../classrbvtrTraCIScenarioManagerLaunchdAccess.html',1,'']]],
   ['rbvtrtracitestapp',['rbvtrTraCITestApp',['../classrbvtrTraCITestApp.html',1,'']]],
-  ['result_5ft',['result_t',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/structcChannel_1_1result__t.html',1,'cChannel']]],
   ['road',['Road',['../classVeins_1_1TraCICommandInterface_1_1Road.html',1,'Veins::TraCICommandInterface']]],
   ['route',['Route',['../classVeins_1_1TraCICommandInterface_1_1Route.html',1,'Veins::TraCICommandInterface']]],
   ['rreqidentifier',['RREQIdentifier',['../classAODVVANETRouting_1_1RREQIdentifier.html',1,'AODVVANETRouting']]],
+  ['rreqidentifier',['RREQIdentifier',['../classAODVRouting_1_1RREQIdentifier.html',1,'AODVRouting']]],
+  ['rreqidentifiercompare',['RREQIdentifierCompare',['../classAODVRouting_1_1RREQIdentifierCompare.html',1,'AODVRouting']]],
   ['rreqidentifiercompare',['RREQIdentifierCompare',['../classAODVVANETRouting_1_1RREQIdentifierCompare.html',1,'AODVVANETRouting']]],
   ['rsamconstmappingiterator',['RSAMConstMappingIterator',['../classRSAMConstMappingIterator.html',1,'']]],
   ['rsammapping',['RSAMMapping',['../classRSAMMapping.html',1,'']]]

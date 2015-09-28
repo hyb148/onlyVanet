@@ -32,7 +32,8 @@
 #include "UDPPacket.h"
 #include "AODVControlPackets_m.h"
 #include <map>
-#include<omnetpp.h>
+#include <ARPPacket_m.h>
+
 /*
  * This class implements AODV routing protocol and Netfilter hooks
  * in the IP-layer required by this protocol.
@@ -45,8 +46,6 @@ class INET_API AODVRouting : public cSimpleModule, public ILifecycle, public INe
      * It implements a unique identifier for an arbitrary RREQ message
      * in the network. See: rreqsArrivalTime.
      */
-    static simsignal_t statAODVRREQSENTSignal;
-    static simsignal_t statAODVRREPSENTSignal;
     class RREQIdentifier
     {
       public:
@@ -135,19 +134,11 @@ class INET_API AODVRouting : public cSimpleModule, public ILifecycle, public INe
     std::multimap<IPv4Address, IPv4Datagram *> targetAddressToDelayedPackets;    // queue for the datagrams we have no route for
 
   protected:
+    static simsignal_t statLinkFailure;
+
     void handleMessage(cMessage *msg);
     void initialize(int stage);
     virtual int numInitStages() const { return 5; }
-
-    /* compute link reliability */
-    Coord findDisplacement(Coord a, Coord b);
-    Coord findRelativeVelocity(Coord a, Coord b);
-    double predictInterval(double h, Coord l, Coord v);
-    double findMu(Coord vel);
-    double findRealtiveMu(Coord vel_a, Coord vel_b);
-    double findSigma(Coord vel);
-    double findRelativeSigma(Coord vel_a, Coord vel_b);
-    double computeRouteReliability(AODVRREQ *rreq);
 
     /* Route Discovery */
     void startRouteDiscovery(const IPv4Address& target, unsigned int timeToLive = 0);
@@ -156,8 +147,8 @@ class INET_API AODVRouting : public cSimpleModule, public ILifecycle, public INe
     void cancelRouteDiscovery(const IPv4Address& destAddr);
 
     /* Routing Table management */
-    void updateRoutingTable(IPv4Route *route, const IPv4Address& nextHop, unsigned int hopCount, bool hasValidDestNum, unsigned int destSeqNum, bool isActive, simtime_t lifeTime, double route_reliability);
-    IPv4Route *createRoute(const IPv4Address& destAddr, const IPv4Address& nextHop, unsigned int hopCount, bool hasValidDestNum, unsigned int destSeqNum, bool isActive, simtime_t lifeTime, double route_reliability);
+    void updateRoutingTable(IPv4Route *route, const IPv4Address& nextHop, unsigned int hopCount, bool hasValidDestNum, unsigned int destSeqNum, bool isActive, simtime_t lifeTime);
+    IPv4Route *createRoute(const IPv4Address& destAddr, const IPv4Address& nextHop, unsigned int hopCount, bool hasValidDestNum, unsigned int destSeqNum, bool isActive, simtime_t lifeTime);
     bool updateValidRouteLifeTime(const IPv4Address& destAddr, simtime_t lifetime);
     void scheduleExpungeRoutes();
     void expungeRoutes();

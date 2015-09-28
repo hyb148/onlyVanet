@@ -1,12 +1,12 @@
-<area shape="rect" id="node1" href="vanetsim.simulations._nodes.Car.html" title="Compound Module Car" alt="" coords="596,6,668,31">
-<area shape="rect" id="node2" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.common.InterfaceTable.html" title="Simple Module InterfaceTable" alt="" coords="5,81,109,106">
-<area shape="rect" id="node3" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.IManetRouting.html" title="Module Interface IManetRouting" alt="" coords="135,81,241,106">
-<area shape="rect" id="node4" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.RoutingTable.html" title="Simple Module RoutingTable" alt="" coords="265,81,364,106">
-<area shape="rect" id="node5" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.udp.UDP.html" title="Simple Module UDP" alt="" coords="388,81,460,106">
-<area shape="rect" id="node6" href="../../../inetmanet-2.0/doc/neddoc/inet.mobility.contract.IMobility.html" title="Module Interface IMobility" alt="" coords="484,81,556,106">
-<area shape="rect" id="node7" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html" title="Compound Module NetworkLayer" alt="" coords="581,81,683,106">
-<area shape="rect" id="node8" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.autorouting.ipv4.HostAutoConfigurator.html" title="Simple Module HostAutoConfigurator" alt="" coords="707,81,855,106">
-<area shape="rect" id="node9" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.ieee80211.Ieee80211Nic.html" title="Compound Module Ieee80211Nic" alt="" coords="879,81,981,106">
-<area shape="rect" id="node10" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="1007,81,1105,106">
-<area shape="rect" id="node11" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.traci.TraCIDemo.html" title="Simple Module TraCIDemo" alt="" coords="1129,81,1220,106">
+<area shape="rect" id="node1" href="vanetsim.simulations._nodes.Car.html" title="Compound Module Car" alt="" coords="620,6,692,31">
+<area shape="rect" id="node2" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="5,81,104,106">
+<area shape="rect" id="node3" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.udp.UDP.html" title="Simple Module UDP" alt="" coords="128,81,200,106">
+<area shape="rect" id="node4" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.RoutingTable.html" title="Simple Module RoutingTable" alt="" coords="224,81,323,106">
+<area shape="rect" id="node5" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.IManetRouting.html" title="Module Interface IManetRouting" alt="" coords="347,81,453,106">
+<area shape="rect" id="node6" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.ieee80211.Ieee80211Nic.html" title="Compound Module Ieee80211Nic" alt="" coords="478,81,580,106">
+<area shape="rect" id="node7" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html" title="Compound Module NetworkLayer" alt="" coords="605,81,707,106">
+<area shape="rect" id="node8" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.common.InterfaceTable.html" title="Simple Module InterfaceTable" alt="" coords="731,81,836,106">
+<area shape="rect" id="node9" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.autorouting.ipv4.HostAutoConfigurator.html" title="Simple Module HostAutoConfigurator" alt="" coords="861,81,1008,106">
+<area shape="rect" id="node10" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.traci.TraCIDemo.html" title="Simple Module TraCIDemo" alt="" coords="1033,81,1124,106">
+<area shape="rect" id="node11" href="../../../inetmanet-2.0/doc/neddoc/inet.mobility.contract.IMobility.html" title="Module Interface IMobility" alt="" coords="1148,81,1220,106">
 <area shape="rect" id="node12" href="../../../inetmanet-2.0/doc/neddoc/inet.base.NotificationBoard.html" title="Simple Module NotificationBoard" alt="" coords="1244,81,1367,106">

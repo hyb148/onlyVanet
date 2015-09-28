@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['siblingmoduleparameterref',['SiblingModuleParameterRef',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classNEDSupport_1_1SiblingModuleParameterRef.html',1,'NEDSupport']]],
   ['signal',['Signal',['../classSignal.html',1,'']]],
   ['simpleconstmapping',['SimpleConstMapping',['../classSimpleConstMapping.html',1,'']]],
   ['simpleconstmappingiterator',['SimpleConstMappingIterator',['../classSimpleConstMappingIterator.html',1,'']]],
@@ -8,16 +7,9 @@ var searchData=
   ['simplepathlossconstmapping',['SimplePathlossConstMapping',['../classSimplePathlossConstMapping.html',1,'']]],
   ['simplepathlossmodel',['SimplePathlossModel',['../classSimplePathlossModel.html',1,'']]],
   ['simsignalwrap_5ft',['simsignalwrap_t',['../classsimsignalwrap__t.html',1,'']]],
-  ['simtime',['SimTime',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classSimTime.html',1,'']]],
-  ['sizeof',['Sizeof',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classNEDSupport_1_1Sizeof.html',1,'NEDSupport']]],
   ['snrthresholddecider',['SNRThresholdDecider',['../classSNRThresholdDecider.html',1,'']]],
-  ['statistics',['Statistics',['../classbitcarTraCIMobility_1_1Statistics.html',1,'bitcarTraCIMobility']]],
-  ['statistics',['Statistics',['../classVeins_1_1TraCIMobility_1_1Statistics.html',1,'Veins::TraCIMobility']]],
-  ['statistics',['Statistics',['../classaodvTraCIMobility_1_1Statistics.html',1,'aodvTraCIMobility']]],
   ['statistics',['Statistics',['../classrbvtrTraCIMobility_1_1Statistics.html',1,'rbvtrTraCIMobility']]],
-  ['stdcharpvector',['stdcharpvector',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classstdcharpvector.html',1,'']]],
-  ['stdstring',['stdstring',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classstdstring.html',1,'']]],
-  ['stdstringvector',['stdstringvector',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classstdstringvector.html',1,'']]],
-  ['stringmapparamresolver',['StringMapParamResolver',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classStringMapParamResolver.html',1,'']]],
-  ['submoduleiterator',['SubmoduleIterator',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcModule_1_1SubmoduleIterator.html',1,'cModule']]]
+  ['statistics',['Statistics',['../classaodvTraCIMobility_1_1Statistics.html',1,'aodvTraCIMobility']]],
+  ['statistics',['Statistics',['../classVeins_1_1TraCIMobility_1_1Statistics.html',1,'Veins::TraCIMobility']]],
+  ['statistics',['Statistics',['../classbitcarTraCIMobility_1_1Statistics.html',1,'bitcarTraCIMobility']]]
 ];

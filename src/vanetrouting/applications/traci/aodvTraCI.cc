@@ -78,7 +78,9 @@ void aodvTraCI::handleLowerMsg(cMessage* msg) {
     //if (!sentMessage) sendMessage();
     emit(statPacketReceivedSignal,NULL);
     double difference = simTime().dbl();
-    difference = difference - msg->par("sendingTime").doubleValue();
+    if(msg->hasPar("sendingTime"))
+        difference = difference - msg->par("sendingTime").doubleValue();
+    else difference = 0;
     emit(statEndToEndDelaySignal,difference);
     delete msg;
 }
@@ -100,7 +102,7 @@ void aodvTraCI::sendApplicationMessage(IPv4Address destRouterId){
 //    char *buffer = new char[size];
 //    cMessage *msg = new cMessage(buffer);
 //    newMessage->addObject(msg);
-    newMessage->setByteLength(size);
+    newMessage->setByteLength(size-8);
     newMessage->addPar("sendingTime");
     (newMessage->par("sendingTime")).setDoubleValue(simTime().dbl());
     emit(statPacketSentSignal,NULL);

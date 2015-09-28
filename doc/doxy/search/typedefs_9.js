@@ -5,10 +5,5 @@ var searchData=
   ['mapped_5ftype_5fcref',['mapped_type_cref',['../classArgument.html#a23feb540136f49b4202ce0c7def1f0c5',1,'Argument']]],
   ['mappingbuffer',['MappingBuffer',['../classMappingUtils.html#ad235ea24201e93c2b28a1c65c2f4fa6e',1,'MappingUtils']]],
   ['mappingset',['MappingSet',['../classConcatConstMapping.html#a633e23b7b9cc932171a9242d286f0970',1,'ConcatConstMapping']]],
-  ['mathfunc1arg',['MathFunc1Arg',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__EnumsTypes.html#ga3279cd74e9efb4bfc039c473e12219ac',1,]]],
-  ['mathfunc2args',['MathFunc2Args',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__EnumsTypes.html#gaa7906ba126493cedf17f179e0f17d51e',1,]]],
-  ['mathfunc3args',['MathFunc3Args',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__EnumsTypes.html#ga17b34e3481c3b3109f62e0be61987b8e',1,]]],
-  ['mathfunc4args',['MathFunc4Args',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__EnumsTypes.html#gad3926f4c5f03adcd8711aba50ebf92e3',1,]]],
-  ['mathfuncnoarg',['MathFuncNoArg',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__EnumsTypes.html#ga34fb283ee632e346870a8baca410c7dc',1,]]],
   ['multipliedmapping',['MultipliedMapping',['../classSignal.html#a484a5f8dfebfd933edcb1a55770df0e2',1,'Signal']]]
 ];

@@ -6,47 +6,46 @@
    <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
 <h2 class="comptitle">Compound Module <i>AODVVANETRouter</i></h2>
 <b>Package:</b> vanetsim.nodes<br/><b>File: <a href="src-nodes-AODVVANETRouter.ned.html">src/nodes/AODVVANETRouter.ned</a></b><br/>
-<p>It models a ~WirelessHost extended with ~AODVRouting submodule.</p>
+<p>It models a ~WirelessHost extended with ~<a href="vanetsim.routing.aodvvanet.AODVRouting.html">AODVRouting</a> submodule.</p>
 <p>AODV is an on-demand MANET routing protocol. Each node
 works similar to a 'router': they manage their own routing
 tables, send request for routes and consult the IP layer via
 Netfilter hooks for data forwarding.</p>
 <p>Scenerios where AODV routing is desired use this module as a
 host module.</p>
-<p>For more info about AODVRouting, see the corresponding module:
-~AODVRouting and its C++ implementation with the same name.</p>
+<p>For more info about <a href="vanetsim.routing.aodvvanet.AODVRouting.html">AODVRouting</a>, see the corresponding module:
+~<a href="vanetsim.routing.aodvvanet.AODVRouting.html">AODVRouting</a> and its C++ implementation with the same name.</p>
 <p>The AODV v.2 (known as DYMO) is also implemented: ~xDYMO,
 ~DYMORouter.</p>
 <img src="vanetsim.nodes.AODVVANETRouter-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.status.NodeStatus.html" title="NodeStatus" alt="NodeStatus" coords="31,78,73,123">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.base.NotificationBoard.html" title="NotificationBoard" alt="NotificationBoard" coords="-4,183,115,228">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.battery.IBattery.html" title="IBattery" alt="IBattery" coords="30,105,80,150">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.mobility.contract.IMobility.html" title="IMobility" alt="IMobility" coords="27,139,83,184">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html" title="NetworkLayer" alt="NetworkLayer" coords="285,307,378,368">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.RoutingTable.html" title="RoutingTable" alt="RoutingTable" coords="13,253,98,298">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.common.InterfaceTable.html" title="InterfaceTable" alt="InterfaceTable" coords="7,315,104,360">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html" title="PcapRecorder" alt="PcapRecorder" coords="-63,366,173,411">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html" title="LoopbackInterface" alt="LoopbackInterface" coords="60,426,104,487">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IWirelessNic.html" title="IWirelessNic" alt="IWirelessNic" coords="160,426,276,487">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IWiredNic.html" title="IWiredNic" alt="IWiredNic" coords="314,426,427,487">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IWiredNic.html" title="IWiredNic" alt="IWiredNic" coords="499,426,622,487">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IExternalNic.html" title="IExternalNic" alt="IExternalNic" coords="76,426,227,487">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.ITCPApp.html" title="ITCPApp" alt="ITCPApp" coords="76,74,223,135">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.ITCP.html" title="ITCP" alt="ITCP" coords="129,161,173,222">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.IUDPApp.html" title="IUDPApp" alt="IUDPApp" coords="253,74,409,135">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.IUDP.html" title="IUDP" alt="IUDP" coords="311,161,355,222">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.ISCTPApp.html" title="ISCTPApp" alt="ISCTPApp" coords="449,74,610,135">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.ISCTP.html" title="ISCTP" alt="ISCTP" coords="509,161,553,222">
-<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.IPingApp.html" title="IPingApp" alt="IPingApp" coords="557,161,717,222">
-<area shape="rect" href="vanetsim.routing.aodvvanet.AODVVANETRouting.html" title="AODVVANETRouting" alt="AODVVANETRouting" coords="525,327,595,388">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.status.NodeStatus.html" title="NodeStatus" alt="NodeStatus" coords="34,78,70,121">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.base.NotificationBoard.html" title="NotificationBoard" alt="NotificationBoard" coords="4,183,107,226">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.battery.IBattery.html" title="IBattery" alt="IBattery" coords="34,105,77,148">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.mobility.contract.IMobility.html" title="IMobility" alt="IMobility" coords="31,139,79,182">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html" title="NetworkLayer" alt="NetworkLayer" coords="291,307,372,366">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.RoutingTable.html" title="RoutingTable" alt="RoutingTable" coords="18,253,92,296">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.common.InterfaceTable.html" title="InterfaceTable" alt="InterfaceTable" coords="13,315,97,358">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.util.PcapRecorder.html" title="PcapRecorder" alt="PcapRecorder" coords="-47,366,158,409">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html" title="LoopbackInterface" alt="LoopbackInterface" coords="60,426,104,485">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IWirelessNic.html" title="IWirelessNic" alt="IWirelessNic" coords="168,426,269,485">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IWiredNic.html" title="IWiredNic" alt="IWiredNic" coords="322,426,418,485">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IWiredNic.html" title="IWiredNic" alt="IWiredNic" coords="507,426,613,485">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.IExternalNic.html" title="IExternalNic" alt="IExternalNic" coords="87,426,216,485">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.ITCPApp.html" title="ITCPApp" alt="ITCPApp" coords="85,74,213,133">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.ITCP.html" title="ITCP" alt="ITCP" coords="129,161,173,220">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.IUDPApp.html" title="IUDPApp" alt="IUDPApp" coords="263,74,400,133">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.IUDP.html" title="IUDP" alt="IUDP" coords="311,161,355,220">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.ISCTPApp.html" title="ISCTPApp" alt="ISCTPApp" coords="459,74,599,133">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.ISCTP.html" title="ISCTP" alt="ISCTP" coords="509,161,553,220">
+<area shape="rect" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.IPingApp.html" title="IPingApp" alt="IPingApp" coords="568,161,707,220">
+<area shape="rect" href="vanetsim.routing.aodvvanet.AODVVANETRouting.html" title="AODVVANETRouting" alt="AODVVANETRouting" coords="530,327,591,386">
 </map>
 <h3 class="subtitle">Usage diagram:</h3>
 <p>The following diagram shows usage relationships between types.
 Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
-<img src="vanetsim.nodes.AODVVANETRouter-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.nodes.AODVVANETRouter.html" title="Compound Module AODVVANETRouter" alt="" coords="83,81,227,106">
-<area shape="rect" id="node2" href="vanetsim.routing.aodvvanet.AODVVANETRouting.html" title="Simple Module AODVVANETRouting" alt="" coords="5,155,155,181">
-<area shape="rect" id="node3" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="180,155,279,181">
-<area shape="rect" id="node4" href="vanetsim.simulations._nodes.AODVVANETCar.html" title="Compound Module AODVVANETCar" alt="" coords="91,6,217,31">
+<img src="vanetsim.nodes.AODVVANETRouter-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="vanetsim.nodes.AODVVANETRouter.html" title="Compound Module AODVVANETRouter" alt="" coords="57,6,201,31">
+<area shape="rect" id="node2" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="5,81,104,106">
+<area shape="rect" id="node3" href="vanetsim.routing.aodvvanet.AODVVANETRouting.html" title="Simple Module AODVVANETRouting" alt="" coords="129,81,279,106">
 </map>
 <h3 class="subtitle">Inheritance diagram:</h3>
 <p>The following diagram shows inheritance relationships for this type.
@@ -76,25 +75,6 @@ mgmtType = ~Ieee80211MgmtSTA added.
 It should be used in conjunction with ~AccessPoint, or any other AP model
 which contains ~Ieee80211Nic with mgmtType = ~Ieee80211MgmtAP.</p>
 
-   </td>
-</tr>
-</table>
-<h3 class="subtitle">Used in compound modules:</h3>
-<table class="typestable">
-   <tr>
-      <th class="name">Name</th>
-      <th class="type">Type</th>
-      <th class="description">Description</th>
-   </tr>
-<tr>
-   <td>
-<a href="vanetsim.simulations._nodes.AODVVANETCar.html">AODVVANETCar</a>
-   </td>
-   <td>
-<i>compound&nbsp;module</i>
-   </td>
-   <td>
-<i>(no description)</i>
    </td>
 </tr>
 </table>
@@ -343,7 +323,7 @@ which contains ~Ieee80211Nic with mgmtType = ~Ieee80211MgmtAP.</p>
    <td>
       <i>string</i>
    </td>
-   <td>""</td>
+   <td>"configurator"</td>
    <td>
 <p>the absolute path to the IPv4NetworkConfigurator; use "" if there is no configurator</p>
    </td>

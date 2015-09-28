@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['tail',['tail',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcLinkedList.html#a4a45bc14b501d3be6b36a751444a4913',1,'cLinkedList']]],
-  ['take',['take',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcDefaultList.html#af405aafaa28a558018d7f3966154a437',1,'cDefaultList::take()'],['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcObject.html#a741da8f24135ad40e27d31da9e79fd33',1,'cObject::take()']]],
   ['takescreenshot',['takeScreenshot',['../classVeins_1_1TraCICommandInterface_1_1GuiView.html#a9b60a0a9ba910d8499c50330acf96c4a',1,'Veins::TraCICommandInterface::GuiView']]],
   ['time_5fstatic',['time_static',['../classDimension.html#a0ebe0eeec14af70b3f75f675c3eb7a7b',1,'Dimension']]],
   ['timeleftinslot',['timeLeftInSlot',['../classMac1609__4.html#a85b16cc9c45d0a2ca674f2ee069a0b39',1,'Mac1609_4']]],
@@ -19,13 +17,6 @@ var searchData=
   ['tracicoord',['TraCICoord',['../structVeins_1_1TraCICoord.html#aacbd9709ddfdc38df32362dccc7420c0',1,'Veins::TraCICoord::TraCICoord()'],['../structVeins_1_1TraCICoord.html#a85685169dd692ec2e4ed2c433f0f23a4',1,'Veins::TraCICoord::TraCICoord(double x, double y)']]],
   ['tracimobility',['TraCIMobility',['../classVeins_1_1TraCIMobility.html#a55255b2a792d2355036b32606695fc16',1,'Veins::TraCIMobility']]],
   ['traciscenariomanager',['TraCIScenarioManager',['../classVeins_1_1TraCIScenarioManager.html#a54a7ac1f30470a59a6bf661499621ac5',1,'Veins::TraCIScenarioManager']]],
-  ['trafficlight',['Trafficlight',['../classVeins_1_1TraCICommandInterface_1_1Trafficlight.html#a5dcdf60becef20e7b1f0a22158edfd5f',1,'Veins::TraCICommandInterface::Trafficlight::Trafficlight()'],['../classVeins_1_1TraCICommandInterface.html#af6fb3314fe045b1694ca21145ab34f0b',1,'Veins::TraCICommandInterface::trafficlight()']]],
-  ['transferto',['transferTo',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcSimulation.html#aae6078fbec235fcc136a33ab5356612c',1,'cSimulation']]],
-  ['transfertomain',['transferToMain',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcSimulation.html#a4e955ec45e74e0f4a289d2d5e14c1923',1,'cSimulation']]],
-  ['transform',['transform',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcDensityEstBase.html#a05869a439ce93498ff14c6b727280f60',1,'cDensityEstBase::transform()'],['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcHistogramBase.html#ad117c20497a78c6cbc23f085e7b3e15a',1,'cHistogramBase::transform()'],['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcKSplit.html#a9090d361b2f54994538b1152ad63d6c0',1,'cKSplit::transform()'],['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcPSquare.html#a365dd0bc668dbe2de69001885216744e',1,'cPSquare::transform()'],['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcVarHistogram.html#a417ff6cbb791083a18ffd0b8e387362d',1,'cVarHistogram::transform()']]],
-  ['triang',['triang',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__RandomNumbersCont.html#ga420c4783712a2f1742e3c3e240810f64',1,]]],
-  ['trunc',['trunc',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classSimTime.html#aa3f333fa230ae7a83f82c3fda45ea85d',1,'SimTime']]],
-  ['truncnormal',['truncnormal',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__RandomNumbersCont.html#ga80b20109dbe65191c8404c58cef90917',1,'truncnormal(double mean, double stddev, int rng=0)(Global Namespace)'],['/home/administrator/ITS/omnetpp-4.4.1//doc/api/group__RandomNumbersCont.html#gae59607f50d297c0f8ce72b833c343c50',1,'truncnormal(SimTime mean, SimTime stddev, int rng=0)(Global Namespace)']]],
-  ['ttoa',['ttoa',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classSimTime.html#a77a56bbf689bb4f6888e23a493e56928',1,'SimTime']]],
+  ['trafficlight',['trafficlight',['../classVeins_1_1TraCICommandInterface.html#af6fb3314fe045b1694ca21145ab34f0b',1,'Veins::TraCICommandInterface::trafficlight()'],['../classVeins_1_1TraCICommandInterface_1_1Trafficlight.html#a5dcdf60becef20e7b1f0a22158edfd5f',1,'Veins::TraCICommandInterface::Trafficlight::Trafficlight()']]],
   ['tworayinterferencemodel',['TwoRayInterferenceModel',['../classTwoRayInterferenceModel.html#aa307745f89b85c3818babbe4ff613c6a',1,'TwoRayInterferenceModel']]]
 ];

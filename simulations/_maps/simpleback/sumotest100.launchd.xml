@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- debug config -->
+<launch>
+	<basedir path="/home/administrator/ITS/VANETProject/VANETSim/simulations/_maps/simple/" />
+	<copy file="sumotest.net.xml" />
+	<copy file="sumotest100.rou.xml" />
+	<copy file="sumotest100.sumo.cfg" type="config" />
+</launch>
+

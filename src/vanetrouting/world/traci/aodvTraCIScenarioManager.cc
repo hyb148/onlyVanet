@@ -997,8 +997,7 @@ void aodvTraCIScenarioManager::executeOneTimestep()
 }
 
 void aodvTraCIScenarioManager::sendApplicationLayerMessage(){
-
-    if(hosts.size() > 1){
+    if(simTime().dbl()>150 && hosts.size() > 1){
         int n = 10;
         while(n--){
             int numHostSender;

@@ -26,6 +26,7 @@ module AODVVANETCar
         @statistic[statAODVRREQSENT](record=count);
         @statistic[statAODVRREPSENT](record=count);
         @statistic[statEndToEndDelay](record=sum);
+        @statistic[statLinkFailure](record=count);
         string mobilityType = default("aodvTraCIMobility");
         networkLayer.configurator.networkConfiguratorModule = "";
         string routingProtocol @enum("AODVVANET","RBVTR","BITCAR") = default("AODVVANET");
@@ -75,6 +76,7 @@ module AODVVANETCar
         wlan: Ieee80211Nic {
             parameters:
                 @display("p=304,461;q=queue");
+                opMode = "p";
         }
         configurator: IPv4NetworkConfigurator {
             parameters:

@@ -10,7 +10,5 @@ var searchData=
   ['keymap',['KeyMap',['../classFilledUpMapping.html#a6b714062e32fe2c679b17c0ca7ee2c3e',1,'FilledUpMapping']]],
   ['keys',['keys',['../classFilledUpMapping.html#aa7dcdf39affa7efc2db8e67e4ca595eb',1,'FilledUpMapping']]],
   ['keyset',['KeySet',['../classFilledUpMapping.html#a58651c85d6c379da4e22810a0f7f18ed',1,'FilledUpMapping']]],
-  ['keyvalue',['KeyValue',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcConfiguration_1_1KeyValue.html',1,'cConfiguration']]],
-  ['keyvalue',['KeyValue',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcConfigurationReader_1_1KeyValue.html',1,'cConfigurationReader']]],
   ['kind',['kind',['../classPassedMessage.html#ab4e2bf6d2317196af7e9c98ed2c406a6',1,'PassedMessage']]]
 ];

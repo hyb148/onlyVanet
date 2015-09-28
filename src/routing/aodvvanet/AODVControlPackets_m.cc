@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgc 4.4 from src/routing/aodvvanet/AODVControlPackets.msg.
+// Generated file, do not edit! Created by opp_msgc 4.4 from networklayer/routing/aodv/AODVControlPackets.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:
@@ -500,11 +500,6 @@ AODVRREQ::AODVRREQ(const char *name) : ::AODVControlPacket(name)
     this->rreqId_var = 0;
     this->destSeqNum_var = 0;
     this->originatorSeqNum_var = 0;
-    //additional attributes for our protocol
-    this->position_var = Coord(0, 0);
-    this->speed_var = Coord(0, 0);
-    this->direction_var = Coord(0, 0);
-    this->link_reliability_var = 1.00;
 }
 
 AODVRREQ::AODVRREQ(const AODVRREQ& other) : ::AODVControlPacket(other)
@@ -538,11 +533,6 @@ void AODVRREQ::copy(const AODVRREQ& other)
     this->destSeqNum_var = other.destSeqNum_var;
     this->originatorAddr_var = other.originatorAddr_var;
     this->originatorSeqNum_var = other.originatorSeqNum_var;
-    //additional attributes for our protocol
-    this->position_var = other.position_var;
-    this->speed_var = other.speed_var;
-    this->direction_var = other.direction_var;
-    this->link_reliability_var = other.link_reliability_var;
 }
 
 void AODVRREQ::parsimPack(cCommBuffer *b)
@@ -560,11 +550,6 @@ void AODVRREQ::parsimPack(cCommBuffer *b)
     doPacking(b,this->destSeqNum_var);
     doPacking(b,this->originatorAddr_var);
     doPacking(b,this->originatorSeqNum_var);
-    //additional attributes for our protocol
-    doPacking(b,this->position_var);
-    doPacking(b,this->speed_var);
-    doPacking(b,this->direction_var);
-    doPacking(b,this->link_reliability_var);
 }
 
 void AODVRREQ::parsimUnpack(cCommBuffer *b)
@@ -582,11 +567,6 @@ void AODVRREQ::parsimUnpack(cCommBuffer *b)
     doUnpacking(b,this->destSeqNum_var);
     doUnpacking(b,this->originatorAddr_var);
     doUnpacking(b,this->originatorSeqNum_var);
-    //additional attributes for our protocol
-    doUnpacking(b,this->position_var);
-    doUnpacking(b,this->speed_var);
-    doUnpacking(b,this->direction_var);
-    doUnpacking(b,this->link_reliability_var);
 }
 
 unsigned int AODVRREQ::getPacketType() const
@@ -708,48 +688,6 @@ void AODVRREQ::setOriginatorSeqNum(unsigned int originatorSeqNum)
 {
     this->originatorSeqNum_var = originatorSeqNum;
 }
-
-
-Coord AODVRREQ::getPosition() const
-{
-    return position_var;
-}
-
-void AODVRREQ::setPosition(Coord position)
-{
-    this->position_var = position;
-}
-
-Coord AODVRREQ::getSpeed() const
-{
-    return speed_var;
-}
-
-void AODVRREQ::setSpeed(Coord speed)
-{
-    this->speed_var = speed;
-}
-
-Coord AODVRREQ::getDirection() const
-{
-    return direction_var;
-}
-
-void AODVRREQ::setDirection(Coord direction)
-{
-    this->direction_var = direction;
-}
-
-double AODVRREQ::getLinkReliability() const
-{
-    return link_reliability_var;
-}
-
-void AODVRREQ::setLinkReliability(double linkReliability)
-{
-    this->link_reliability_var = linkReliability;
-}
-
 
 class AODVRREQDescriptor : public cClassDescriptor
 {
@@ -1025,8 +963,6 @@ AODVRREP::AODVRREP(const char *name) : ::AODVControlPacket(name)
     this->destSeqNum_var = 0;
     this->originatorSeqNum_var = 0;
     this->lifeTime_var = 0;
-    //additional attributes for our protocol
-    this->route_reliability_var = 1.00;
 }
 
 AODVRREP::AODVRREP(const AODVRREP& other) : ::AODVControlPacket(other)
@@ -1058,8 +994,6 @@ void AODVRREP::copy(const AODVRREP& other)
     this->originatorAddr_var = other.originatorAddr_var;
     this->originatorSeqNum_var = other.originatorSeqNum_var;
     this->lifeTime_var = other.lifeTime_var;
-    //additional attributes for our protocol
-    this->route_reliability_var = other.route_reliability_var;
 }
 
 void AODVRREP::parsimPack(cCommBuffer *b)
@@ -1075,8 +1009,6 @@ void AODVRREP::parsimPack(cCommBuffer *b)
     doPacking(b,this->originatorAddr_var);
     doPacking(b,this->originatorSeqNum_var);
     doPacking(b,this->lifeTime_var);
-    //additional attributes for our protocol
-    doPacking(b, this->route_reliability_var);
 }
 
 void AODVRREP::parsimUnpack(cCommBuffer *b)
@@ -1092,8 +1024,6 @@ void AODVRREP::parsimUnpack(cCommBuffer *b)
     doUnpacking(b,this->originatorAddr_var);
     doUnpacking(b,this->originatorSeqNum_var);
     doUnpacking(b,this->lifeTime_var);
-    //additional attributes for our protocol
-    doUnpacking(b, this->route_reliability_var);
 }
 
 unsigned int AODVRREP::getPacketType() const
@@ -1194,16 +1124,6 @@ simtime_t AODVRREP::getLifeTime() const
 void AODVRREP::setLifeTime(simtime_t lifeTime)
 {
     this->lifeTime_var = lifeTime;
-}
-
-double AODVRREP::getRouteReliability() const
-{
-    return route_reliability_var;
-}
-
-void AODVRREP::setRouteReliability(double route_reliability)
-{
-    this->route_reliability_var = route_reliability;
 }
 
 class AODVRREPDescriptor : public cClassDescriptor

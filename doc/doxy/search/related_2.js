@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jakesfadingmapping',['JakesFadingMapping',['../classJakesFading.html#a512ebf4ce5a76e1580f7058c9fd49d90',1,'JakesFading']]]
+  ['multidimmappingiterator_3c_20interpolator_20_3e',['MultiDimMappingIterator&lt; Interpolator &gt;',['../classMultiDimMapping.html#a6314bc1334b489fad95fbc1affbdb57f',1,'MultiDimMapping']]]
 ];

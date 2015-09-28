@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('classDeciderToPhyInterface.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c55926187883df5bc322c947d317534"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classConstMapping.html">ConstMapping</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#a2c55926187883df5bc322c947d317534">getThermalNoise</a> (simtime_t_cref from, simtime_t_cref to)=0</td></tr>
 <tr class="memdesc:a2c55926187883df5bc322c947d317534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="classMapping.html" title="Represents a changeable mapping (mathematical function) from at least time to Argument::mapped_type. ">Mapping</a> which defines the thermal noise in the passed time frame (in mW).  <a href="#a2c55926187883df5bc322c947d317534">More...</a><br/></td></tr>
 <tr class="separator:a2c55926187883df5bc322c947d317534"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a319e413b963f03ff218b0d0024fb66b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#a319e413b963f03ff218b0d0024fb66b9">sendControlMsgToMac</a> (<a class="elRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcMessage.html">cMessage</a> *msg)=0</td></tr>
+<tr class="memitem:a319e413b963f03ff218b0d0024fb66b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#a319e413b963f03ff218b0d0024fb66b9">sendControlMsgToMac</a> (cMessage *msg)=0</td></tr>
 <tr class="memdesc:a319e413b963f03ff218b0d0024fb66b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the <a class="el" href="classDecider.html" title="The basic Decider class. ">Decider</a> to send a control message to the MACLayer.  <a href="#a319e413b963f03ff218b0d0024fb66b9">More...</a><br/></td></tr>
 <tr class="separator:a319e413b963f03ff218b0d0024fb66b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c0676323e402449d0972890c6a14df3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#a3c0676323e402449d0972890c6a14df3">sendUp</a> (<a class="el" href="classVeins_1_1AirFrame.html">AirFrame</a> *packet, <a class="el" href="classDeciderResult.html">DeciderResult</a> *result)=0</td></tr>
@@ -153,10 +153,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73660771f127a990489fb04da07ea39e"><td class="memItemLeft" align="right" valign="top">virtual simtime_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#a73660771f127a990489fb04da07ea39e">getSimTime</a> ()=0</td></tr>
 <tr class="memdesc:a73660771f127a990489fb04da07ea39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current simulation time.  <a href="#a73660771f127a990489fb04da07ea39e">More...</a><br/></td></tr>
 <tr class="separator:a73660771f127a990489fb04da07ea39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af85151048dba05ec27e378000fd95403"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#af85151048dba05ec27e378000fd95403">cancelScheduledMessage</a> (<a class="elRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcMessage.html">cMessage</a> *msg)=0</td></tr>
+<tr class="memitem:af85151048dba05ec27e378000fd95403"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#af85151048dba05ec27e378000fd95403">cancelScheduledMessage</a> (cMessage *msg)=0</td></tr>
 <tr class="memdesc:af85151048dba05ec27e378000fd95403"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells the PhyLayer to cancel a scheduled message (AirFrame or ControlMessage).  <a href="#af85151048dba05ec27e378000fd95403">More...</a><br/></td></tr>
 <tr class="separator:af85151048dba05ec27e378000fd95403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a223fb24be9268abba32e90181fa248b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#a223fb24be9268abba32e90181fa248b9">rescheduleMessage</a> (<a class="elRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcMessage.html">cMessage</a> *msg, simtime_t_cref t)=0</td></tr>
+<tr class="memitem:a223fb24be9268abba32e90181fa248b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#a223fb24be9268abba32e90181fa248b9">rescheduleMessage</a> (cMessage *msg, simtime_t_cref t)=0</td></tr>
 <tr class="memdesc:a223fb24be9268abba32e90181fa248b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells the PhyLayer to reschedule a message (AirFrame or ControlMessage).  <a href="#a223fb24be9268abba32e90181fa248b9">More...</a><br/></td></tr>
 <tr class="separator:a223fb24be9268abba32e90181fa248b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ee7d31b5bf0cda9e543ac91b3aaecc5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeciderToPhyInterface.html#a1ee7d31b5bf0cda9e543ac91b3aaecc5">drawCurrent</a> (double amount, int activity)=0</td></tr>
@@ -238,7 +238,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void DeciderToPhyInterface::cancelScheduledMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcMessage.html">cMessage</a> *&#160;</td>
+          <td class="paramtype">cMessage *&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
@@ -516,7 +516,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void DeciderToPhyInterface::rescheduleMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcMessage.html">cMessage</a> *&#160;</td>
+          <td class="paramtype">cMessage *&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -555,7 +555,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void DeciderToPhyInterface::sendControlMsgToMac </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcMessage.html">cMessage</a> *&#160;</td>
+          <td class="paramtype">cMessage *&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
@@ -622,7 +622,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classDeciderToPhyInterface.html">DeciderToPhyInterface</a></li>
-    <li class="footer">Generated on Tue Aug 11 2015 00:38:25 for onlyVanet by
+    <li class="footer">Generated on Thu Sep 10 2015 18:53:16 for onlyVanet by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rsamconstmappingiterator',['RSAMConstMappingIterator',['../classRadioStateAnalogueModel.html#ab901736afc45f0b8dbe019c39356aa09',1,'RadioStateAnalogueModel']]],
-  ['rsammapping',['RSAMMapping',['../classRadioStateAnalogueModel.html#a6ec9262901fa86ea2ef6d08fc9410144',1,'RadioStateAnalogueModel']]]
+  ['simplepathlossconstmapping',['SimplePathlossConstMapping',['../classSimplePathlossModel.html#a917f0958441d102331b9adf788fd63c8',1,'SimplePathlossModel']]]
 ];

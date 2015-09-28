@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['t_5faccess_5fcategory',['t_access_category',['../classMac1609__4.html#a1ebd8faa51fdcaf3881c5799cb6eedb2',1,'Mac1609_4']]],
-  ['t_5fchannel',['t_channel',['../Consts80211p_8h.html#adf9b7633e9be0abbe2a94e0e2b8de074',1,'Consts80211p.h']]],
-  ['type',['Type',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcConfigOption.html#af4a1d608a199a5732612d6427aae7f95',1,'cConfigOption::Type()'],['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcGate.html#ac548a8cc681cf0c39afb2b993fe6e09f',1,'cGate::Type()'],['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcNEDValue.html#af31583b19ac37e336ce3c0d665117fd6',1,'cNEDValue::Type()']]]
+  ['vanetcontroltype',['VanetControlType',['../ControlVanetRouting__m_8h.html#aeca4fc7fd8dfe50a210f6227147871d9',1,'ControlVanetRouting_m.h']]],
+  ['vehiclesignal',['VehicleSignal',['../classaodvTraCIScenarioManager.html#a952cd0aded2b30b118ced2dc871ec8b2',1,'aodvTraCIScenarioManager::VehicleSignal()'],['../classbitcarTraCIScenarioManager.html#a3046960bc9ebaec8dcdceab8c8fe5d55',1,'bitcarTraCIScenarioManager::VehicleSignal()'],['../classrbvtrTraCIScenarioManager.html#ae499db3006265cf4c83d1d62dbee9d93',1,'rbvtrTraCIScenarioManager::VehicleSignal()'],['../classVeins_1_1TraCIScenarioManager.html#afa3fe3951bcea5da7557567b8142f32a',1,'Veins::TraCIScenarioManager::VehicleSignal()']]]
 ];

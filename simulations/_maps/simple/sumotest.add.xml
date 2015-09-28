@@ -1,7 +1,7 @@
 <additional>
 		<route id="connector1" edges="3to4 4to1 1to2 2to3"/>
 		<route id="connector2" edges="1to2 2to3 3to4 4to1"/>
-		<route id="circuit" edges="1to2 2to3 3to4"/>
+		<route id="circuit" edges="1to2"/>
 		<rerouter id="rerouter1" edges="1to2">
 			<interval begin="0" end="100000">
 				<routeProbReroute id="connector2" />

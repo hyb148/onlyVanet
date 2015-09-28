@@ -33,8 +33,6 @@ class INET_API AODVRouteData : public cObject
     unsigned int destSeqNum;
     simtime_t lifeTime;    // expiration or deletion time of the route
 
-    // attributes for our implementation
-    double route_reliability_var;
   public:
 
     AODVRouteData()
@@ -45,8 +43,6 @@ class INET_API AODVRouteData : public cObject
         validDestNum = true;
         lifeTime = SIMTIME_ZERO;
         destSeqNum = 0;
-        // attributes for our implementation
-        route_reliability_var = 1.00;
     }
 
     virtual ~AODVRouteData() {}
@@ -65,9 +61,6 @@ class INET_API AODVRouteData : public cObject
     void setIsActive(bool active) { this->active = active; }
     void addPrecursor(const IPv4Address& precursorAddr) { precursorList.insert(precursorAddr); }
     const std::set<IPv4Address>& getPrecursorList() const { return precursorList; }
-    // attributes for our implementation
-    double getRouteReliability() const { return route_reliability_var; }
-    void setRouteReliability(double route_reliability) { this->route_reliability_var = route_reliability; }
 };
 
 std::ostream& operator<<(std::ostream& out, const AODVRouteData *data);

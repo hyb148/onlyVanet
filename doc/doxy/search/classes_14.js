@@ -8,7 +8,6 @@ var searchData=
   ['vanetmobilityaccess',['VANETMobilityAccess',['../classVANETMobilityAccess.html',1,'']]],
   ['vanetmobilitybase',['VANETMobilityBase',['../classVANETMobilityBase.html',1,'']]],
   ['vanetmoduleaccess',['VanetModuleAccess',['../classVanetModuleAccess.html',1,'']]],
-  ['vanetmoduleaccess_3c_20aodvtracimobility_20_3e',['VanetModuleAccess&lt; aodvTraCIMobility &gt;',['../classVanetModuleAccess.html',1,'']]],
   ['vanetmoduleaccess_3c_20aodvtraciscenariomanagerlaunchd_20_3e',['VanetModuleAccess&lt; aodvTraCIScenarioManagerLaunchd &gt;',['../classVanetModuleAccess.html',1,'']]],
   ['vanetmoduleaccess_3c_20bitcartracimobility_20_3e',['VanetModuleAccess&lt; bitcarTraCIMobility &gt;',['../classVanetModuleAccess.html',1,'']]],
   ['vanetmoduleaccess_3c_20bitcartraciscenariomanagerlaunchd_20_3e',['VanetModuleAccess&lt; bitcarTraCIScenarioManagerLaunchd &gt;',['../classVanetModuleAccess.html',1,'']]],

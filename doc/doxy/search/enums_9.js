@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sensemode',['SenseMode',['../ChannelSenseRequest__m_8h.html#a0b90c56247d6abd23f8babaa3c467f5f',1,'ChannelSenseRequest_m.h']]],
-  ['signalstate',['SignalState',['../classBaseDecider.html#ae4acbca8f960e9c49379ae2a82e2d90b',1,'BaseDecider']]],
-  ['states',['States',['../classHostState.html#a5002302e0f07bbd982c6e5d65eaa9c3c',1,'HostState']]]
+  ['t_5faccess_5fcategory',['t_access_category',['../classMac1609__4.html#a1ebd8faa51fdcaf3881c5799cb6eedb2',1,'Mac1609_4']]],
+  ['t_5fchannel',['t_channel',['../Consts80211p_8h.html#adf9b7633e9be0abbe2a94e0e2b8de074',1,'Consts80211p.h']]]
 ];

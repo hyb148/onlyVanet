@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('classIVANETMobility.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(12)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -152,7 +152,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ac2469661b9243ace1338e60e1d567489"><td class="memItemLeft" align="right" valign="top">static simsignal_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVANETMobility.html#ac2469661b9243ace1338e60e1d567489">vanetMobilityStateChangedSignal</a> = <a class="elRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcComponent.html#aeaa2a3ca2cb5f2c798ff0bea82f38a91">cComponent::registerSignal</a>(&quot;vanetMobilityStateChanged&quot;)</td></tr>
+<tr class="memitem:ac2469661b9243ace1338e60e1d567489"><td class="memItemLeft" align="right" valign="top">static simsignal_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVANETMobility.html#ac2469661b9243ace1338e60e1d567489">vanetMobilityStateChangedSignal</a> = cComponent::registerSignal(&quot;vanetMobilityStateChanged&quot;)</td></tr>
 <tr class="memdesc:ac2469661b9243ace1338e60e1d567489"><td class="mdescLeft">&#160;</td><td class="mdescRight">A signal used to publish mobility state changes.  <a href="#ac2469661b9243ace1338e60e1d567489">More...</a><br/></td></tr>
 <tr class="separator:ac2469661b9243ace1338e60e1d567489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -307,7 +307,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">simsignal_t IVANETMobility::vanetMobilityStateChangedSignal = <a class="elRef" doxygen="/home/administrator/ITS/omnetpp-4.4.1/doc/api/opptags.xml:/home/administrator/ITS/omnetpp-4.4.1//doc/api/" href="/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcComponent.html#aeaa2a3ca2cb5f2c798ff0bea82f38a91">cComponent::registerSignal</a>(&quot;vanetMobilityStateChanged&quot;)</td>
+          <td class="memname">simsignal_t IVANETMobility::vanetMobilityStateChangedSignal = cComponent::registerSignal(&quot;vanetMobilityStateChanged&quot;)</td>
         </tr>
       </table>
   </td>
@@ -333,7 +333,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classIVANETMobility.html">IVANETMobility</a></li>
-    <li class="footer">Generated on Tue Aug 11 2015 00:38:25 for onlyVanet by
+    <li class="footer">Generated on Thu Sep 10 2015 18:53:16 for onlyVanet by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,79 +1,85 @@
-<area shape="rect" id="node1" href="vanetsim.veins.modules.world.annotations.AnnotationDummy.html" title="Simple Module AnnotationDummy" alt="" coords="2457,6,2587,31">
-<area shape="rect" id="node2" href="vanetsim.veins.modules.world.annotations.AnnotationManager.html" title="Simple Module AnnotationManager" alt="" coords="145,155,279,181">
-<area shape="rect" id="node3" href="vanetsim.simulations._nodes.Scenario.html" title="Network Scenario" alt="" coords="327,81,400,106">
-<area shape="rect" id="node41" href="vanetsim.veins.base.modules.BaseWorldUtility.html" title="Simple Module BaseWorldUtility" alt="" coords="304,155,424,181">
-<area shape="rect" id="node51" href="vanetsim.veins.base.connectionManager.ConnectionManager.html" title="Simple Module ConnectionManager" alt="" coords="448,155,587,181">
-<area shape="rect" id="node56" href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html" title="Simple Module TraCIScenarioManagerLaunchd" alt="" coords="611,155,816,181">
-<area shape="rect" id="node67" href="vanetsim.veins.modules.obstacle.ObstacleControl.html" title="Simple Module ObstacleControl" alt="" coords="5,155,120,181">
-<area shape="rect" id="node4" href="vanetsim.simulations._nodes.AODVCar.html" title="Compound Module AODVCar" alt="" coords="2447,81,2528,106">
-<area shape="rect" id="node5" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.aodv.AODVRouter.html" title="Compound Module AODVRouter" alt="" coords="1909,155,2008,181">
-<area shape="rect" id="node6" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.common.InterfaceTable.html" title="Simple Module InterfaceTable" alt="" coords="2945,155,3049,181">
-<area shape="rect" id="node7" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.RoutingTable.html" title="Simple Module RoutingTable" alt="" coords="3075,155,3173,181">
-<area shape="rect" id="node8" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.udp.UDP.html" title="Simple Module UDP" alt="" coords="2275,155,2347,181">
-<area shape="rect" id="node9" href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html" title="Simple Module ChannelControl" alt="" coords="840,155,951,181">
-<area shape="rect" id="node10" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.autorouting.ipv4.HostAutoConfigurator.html" title="Simple Module HostAutoConfigurator" alt="" coords="2371,155,2519,181">
-<area shape="rect" id="node11" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.ieee80211.Ieee80211Nic.html" title="Compound Module Ieee80211Nic" alt="" coords="2543,155,2645,181">
-<area shape="rect" id="node12" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="3396,230,3495,255">
-<area shape="rect" id="node13" href="../../../inetmanet-2.0/doc/neddoc/inet.base.NotificationBoard.html" title="Simple Module NotificationBoard" alt="" coords="2671,155,2793,181">
-<area shape="rect" id="node14" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.traci.TraCIDemo.html" title="Simple Module TraCIDemo" alt="" coords="3197,155,3288,181">
-<area shape="rect" id="node15" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.autorouting.ipv4.IPv4NetworkConfigurator.html" title="Simple Module IPv4NetworkConfigurator" alt="" coords="1715,155,1884,181">
-<area shape="rect" id="node16" href="vanetsim.veins.base.modules.IMobility.html" title="Module Interface IMobility" alt="" coords="3312,155,3384,181">
-<area shape="rect" id="node17" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html" title="Compound Module NetworkLayer" alt="" coords="2818,155,2920,181">
-<area shape="rect" id="node18" href="../../../inetmanet-2.0/doc/neddoc/inet.base.LifecycleController.html" title="Simple Module LifecycleController" alt="" coords="1560,155,1689,181">
-<area shape="rect" id="node19" href="vanetsim.simulations.aodv.AODVSim.html" title="Network AODVSim" alt="" coords="3125,6,3207,31">
-<area shape="rect" id="node20" href="vanetsim.veins.nodes.RSU.html" title="Compound Module RSU" alt="" coords="3248,81,3320,106">
-<area shape="rect" id="node37" href="vanetsim.veins.base.modules.BaseMobility.html" title="Simple Module BaseMobility" alt="" coords="4089,155,4185,181">
-<area shape="rect" id="node49" href="vanetsim.veins.modules.nic.INic80211p.html" title="Module Interface INic80211p" alt="" coords="3901,155,3989,181">
-<area shape="rect" id="node50" href="vanetsim.veins.base.modules.IBaseApplLayer.html" title="Module Interface IBaseApplLayer" alt="" coords="3763,155,3877,181">
-<area shape="rect" id="node21" href="vanetsim.vanetrouting.applications.traci.aodvTraCI.html" title="Simple Module aodvTraCI" alt="" coords="1403,155,1484,181">
-<area shape="rect" id="node22" href="vanetsim.simulations._nodes.AODVVANETCar.html" title="Compound Module AODVVANETCar" alt="" coords="2137,81,2263,106">
-<area shape="rect" id="node31" href="vanetsim.vanetrouting.mobility.contract.IVANETMobility.html" title="Module Interface IVANETMobility" alt="" coords="2033,155,2148,181">
-<area shape="rect" id="node32" href="vanetsim.nodes.AODVVANETRouter.html" title="Compound Module AODVVANETRouter" alt="" coords="1235,155,1379,181">
-<area shape="rect" id="node23" href="vanetsim.vanetrouting.mobility.single.aodvTraCIMobility.html" title="Simple Module aodvTraCIMobility" alt="" coords="3537,6,3665,31">
-<area shape="rect" id="node24" href="vanetsim.vanetrouting.world.traci.aodvTraCIScenarioManager.html" title="Simple Module aodvTraCIScenarioManager" alt="" coords="3689,6,3873,31">
-<area shape="rect" id="node25" href="vanetsim.vanetrouting.world.traci.aodvTraCIScenarioManagerLaunchd.html" title="Simple Module aodvTraCIScenarioManagerLaunchd" alt="" coords="977,155,1209,181">
-<area shape="rect" id="node26" href="vanetsim.simulations._nodes.AODVVANETHighway.html" title="Compound Module AODVVANETHighway" alt="" coords="917,81,1072,106">
-<area shape="rect" id="node27" href="vanetsim.vanetrouting.applications.traci.aodvTraCITestApp.html" title="Simple Module aodvTraCITestApp" alt="" coords="3898,6,4029,31">
-<area shape="rect" id="node28" href="vanetsim.simulations.aodvuu.AODVUUSim.html" title="Network AODVUUSim" alt="" coords="3233,6,3335,31">
-<area shape="rect" id="node29" href="vanetsim.AODVVANET.html" title="Simple Module AODVVANET" alt="" coords="2611,6,2716,31">
-<area shape="rect" id="node30" href="vanetsim.simulations._nodes.AODVVANETRSU.html" title="Compound Module AODVVANETRSU" alt="" coords="2597,81,2731,106">
-<area shape="rect" id="node33" href="vanetsim.routing.aodvvanet.AODVVANETRouting.html" title="Simple Module AODVVANETRouting" alt="" coords="1231,230,1381,255">
-<area shape="rect" id="node34" href="vanetsim.simulations._nodes.AODVVANETScenario.html" title="Network AODVVANETScenario" alt="" coords="4054,6,4209,31">
-<area shape="rect" id="node35" href="vanetsim.veins.base.modules.BaseLayer.html" title="Simple Module BaseLayer" alt="" coords="4234,6,4317,31">
-<area shape="rect" id="node36" href="vanetsim.veins.base.modules.BaseMacLayer.html" title="Simple Module BaseMacLayer" alt="" coords="4343,6,4452,31">
-<area shape="rect" id="node38" href="vanetsim.veins.base.phyLayer.BasePhyLayer.html" title="Simple Module BasePhyLayer" alt="" coords="4476,6,4583,31">
-<area shape="rect" id="node39" href="vanetsim.vanetrouting.base.BaseVanetRouting.html" title="Simple Module BaseVanetRouting" alt="" coords="4607,6,4736,31">
-<area shape="rect" id="node40" href="vanetsim.veins.modules.application.ieee80211p.BaseWaveApplLayer.html" title="Simple Module BaseWaveApplLayer" alt="" coords="4761,6,4905,31">
-<area shape="rect" id="node42" href="vanetsim.BITCAR.html" title="Simple Module BITCAR" alt="" coords="4929,6,5001,31">
-<area shape="rect" id="node43" href="vanetsim.vanetrouting.applications.traci.bitcarTraCIDemo.html" title="Simple Module bitcarTraCIDemo" alt="" coords="5025,6,5148,31">
-<area shape="rect" id="node44" href="vanetsim.vanetrouting.mobility.single.bitcarTraCIMobility.html" title="Simple Module bitcarTraCIMobility" alt="" coords="5173,6,5304,31">
-<area shape="rect" id="node45" href="vanetsim.vanetrouting.applications.traci.bitcarTraCITestApp.html" title="Simple Module bitcarTraCITestApp" alt="" coords="5329,6,5464,31">
-<area shape="rect" id="node46" href="vanetsim.veins.nodes.Car.html" title="Compound Module Car" alt="" coords="3088,81,3160,106">
-<area shape="rect" id="node47" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.IManetRouting.html" title="Module Interface IManetRouting" alt="" coords="3507,155,3613,181">
-<area shape="rect" id="node48" href="vanetsim.veins.modules.mobility.traci.TraCIMobility.html" title="Simple Module TraCIMobility" alt="" coords="3638,155,3737,181">
-<area shape="rect" id="node52" href="ned.DatarateChannel.html" title="Channel DatarateChannel" alt="" coords="5489,6,5609,31">
-<area shape="rect" id="node53" href="ned.DelayChannel.html" title="Channel DelayChannel" alt="" coords="5633,6,5737,31">
-<area shape="rect" id="node54" href="vanetsim.vanetrouting.util.GlobalWirelessLinkInspector_Vanet_Vanet.html" title="Simple Module GlobalWirelessLinkInspector_Vanet_Vanet" alt="" coords="5762,6,6032,31">
-<area shape="rect" id="node55" href="vanetsim.simulations.traci_launchd.Highway.html" title="Compound Module Highway" alt="" coords="698,81,771,106">
-<area shape="rect" id="node57" href="ned.IBidirectionalChannel.html" title="Module Interface IBidirectionalChannel" alt="" coords="6057,6,6201,31">
-<area shape="rect" id="node58" href="vanetsim.veins.modules.nic.Nic80211p.html" title="Compound Module Nic80211p" alt="" coords="4210,155,4293,181">
-<area shape="rect" id="node64" href="vanetsim.veins.modules.mac.ieee80211p.Mac1609_4.html" title="Simple Module Mac1609_4" alt="" coords="4143,230,4232,255">
-<area shape="rect" id="node66" href="vanetsim.veins.modules.phy.PhyLayer80211p.html" title="Simple Module PhyLayer80211p" alt="" coords="4257,230,4375,255">
-<area shape="rect" id="node59" href="ned.IUnidirectionalChannel.html" title="Module Interface IUnidirectionalChannel" alt="" coords="6226,6,6379,31">
-<area shape="rect" id="node60" href="vanetsim.vanetrouting.networklayer.IVanetRouting.html" title="Module Interface IVanetRouting" alt="" coords="6403,6,6508,31">
-<area shape="rect" id="node61" href="vanetsim.veins.base.modules.IWirelessMac.html" title="Module Interface IWirelessMac" alt="" coords="6533,6,6635,31">
-<area shape="rect" id="node62" href="vanetsim.veins.base.phyLayer.IWirelessPhy.html" title="Module Interface IWirelessPhy" alt="" coords="6659,6,6759,31">
-<area shape="rect" id="node63" href="vanetsim.vanetrouting.mobility.single.LinearVANETMobility.html" title="Simple Module LinearVANETMobility" alt="" coords="6784,6,6931,31">
-<area shape="rect" id="node65" href="vanetsim.vanetrouting.mobility.common.MovingVANETMobilityBase.html" title="Simple Module MovingVANETMobilityBase" alt="" coords="6955,6,7139,31">
-<area shape="rect" id="node68" href="vanetsim.RBVTP.html" title="Simple Module RBVTP" alt="" coords="7163,6,7235,31">
-<area shape="rect" id="node69" href="vanetsim.RBVTR.html" title="Simple Module RBVTR" alt="" coords="7259,6,7331,31">
-<area shape="rect" id="node70" href="vanetsim.vanetrouting.applications.traci.rbvtrTraCIDemo.html" title="Simple Module rbvtrTraCIDemo" alt="" coords="7355,6,7471,31">
-<area shape="rect" id="node71" href="vanetsim.vanetrouting.mobility.single.rbvtrTraCIMobility.html" title="Simple Module rbvtrTraCIMobility" alt="" coords="7495,6,7621,31">
-<area shape="rect" id="node72" href="vanetsim.vanetrouting.applications.traci.rbvtrTraCITestApp.html" title="Simple Module rbvtrTraCITestApp" alt="" coords="7647,6,7776,31">
-<area shape="rect" id="node73" href="vanetsim.simulations.veins.RSUExampleScenario.html" title="Network RSUExampleScenario" alt="" coords="3359,6,3512,31">
-<area shape="rect" id="node74" href="vanetsim.simulations.traci_launchd.scenario.html" title="Network scenario" alt="" coords="7801,6,7873,31">
-<area shape="rect" id="node75" href="vanetsim.veins.modules.application.traci.TraCIDemo11p.html" title="Simple Module TraCIDemo11p" alt="" coords="7898,6,8008,31">
-<area shape="rect" id="node76" href="vanetsim.veins.modules.application.traci.TraCIDemoRSU11p.html" title="Simple Module TraCIDemoRSU11p" alt="" coords="8033,6,8172,31">
-<area shape="rect" id="node77" href="vanetsim.veins.modules.mobility.traci.TraCIScreenRecorder.html" title="Simple Module TraCIScreenRecorder" alt="" coords="8197,6,8345,31">
-<area shape="rect" id="node78" href="vanetsim.veins.modules.application.traci.TraCITestApp.html" title="Simple Module TraCITestApp" alt="" coords="8371,6,8475,31">
-<area shape="rect" id="node79" href="vanetsim.vanetrouting.mobility.common.VANETMobilityBase.html" title="Simple Module VANETMobilityBase" alt="" coords="8499,6,8641,31">
+<area shape="rect" id="node1" href="vanetsim.veins.modules.world.annotations.AnnotationDummy.html" title="Simple Module AnnotationDummy" alt="" coords="2773,6,2903,31">
+<area shape="rect" id="node2" href="vanetsim.veins.modules.world.annotations.AnnotationManager.html" title="Simple Module AnnotationManager" alt="" coords="453,155,587,181">
+<area shape="rect" id="node3" href="vanetsim.simulations._nodes.Scenario.html" title="Network Scenario" alt="" coords="334,81,407,106">
+<area shape="rect" id="node43" href="vanetsim.veins.base.modules.BaseWorldUtility.html" title="Simple Module BaseWorldUtility" alt="" coords="5,155,125,181">
+<area shape="rect" id="node55" href="vanetsim.veins.base.connectionManager.ConnectionManager.html" title="Simple Module ConnectionManager" alt="" coords="149,155,288,181">
+<area shape="rect" id="node60" href="vanetsim.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd.html" title="Simple Module TraCIScenarioManagerLaunchd" alt="" coords="612,155,817,181">
+<area shape="rect" id="node71" href="vanetsim.veins.modules.obstacle.ObstacleControl.html" title="Simple Module ObstacleControl" alt="" coords="313,155,428,181">
+<area shape="rect" id="node4" href="vanetsim.simulations._nodes.AODVCar.html" title="Compound Module AODVCar" alt="" coords="2345,81,2425,106">
+<area shape="rect" id="node5" href="../../../inetmanet-2.0/doc/neddoc/inet.world.radio.ChannelControl.html" title="Simple Module ChannelControl" alt="" coords="841,155,952,181">
+<area shape="rect" id="node6" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="" coords="3472,155,3571,181">
+<area shape="rect" id="node7" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.autorouting.ipv4.IPv4NetworkConfigurator.html" title="Simple Module IPv4NetworkConfigurator" alt="" coords="1471,155,1640,181">
+<area shape="rect" id="node8" href="../../../inetmanet-2.0/doc/neddoc/inet.transport.udp.UDP.html" title="Simple Module UDP" alt="" coords="2084,155,2156,181">
+<area shape="rect" id="node9" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.ipv4.RoutingTable.html" title="Simple Module RoutingTable" alt="" coords="2180,155,2279,181">
+<area shape="rect" id="node10" href="../../../inetmanet-2.0/doc/neddoc/inet.base.LifecycleController.html" title="Simple Module LifecycleController" alt="" coords="1665,155,1795,181">
+<area shape="rect" id="node11" href="../../../inetmanet-2.0/doc/neddoc/inet.linklayer.ieee80211.Ieee80211Nic.html" title="Compound Module Ieee80211Nic" alt="" coords="2303,155,2405,181">
+<area shape="rect" id="node12" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.inet.NetworkLayer.html" title="Compound Module NetworkLayer" alt="" coords="2430,155,2532,181">
+<area shape="rect" id="node13" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.common.InterfaceTable.html" title="Simple Module InterfaceTable" alt="" coords="2557,155,2661,181">
+<area shape="rect" id="node14" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.autorouting.ipv4.HostAutoConfigurator.html" title="Simple Module HostAutoConfigurator" alt="" coords="2686,155,2833,181">
+<area shape="rect" id="node15" href="../../../inetmanet-2.0/doc/neddoc/inet.applications.traci.TraCIDemo.html" title="Simple Module TraCIDemo" alt="" coords="3005,155,3096,181">
+<area shape="rect" id="node16" href="../../../inetmanet-2.0/doc/neddoc/inet.nodes.aodv.AODVRouter.html" title="Compound Module AODVRouter" alt="" coords="1961,155,2060,181">
+<area shape="rect" id="node17" href="vanetsim.veins.base.modules.IMobility.html" title="Module Interface IMobility" alt="" coords="3120,155,3192,181">
+<area shape="rect" id="node18" href="../../../inetmanet-2.0/doc/neddoc/inet.base.NotificationBoard.html" title="Simple Module NotificationBoard" alt="" coords="2859,155,2981,181">
+<area shape="rect" id="node19" href="vanetsim.simulations._nodes.AODVMANETCar.html" title="Compound Module AODVMANETCar" alt="" coords="3340,6,3468,31">
+<area shape="rect" id="node20" href="vanetsim.routing.aodvvanet.AODVRouting.html" title="Simple Module AODVRouting" alt="" coords="1342,155,1447,181">
+<area shape="rect" id="node21" href="vanetsim.simulations._nodes.AODVVANETCar.html" title="Compound Module AODVVANETCar" alt="" coords="2111,81,2237,106">
+<area shape="rect" id="node24" href="vanetsim.vanetrouting.applications.traci.aodvTraCI.html" title="Simple Module aodvTraCI" alt="" coords="1236,155,1317,181">
+<area shape="rect" id="node32" href="vanetsim.vanetrouting.mobility.contract.IVANETMobility.html" title="Module Interface IVANETMobility" alt="" coords="1821,155,1936,181">
+<area shape="rect" id="node22" href="vanetsim.simulations.aodv.AODVSim.html" title="Network AODVSim" alt="" coords="2928,6,3009,31">
+<area shape="rect" id="node23" href="vanetsim.veins.nodes.RSU.html" title="Compound Module RSU" alt="" coords="3051,81,3123,106">
+<area shape="rect" id="node39" href="vanetsim.veins.base.modules.BaseMobility.html" title="Simple Module BaseMobility" alt="" coords="3846,155,3943,181">
+<area shape="rect" id="node53" href="vanetsim.veins.base.modules.IBaseApplLayer.html" title="Module Interface IBaseApplLayer" alt="" coords="3595,155,3709,181">
+<area shape="rect" id="node54" href="vanetsim.veins.modules.nic.INic80211p.html" title="Module Interface INic80211p" alt="" coords="3733,155,3821,181">
+<area shape="rect" id="node25" href="vanetsim.vanetrouting.mobility.single.aodvTraCIMobility.html" title="Simple Module aodvTraCIMobility" alt="" coords="3492,6,3620,31">
+<area shape="rect" id="node26" href="vanetsim.vanetrouting.world.traci.aodvTraCIScenarioManager.html" title="Simple Module aodvTraCIScenarioManager" alt="" coords="3644,6,3828,31">
+<area shape="rect" id="node27" href="vanetsim.vanetrouting.world.traci.aodvTraCIScenarioManagerLaunchd.html" title="Simple Module aodvTraCIScenarioManagerLaunchd" alt="" coords="978,155,1211,181">
+<area shape="rect" id="node28" href="vanetsim.simulations._nodes.AODVVANETHighway.html" title="Compound Module AODVVANETHighway" alt="" coords="918,81,1073,106">
+<area shape="rect" id="node29" href="vanetsim.vanetrouting.applications.traci.aodvTraCITestApp.html" title="Simple Module aodvTraCITestApp" alt="" coords="3853,6,3984,31">
+<area shape="rect" id="node30" href="vanetsim.simulations.aodvuu.AODVUUSim.html" title="Network AODVUUSim" alt="" coords="3035,6,3137,31">
+<area shape="rect" id="node31" href="vanetsim.AODVVANET.html" title="Simple Module AODVVANET" alt="" coords="4009,6,4113,31">
+<area shape="rect" id="node33" href="vanetsim.nodes.AODVVANETRouter.html" title="Compound Module AODVVANETRouter" alt="" coords="3709,81,3853,106">
+<area shape="rect" id="node34" href="vanetsim.routing.aodvvanet.AODVVANETRouting.html" title="Simple Module AODVVANETRouting" alt="" coords="3967,155,4117,181">
+<area shape="rect" id="node35" href="vanetsim.simulations._nodes.AODVVANETRSU.html" title="Compound Module AODVVANETRSU" alt="" coords="2481,81,2615,106">
+<area shape="rect" id="node36" href="vanetsim.simulations._nodes.AODVVANETScenario.html" title="Network AODVVANETScenario" alt="" coords="4138,6,4293,31">
+<area shape="rect" id="node37" href="vanetsim.veins.base.modules.BaseLayer.html" title="Simple Module BaseLayer" alt="" coords="4318,6,4401,31">
+<area shape="rect" id="node38" href="vanetsim.veins.base.modules.BaseMacLayer.html" title="Simple Module BaseMacLayer" alt="" coords="4427,6,4536,31">
+<area shape="rect" id="node40" href="vanetsim.veins.base.phyLayer.BasePhyLayer.html" title="Simple Module BasePhyLayer" alt="" coords="4560,6,4667,31">
+<area shape="rect" id="node41" href="vanetsim.vanetrouting.base.BaseVanetRouting.html" title="Simple Module BaseVanetRouting" alt="" coords="4691,6,4820,31">
+<area shape="rect" id="node42" href="vanetsim.veins.modules.application.ieee80211p.BaseWaveApplLayer.html" title="Simple Module BaseWaveApplLayer" alt="" coords="4845,6,4989,31">
+<area shape="rect" id="node44" href="vanetsim.BITCAR.html" title="Simple Module BITCAR" alt="" coords="5013,6,5085,31">
+<area shape="rect" id="node45" href="vanetsim.vanetrouting.applications.traci.bitcarTraCIDemo.html" title="Simple Module bitcarTraCIDemo" alt="" coords="5109,6,5232,31">
+<area shape="rect" id="node46" href="vanetsim.vanetrouting.mobility.single.bitcarTraCIMobility.html" title="Simple Module bitcarTraCIMobility" alt="" coords="5257,6,5388,31">
+<area shape="rect" id="node47" href="vanetsim.vanetrouting.world.traci.bitcarTraCIScenarioManager.html" title="Simple Module bitcarTraCIScenarioManager" alt="" coords="5413,6,5600,31">
+<area shape="rect" id="node48" href="vanetsim.vanetrouting.world.traci.bitcarTraCIScenarioManagerLaunchd.html" title="Simple Module bitcarTraCIScenarioManagerLaunchd" alt="" coords="5625,6,5861,31">
+<area shape="rect" id="node49" href="vanetsim.vanetrouting.applications.traci.bitcarTraCITestApp.html" title="Simple Module bitcarTraCITestApp" alt="" coords="5887,6,6021,31">
+<area shape="rect" id="node50" href="vanetsim.veins.nodes.Car.html" title="Compound Module Car" alt="" coords="2884,81,2956,106">
+<area shape="rect" id="node51" href="../../../inetmanet-2.0/doc/neddoc/inet.networklayer.IManetRouting.html" title="Module Interface IManetRouting" alt="" coords="3216,155,3323,181">
+<area shape="rect" id="node52" href="vanetsim.veins.modules.mobility.traci.TraCIMobility.html" title="Simple Module TraCIMobility" alt="" coords="3347,155,3447,181">
+<area shape="rect" id="node56" href="ned.DatarateChannel.html" title="Channel DatarateChannel" alt="" coords="6047,6,6167,31">
+<area shape="rect" id="node57" href="ned.DelayChannel.html" title="Channel DelayChannel" alt="" coords="6191,6,6295,31">
+<area shape="rect" id="node58" href="vanetsim.vanetrouting.util.GlobalWirelessLinkInspector_Vanet_Vanet.html" title="Simple Module GlobalWirelessLinkInspector_Vanet_Vanet" alt="" coords="6319,6,6589,31">
+<area shape="rect" id="node59" href="vanetsim.simulations.traci_launchd.Highway.html" title="Compound Module Highway" alt="" coords="699,81,772,106">
+<area shape="rect" id="node61" href="ned.IBidirectionalChannel.html" title="Module Interface IBidirectionalChannel" alt="" coords="6614,6,6759,31">
+<area shape="rect" id="node62" href="vanetsim.veins.modules.nic.Nic80211p.html" title="Compound Module Nic80211p" alt="" coords="4159,81,4243,106">
+<area shape="rect" id="node68" href="vanetsim.veins.modules.mac.ieee80211p.Mac1609_4.html" title="Simple Module Mac1609_4" alt="" coords="4285,155,4373,181">
+<area shape="rect" id="node70" href="vanetsim.veins.modules.phy.PhyLayer80211p.html" title="Simple Module PhyLayer80211p" alt="" coords="4142,155,4260,181">
+<area shape="rect" id="node63" href="ned.IUnidirectionalChannel.html" title="Module Interface IUnidirectionalChannel" alt="" coords="6783,6,6936,31">
+<area shape="rect" id="node64" href="vanetsim.vanetrouting.networklayer.IVanetRouting.html" title="Module Interface IVanetRouting" alt="" coords="6961,6,7065,31">
+<area shape="rect" id="node65" href="vanetsim.veins.base.modules.IWirelessMac.html" title="Module Interface IWirelessMac" alt="" coords="7090,6,7192,31">
+<area shape="rect" id="node66" href="vanetsim.veins.base.phyLayer.IWirelessPhy.html" title="Module Interface IWirelessPhy" alt="" coords="7217,6,7316,31">
+<area shape="rect" id="node67" href="vanetsim.vanetrouting.mobility.single.LinearVANETMobility.html" title="Simple Module LinearVANETMobility" alt="" coords="7341,6,7488,31">
+<area shape="rect" id="node69" href="vanetsim.vanetrouting.mobility.common.MovingVANETMobilityBase.html" title="Simple Module MovingVANETMobilityBase" alt="" coords="7512,6,7696,31">
+<area shape="rect" id="node72" href="vanetsim.RBVTP.html" title="Simple Module RBVTP" alt="" coords="7720,6,7792,31">
+<area shape="rect" id="node73" href="vanetsim.RBVTR.html" title="Simple Module RBVTR" alt="" coords="7816,6,7888,31">
+<area shape="rect" id="node74" href="vanetsim.vanetrouting.applications.traci.rbvtrTraCIDemo.html" title="Simple Module rbvtrTraCIDemo" alt="" coords="7913,6,8028,31">
+<area shape="rect" id="node75" href="vanetsim.vanetrouting.mobility.single.rbvtrTraCIMobility.html" title="Simple Module rbvtrTraCIMobility" alt="" coords="8053,6,8179,31">
+<area shape="rect" id="node76" href="vanetsim.vanetrouting.world.traci.rbvtrTraCIScenarioManager.html" title="Simple Module rbvtrTraCIScenarioManager" alt="" coords="8203,6,8385,31">
+<area shape="rect" id="node77" href="vanetsim.vanetrouting.world.traci.rbvtrTraCIScenarioManagerLaunchd.html" title="Simple Module rbvtrTraCIScenarioManagerLaunchd" alt="" coords="8410,6,8640,31">
+<area shape="rect" id="node78" href="vanetsim.vanetrouting.applications.traci.rbvtrTraCITestApp.html" title="Simple Module rbvtrTraCITestApp" alt="" coords="8665,6,8795,31">
+<area shape="rect" id="node79" href="vanetsim.simulations.veins.RSUExampleScenario.html" title="Network RSUExampleScenario" alt="" coords="3162,6,3315,31">
+<area shape="rect" id="node80" href="vanetsim.simulations.traci_launchd.scenario.html" title="Network scenario" alt="" coords="8820,6,8892,31">
+<area shape="rect" id="node81" href="vanetsim.veins.modules.application.traci.TraCIDemo11p.html" title="Simple Module TraCIDemo11p" alt="" coords="8917,6,9027,31">
+<area shape="rect" id="node82" href="vanetsim.veins.modules.application.traci.TraCIDemoRSU11p.html" title="Simple Module TraCIDemoRSU11p" alt="" coords="9051,6,9191,31">
+<area shape="rect" id="node83" href="vanetsim.veins.modules.mobility.traci.TraCIScreenRecorder.html" title="Simple Module TraCIScreenRecorder" alt="" coords="9216,6,9364,31">
+<area shape="rect" id="node84" href="vanetsim.veins.modules.application.traci.TraCITestApp.html" title="Simple Module TraCITestApp" alt="" coords="9389,6,9493,31">
+<area shape="rect" id="node85" href="vanetsim.vanetrouting.mobility.common.VANETMobilityBase.html" title="Simple Module VANETMobilityBase" alt="" coords="9518,6,9660,31">

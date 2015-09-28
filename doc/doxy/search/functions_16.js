@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['validate',['validate',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcConfigurationEx.html#ad80ffa7651982fe30377eafc8190f0ee',1,'cConfigurationEx']]],
   ['vanet_5fcontrolinfobreaklink',['Vanet_ControlInfoBreakLink',['../classVanet__ControlInfoBreakLink.html#a089996d964f3a6940cd35e97cd6a3f5f',1,'Vanet_ControlInfoBreakLink::Vanet_ControlInfoBreakLink()'],['../classVanet__ControlInfoBreakLink.html#a72e36b09b8c4ff51faa9cb061692cdc8',1,'Vanet_ControlInfoBreakLink::Vanet_ControlInfoBreakLink(const Vanet_ControlInfoBreakLink &amp;other)']]],
   ['vanet_5fin_5faddr',['Vanet_In_addr',['../structVanet__In__addr.html#a1092758a12b0efa6a34b9652dcd9b9d7',1,'Vanet_In_addr::Vanet_In_addr(const Vanet_In_addr &amp;addr)'],['../structVanet__In__addr.html#aca0145d708b05b2515b7761c308d055e',1,'Vanet_In_addr::Vanet_In_addr()']]],
   ['vanet_5flocatornotificationinfo',['Vanet_LocatorNotificationInfo',['../classVanet__LocatorNotificationInfo.html#a42586669acd29437009a4df13a14df46',1,'Vanet_LocatorNotificationInfo::Vanet_LocatorNotificationInfo()'],['../classVanet__LocatorNotificationInfo.html#ae84fc75d3e81be818376d32b4fa7d48b',1,'Vanet_LocatorNotificationInfo::Vanet_LocatorNotificationInfo(const Vanet_LocatorNotificationInfo &amp;other)']]],
@@ -12,6 +11,5 @@ var searchData=
   ['vanetroutingbase',['VanetRoutingBase',['../classVanetRoutingBase.html#a3dda1906b62aa251bd007c30844ff9f7',1,'VanetRoutingBase']]],
   ['vanettimer',['VanetTimer',['../classVanetTimer.html#a7607b57f48db5d66405072dabf849f3d',1,'VanetTimer::VanetTimer()'],['../classVanetTimer.html#ad8b17fa3880a19b0ca3a5801b81e593d',1,'VanetTimer::VanetTimer(VanetRoutingBase *agent)']]],
   ['vanettracicolor',['vanetTraCIColor',['../classvanetTraCIColor.html#a9b15b0dbb41ba9bdcd11220d74afafd9',1,'vanetTraCIColor']]],
-  ['vehicle',['vehicle',['../classVeins_1_1TraCICommandInterface.html#a75c50a766747a878825415945e474665',1,'Veins::TraCICommandInterface::vehicle()'],['../classVeins_1_1TraCICommandInterface_1_1Vehicle.html#a5649948312c6fdc18f071253698ac71e',1,'Veins::TraCICommandInterface::Vehicle::Vehicle()']]],
-  ['visit',['visit',['/home/administrator/ITS/omnetpp-4.4.1//doc/api/classcVisitor.html#acb24dffe98329aa11479419c644ccdb4',1,'cVisitor']]]
+  ['vehicle',['vehicle',['../classVeins_1_1TraCICommandInterface.html#a75c50a766747a878825415945e474665',1,'Veins::TraCICommandInterface::vehicle()'],['../classVeins_1_1TraCICommandInterface_1_1Vehicle.html#a5649948312c6fdc18f071253698ac71e',1,'Veins::TraCICommandInterface::Vehicle::Vehicle()']]]
 ];
